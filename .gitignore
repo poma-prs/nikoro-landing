@@ -1,0 +1,9 @@
+node_modules/
+dist/
+awsaccess.json
+publish/
+
+awsaccess-prod.json
+awsaccess-stage.json
+
+*.tmp
