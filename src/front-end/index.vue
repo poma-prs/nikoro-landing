@@ -4,15 +4,17 @@
       <app-header></app-header>
     </div>
     <block1></block1>
+    <block2></block2>
   </div>
 </template>
 
 <script>
-  var block1 = require('./components/blocks/block1.vue');
   var appHeader = require('./components/blocks/header.vue');
+  var block1 = require('./components/blocks/block1.vue');
+  var block2 = require('./components/blocks/block2.vue');
 
   module.exports = {
-    components: { block1, appHeader }
+    components: { appHeader, block1, block2 }
   };
 </script>
 
