@@ -6,6 +6,7 @@
     <block1></block1>
     <block2></block2>
     <block3></block3>
+    <block4></block4>
 
     <block9></block9>
   </div>
@@ -16,12 +17,13 @@
   var block1 = require('./components/blocks/block1.vue');
   var block2 = require('./components/blocks/block2.vue');
   var block3 = require('./components/blocks/block3.vue');
+  var block4 = require('./components/blocks/block4.vue');
 
   var block9 = require('./components/blocks/block9.vue');
 
   module.exports = {
     components: { appHeader, block1,
-      block2, block3,
+      block2, block3, block4,
       block9
     }
   };

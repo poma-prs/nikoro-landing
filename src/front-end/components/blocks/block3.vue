@@ -38,7 +38,7 @@
 <style lang="scss" scoped>
   .block {
     position: relative;
-    padding: 50px 0;
+    padding: 70px 0;
     background-color: #1b1d1c;
     color: white;
 

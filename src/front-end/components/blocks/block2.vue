@@ -59,7 +59,7 @@
 
 <style lang="scss" scoped>
   .block {
-    padding: 50px 0;
+    padding: 70px 0;
     background-color: white;
 
     .title {
