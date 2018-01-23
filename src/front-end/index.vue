@@ -34,8 +34,8 @@
 
 <style lang="scss" scoped>
   .header {
-    z-index: 2;
-    position: fixed;
+    z-index: 100;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -46,9 +46,5 @@
   img {
     max-height: 100%;
     max-width: 100%;
-  }
-
-  body {
-    height: 5000px;
   }
 </style>

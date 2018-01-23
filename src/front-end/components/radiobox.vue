@@ -18,6 +18,9 @@
       },
       value: { type: Object }
     },
+    created() {
+      this.$emit('input', this.options[this.defind]);
+    },
     methods: {
       onChange (event) {
         console.log('checked: ', event.target.checked);
