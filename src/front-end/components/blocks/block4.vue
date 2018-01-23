@@ -5,14 +5,14 @@
       <div class="slider">
         <vue-slider v-model="square" v-bind="options">
           <template slot="tooltip" scope="tooltip">
-            <div class="slider-tooltip">{{ tooltip.value }} м2</div>
+            <div class="slider-tooltip">{{ tooltip.value }} м<sup>2</sup></div>
           </template>
         </vue-slider>
       </div>
       <div class="row">
         <div class="col-sm-6">
           <div class="home-types">
-            <radiobox v-model="selectedType" name="hometype" :options="types" defind="1"></radiobox>
+            <radiobox v-model="selectedType" name="hometype" :options="types" :defind="1"></radiobox>
           </div>
         </div>
         <div class="col-sm-6 text-center">
