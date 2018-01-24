@@ -5,5 +5,5 @@ var app = require('./index.vue');
 
 new Vue({
   el: 'app',
-  components: { app }
+  components: { app: app }
 });

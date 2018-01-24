@@ -75,7 +75,7 @@ function build(folder, filename, watch) {
     .pipe(plumber())
     .pipe(source(filename))
     .pipe(buffer())
-    .pipe(babel({presets: ['es2015']}))
+    //.pipe(babel({presets: ['es2015'], ignore: ['**/node_modules/**']}))
     .pipe(gulp.dest(path.join(conf.paths.dist, folder)));
 }
 

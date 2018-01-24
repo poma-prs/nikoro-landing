@@ -30,8 +30,7 @@
 </template>
 
 <script>
-  import vueSlider from 'vue-slider-component';
-
+  var vueSlider = require('vue-slider-component');
   var radiobox = require('../radiobox.vue');
 
   module.exports = {
