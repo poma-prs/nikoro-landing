@@ -10,6 +10,7 @@
     <block5></block5>
     <block6></block6>
 
+    <block8></block8>
     <block9></block9>
   </div>
 </template>
@@ -23,6 +24,7 @@
   var block5 = require('./components/blocks/block5.vue');
   var block6 = require('./components/blocks/block6.vue');
 
+  var block8 = require('./components/blocks/block8.vue');
   var block9 = require('./components/blocks/block9.vue');
 
   module.exports = {
@@ -33,7 +35,9 @@
       block3: block3,
       block4: block4,
       block5: block5,
-      block6: block6, //block7,
+      block6: block6,
+      //block7,
+      block8: block8,
       block9: block9
     }
   };
