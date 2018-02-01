@@ -87,8 +87,21 @@
         height: 18px;
       }
 
+      @keyframes tick {
+        0% {
+          transform: scale(0);
+        }
+        90% {
+          transform: scale(1.4);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
       input:checked ~ .checkmark::after {
         display: block;
+        animation: tick .2s ease-in-out;
       }
     }
   }

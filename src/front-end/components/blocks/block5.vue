@@ -116,6 +116,7 @@
         height: 80%;
         border: 2px #EA1821 solid;
         z-index: -1;
+        transition:all 0.3s ease;
       }
 
       &:hover::before {

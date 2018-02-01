@@ -23,7 +23,7 @@
         </div>
       </div>
       <div class="btn-container">
-        <div class="btn">Получить подробный рассчет стоимости</div>
+        <div class="btn">Получить подробный расчет стоимости</div>
       </div>
     </div>
   </div>
