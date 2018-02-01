@@ -6,27 +6,21 @@
         <div class="col-xs-12 col-sm-7 content-part">
           <div class="offer">
             <div class="titles">
-              <div class="title">Строим дома в Ижевске</div>
-              <div class="subtitle">Из деревянного каркаса и бруса</div>
+              <h1 class="title title-font">Строительство каркасных домов под ключ в Ижевске от 359 000 рублей</h1>
+              <div class="subtitle">Оставьте заявку на рассчет стоимости дома</div>
             </div>
           </div>
           <div class="offer">
             <div class="buttons">
               <div class="btn">Остaвить заявку</div>
-              <div class="bonus">
+              <!-- <div class="bonus">
                 Оставьте заявку на рассчет стоимости дома
                 <div class="subbonus">+ бесплатно "Технология умный дом"</div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="gift">
-      <div>В ПОДАРОК</div>
-      <div>Технология</div>
-      <div>Умный дом</div>
     </div>
   </div>
 </template>
@@ -43,7 +37,7 @@
     background-color: #1B1D1C;
 
     @media (max-width: 767px) {
-      background-image: url(assets/images/home1.jpg);
+      background-image: url(assets/images/block1/home.jpg);
       background-size: cover;
     }
 
@@ -53,7 +47,7 @@
     }
 
     .image-part {
-      background-image: url(assets/images/home1.jpg);
+      background-image: url(assets/images/block1/home.jpg);
       background-size: cover;
     }
 
@@ -85,13 +79,15 @@
           }
 
           .title {
-            font-size: 50px;
+            font-size: 37px;
+            font-weight: bold;
             line-height: 1.2;
+            margin: 0;
             margin-bottom: 20px;
           }
 
           .subtitle {
-            font-size: 18px;
+            font-size: 16px;
             margin-bottom: 10px;
 
             @media (min-width: 768px) {
@@ -109,7 +105,7 @@
             z-index: -1;
 
             @media (min-width: 768px) {
-              width: 53%;
+              width: 66%;
             }
           }
         }
@@ -169,31 +165,6 @@
             }
           }
         }
-      }
-    }
-
-    .gift {
-      position: absolute;
-      left: 0;
-      top: 25%;
-      text-align: center;
-      padding: 25px 10px;
-      background-color: #1b1d1c;
-
-      @media (max-width: 767px) {
-        display: none;
-      }
-
-      & > div:not(:first-child) {
-        font-size: 18px;
-        font-weight: bold;
-        color: white;
-      }
-
-      & > div:first-child {
-        font-size: 18px;
-        color: #999999;
-        margin-bottom: 7px;
       }
     }
   }

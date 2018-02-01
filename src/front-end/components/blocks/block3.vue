@@ -1,17 +1,19 @@
 <template>
   <div class="block">
     <div class="container">
+
       <div class="row">
-        <div class="col-sm-5 hidden-xs img-container">
-          <img src="/assets/images/block3/home1.png">
-        </div>
-        <div class="col-sm-7">
-          <div class="title">Преимущества каркасных домов</div>
-          <div class="benefits">
-            <div class="benefit" v-for="item in benefits">{{ item }}</div>
-          </div>
+        <div class="col-sm-offset-1 col-sm-11">
+          <h2 class="title title-font">Преимущества каркасных домов</h2>
+          <ul class="benefits">
+            <li class="benefit" v-for="(item, index) in benefits" v-if="index < 4">{{ item }}</li>
+          </ul>
+          <ul class="benefits">
+            <li class="benefit" v-for="(item, index) in benefits" v-if="index > 3">{{ item }}</li>
+          </ul>
         </div>
       </div>
+
     </div>
   </div>
 </template>
@@ -24,7 +26,8 @@
     'Прогрев дома от 5 до 20°C за 1 час',
     'Сроки возведения 30-120 дней',
     '50 лет - срок службы до первого серьезного ремонта',
-    'Затраты на отопление на 58% меньше'
+    'Затраты на отопление на 58% меньше',
+    'Можно строить и отделывать поэтапно'
   ];
 
   module.exports = {
@@ -38,87 +41,80 @@
 <style lang="scss" scoped>
   .block {
     position: relative;
-    padding: 70px 0;
-    background-color: #1b1d1c;
-    color: white;
-
-    @media (max-width: 767px) {
-      background-image: url(assets/images/block3/home1.png);
-      background-size: cover;
-      background-position: right;
-
-      &::before {
-        content: ' ';
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.6);
-      }
-    }
-
-    .row {
-      display: flex;
-      align-items: stretch;
-    }
-
-    .img-container {
-      position: relative;
-
-      &::before {
-        content: ' ';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 20%;
-        bottom: 0;
-        border: 2px #ea1821 solid;
-      }
-
-      img {
-        max-width: none;
-        max-height: none;
-        position: absolute;
-        top: 0;
-        right: 10%;
-        height: 105%;
-      }
-    }
+    padding: 0 0 70px;
+    background-color: #fafafa;
 
     .title {
-      margin: 30px 0;
       font-size: 37px;
-
-      @media (max-width: 767px) {
-        text-align: center;
-      }
+      font-weight: bold;
+      margin: 0;
+      margin-bottom: 45px;
     }
 
     .benefits {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    @media (min-width: 768px) {
+      .benefits {
+        display: flex;
+        justify-content: space-between;
+      }
+
       .benefit {
         position: relative;
-        padding: 22px 0;
-        padding-left: 70px;
-        font-size: 16px;
+        border: 2px solid #ea1821;
+        padding: 15px;
+        height: 180px;
+        max-width: 180px;
+        margin: 25px 5px;
 
         &::before {
           content: ' ';
           position: absolute;
-          top: 50%;
-          left: 0;
-          transform: translateY(-50%);
-          width: 56px;
-          height: 2px;
-          background-color: #ea1821;
+          height: 30px;
+          bottom: 10px;
+          right: 24px;
+          border-left: 2px solid #ea1821;
+          transition:all 0.3s ease;
+        }
+
+        &::after {
+          content: ' ';
+          position: absolute;
+          width: 30px;
+          bottom: 24px;
+          right: 10px;
+          border-top: 2px solid #ea1821;
+          transition:all 0.3s ease;
         }
 
         &:hover {
-          padding-left: 98px;
-
           &::before {
-            width: 84px;
+            transform: rotate(90deg);
           }
+
+          &::after {
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+
+    @media (max-width: 767px) {
+      .benefit {
+        position: relative;
+        padding: 10px 0 10px 50px;
+
+        &::before {
+          content: ' ';
+          position: absolute;
+          width: 35px;
+          left: 0;
+          top: 50%;
+          border-top: 2px solid #ea1821;
+          transform: translateY(-50%);
         }
       }
     }
