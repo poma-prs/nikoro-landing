@@ -54,23 +54,6 @@
     background-color: #fafafa;
     z-index: 0;
 
-    /* @media (max-width: 767px) {
-      background-image: url(assets/images/block2/home.png);
-      background-size: cover;
-      background-position: right;
-
-      &::before {
-        content: ' ';
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background-color: rgba(255, 255, 255, 0.6);
-        z-index: -1;
-      }
-    } */
-
     .title {
       font-size: 37px;
       font-weight: bold;
@@ -79,6 +62,7 @@
 
       @media (max-width: 767px) {
         margin-bottom: 30px;
+        text-align: center;
       }
     }
 
@@ -118,6 +102,22 @@
 
       p:not(:last-child) {
         margin-bottom: 45px;
+      }
+
+      p {
+        @media (max-width: 767px) {
+          padding: 10px;
+          position: relative;
+
+          &:before {
+            content: ' ';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            border-left: 2px solid #ea1821;
+          }
+        }
       }
     }
   }

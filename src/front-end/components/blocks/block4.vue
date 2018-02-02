@@ -1,102 +1,34 @@
 <template>
   <div class="block">
-    <div class="container">
-      <div class="title">Рассчитать стоимость своего дома</div>
-      <div class="slider">
-        <vue-slider v-model="square" v-bind="options">
-          <template slot="tooltip" scope="tooltip">
-            <div class="slider-tooltip">{{ tooltip.value }} м<sup>2</sup></div>
-          </template>
-        </vue-slider>
+    <div class="container-fluid">
+      <div class="text-center">
+        <h2 class="title title-font">Каркасный дом от “Никоро” – идеальное решение, если вы…</h2>
       </div>
       <div class="row">
-        <div class="col-sm-6">
-          <div class="home-types">
-            <radiobox v-model="selectedType" name="hometype" :options="types" :defind="1"></radiobox>
+        <div class="col-sm-4 nopadding" v-for="item in features">
+          <div class="feature" :style="{ backgroundImage: 'url('+ item.img + ')'}">
+            <span>{{ item.text }}</span>
           </div>
         </div>
-        <div class="col-sm-6 text-center">
-          <div class="summary">
-            <div class="sum-label">СТОИМОСТЬ ДОМА:</div>
-            <div class="sum-price">{{ summary | rubles }}</div>
-          </div>
-        </div>
-      </div>
-      <div class="btn-container">
-        <div class="btn">Получить подробный расчет стоимости</div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  var vueSlider = require('vue-slider-component');
-  var radiobox = require('../radiobox.vue');
-
   module.exports = {
     data() {
       return {
-        square: 150,
-        options: {
-          max: 500,
-          height: 3,
-          tooltipDir: "top",
-          processStyle: {
-            backgroundColor: "#ea1821"
-          },
-          bgStyle: {
-            backgroundColor: "#ea1821"
-          },
-          sliderStyle: {
-            border: "2px solid #ea1821",
-            height: "28px",
-            width: "28px",
-            top: "-12px",
-            backgroundColor: "white",
-            boxShadow: "none",
-          }
-        },
-        selectedType: null,
-        types: [{
-          text: "Дача",
-          desc: "",
-          price: 15500,
-          discountPrice: 11990
+        features: [{
+          text: 'Хотите жить в уютном, тихом и надежном доме',
+          img: 'assets/images/block4/home1.jpg',
         },{
-          text: "Классика",
-          desc: "",
-          price: 18300,
-          discountPrice: 15990
+          text: 'Устали переплачивать за квартиру',
+          img: 'assets/images/block4/home2.jpg',
         },{
-          text: "Под ключ",
-          desc: "",
-          price: 21000,
-          discountPrice: 19900
+          text: 'Мечтаете жить с детьми в просторном доме',
+          img: 'assets/images/block4/home3.jpg',
         }]
-      }
-    },
-    computed: {
-      summary: function() {
-        var price = this.selectedType
-          ? this.selectedType.discountPrice
-          : this.types[0].discountPrice;
-        return price * this.square;
-      }
-    },
-    components: { vueSlider, radiobox },
-    filters: {
-      rubles: function (value) {
-        if (!value) return '0 рублей';
-        value = parseInt(value);
-        var result = '';
-        while (value != 0) {
-          let v = (value % 1000).toString();
-          value = Math.floor(value / 1000);
-          while (value != 0 && v.length < 3)
-            v = '0' + v;
-          result = v + ' ' + result;
-        }
-        return result + ' рублей';
       }
     }
   };
@@ -106,62 +38,81 @@
   .block {
     position: relative;
     padding: 70px 0;
+    background-color: #1b1d1c;
+    color: white;
 
     .title {
+      position: relative;
       font-size: 37px;
+      font-weight: bold;
       text-align: center;
-      margin-bottom: 70px;
-    }
+      margin-bottom: 40px;
+      z-index: 0;
 
-    .slider {
-      margin-bottom: 60px;
+      @media (min-width: 768px) {
+        display: inline-block;
+        max-width: 600px;
+        margin: 0 auto 70px;
+        padding: 20px;
 
-      .slider-tooltip {
-        color: black;
-        font-size: 21px;
-        font-weight: bold;
-        white-space: nowrap;
-      }
-    }
-
-    .home-types {
-      text-align: center;
-    }
-
-    .summary {
-      display: inline-block;
-      border: 2px solid #ea1821;
-      padding: 20px;
-      margin-top: 38px;
-
-      .sum-label {
-        font-size: 21px;
-        color: #555555;
-        text-align: left;
-      }
-
-      .sum-price {
-        text-align: center;
-        font-size: 37px;
-        line-height: 2;
-        font-weight: bold;
-
-        @media (min-width: 767px) {
-          width: 400px;
+        &:before {
+          content: ' ';
+          position: absolute;
+          z-index: -1;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          right: 20%;
+          border: 2px solid #ea1821;
         }
       }
     }
 
-    .btn-container {
-      margin-top: 40px;
-      text-align: center;
+    .nopadding {
+      padding: 0 !important;
+    }
 
-      .btn {
-        color: white;
-        background-color: #ea1821;
-        border-radius: 0;
-        font-size: 16px;
-        padding: 13px 30px;
+    .feature {
+      position: relative;
+      background-size: cover;
+      text-align: center;
+      font-size: 21px;
+      font-weight: bold;
+      height: 33vw;
+      min-height: 300px;
+      z-index: 0;
+      transition:all 0.3s ease;
+
+      & > span {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 15%;
+        right: 15%;
+        transform: translateY(-50%);
+      }
+
+      &:before {
+        content: ' ';
+        position: absolute;
+        z-index: -1;
+        left: 20px;
+        top: 20px;
+        bottom: 20px;
+        right: 20px;
+        border: 2px solid #ea1821;
+        transition:all 0.3s ease;
+      }
+
+      &:hover {
+        font-size: 22px;
+
+        &:before {
+          left: 17px;
+          right: 17px;
+          top: 17px;
+          bottom: 17px;
+        }
       }
     }
   }

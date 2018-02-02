@@ -49,6 +49,10 @@
       font-weight: bold;
       margin: 0;
       margin-bottom: 45px;
+
+      @media (max-width: 767px){
+        text-align: center;
+      }
     }
 
     .benefits {
