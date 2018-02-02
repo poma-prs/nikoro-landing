@@ -1,101 +1,174 @@
 <template>
-  <div class="slider-block">
-    <flickity class="flickity-slider" ref="flickity" :options="flickityOptions">
-      <block-item v-for="page in pages" :title='page.title' :desc="page.desc"
-        :img="page.img" :bg-img="page.bgImg" @next="next" @previous="previous">
-      </block-item>
-    </flickity>
-    <div class="page-dots">
-      <div v-for="(i, index) in pages" @click="select(index)" :class="{ selected: selectInd == index }"></div>
+  <div class="block">
+    <div class="container">
+      <div class="title title-font">Рассчитайте стоимость своего дома</div>
+      <div class="slider">
+        <vue-slider v-model="square" v-bind="options">
+          <template slot="tooltip" scope="tooltip">
+            <div class="slider-tooltip">{{ tooltip.value }} м<sup>2</sup></div>
+          </template>
+        </vue-slider>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="home-types">
+            <radiobox v-model="selectedType" name="hometype" :options="types" :defind="1"></radiobox>
+          </div>
+        </div>
+        <div class="col-sm-6 text-center">
+          <div class="summary">
+            <div class="sum-label">СТОИМОСТЬ ДОМА:</div>
+            <div class="sum-price">{{ summary | rubles }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-container">
+        <div class="btn">Получить подробный расчет стоимости</div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-  var Flickity = require('vue-flickity');
-  var blockItem = require('./block6-item.vue');
+  var vueSlider = require('vue-slider-component');
+  var radiobox = require('../radiobox.vue');
 
   module.exports = {
     data() {
       return {
-        flickityOptions: {
-          adaptiveHeight: true,
-          prevNextButtons: false,
-          pageDots: false,
-          wrapAround: true
+        square: 150,
+        options: {
+          max: 500,
+          height: 3,
+          tooltipDir: "top",
+          processStyle: {
+            backgroundColor: "#ea1821"
+          },
+          bgStyle: {
+            backgroundColor: "#ea1821"
+          },
+          sliderStyle: {
+            border: "2px solid #ea1821",
+            height: "28px",
+            width: "28px",
+            top: "-12px",
+            backgroundColor: "#1b1d1c",
+            boxShadow: "none",
+          }
         },
-        selectInd: 0,
-        pages: [{
-          title: '"Умный дом"',
-          desc: 'Строя вместе с нами вы получаете технологию умного дома абсолютно бесплатно',
-          img: '/assets/images/block6/item1.jpg'
+        selectedType: null,
+        types: [{
+          text: "Дача",
+          desc: "",
+          price: 15500,
+          discountPrice: 11990
         },{
-          title: '"Умный дом"',
-          desc: 'Управление светильником или целым домом! Выбор за тобой!',
-          img: '/assets/images/block6/item2-1.jpg',
-          bgImg: '/assets/images/block6/item2.jpg'
+          text: "Классика",
+          desc: "",
+          price: 18300,
+          discountPrice: 15990
         },{
-          title: '"Умный дом"',
-          desc: 'Современным технологиям - эксклюзивный дизайн. Наши пульты органично впишутся в ваш дизайн',
-          img: '/assets/images/block6/item3-1.jpg',
-          bgImg: '/assets/images/block6/item3.jpg'
-        },{
-          title: '"Умный дом"',
-          desc: 'Да хоть из-за границы! Умным домом можно управлять не только с приложения или пульта, но и через Интернет',
-          img: '/assets/images/block6/item4.jpg'
+          text: "Под ключ",
+          desc: "",
+          price: 21000,
+          discountPrice: 19900
         }]
       }
     },
-    mounted() {
-      var that = this;
-      this.$refs.flickity.on('select', function() {
-        that.selectInd = that.$refs.flickity.selectedIndex();
-      })
-    },
-    methods: {
-      next() {
-        this.$refs.flickity.next();
-      },
-      previous() {
-        this.$refs.flickity.previous();
-      },
-      select(ind) {
-        this.$refs.flickity.select(ind);
+    computed: {
+      summary: function() {
+        var price = this.selectedType
+          ? this.selectedType.discountPrice
+          : this.types[0].discountPrice;
+        return price * this.square;
       }
     },
-    components: { Flickity, blockItem }
+    components: { vueSlider, radiobox },
+    filters: {
+      rubles: function (value) {
+        if (!value) return '0 рублей';
+        value = parseInt(value);
+        var result = '';
+        while (value != 0) {
+          let v = (value % 1000).toString();
+          value = Math.floor(value / 1000);
+          while (value != 0 && v.length < 3)
+            v = '0' + v;
+          result = v + ' ' + result;
+        }
+        return result + ' рублей';
+      }
+    }
   };
 </script>
 
 <style lang="scss" scoped>
-  .slider-block {
+  .block {
     position: relative;
-    overflow: hidden;
-    padding-bottom: 20px;
+    padding: 70px 0;
+    background-color: #1b1d1c;
+    color: white;
 
     .title {
       font-size: 37px;
-      margin-bottom: 30px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 70px;
     }
 
-    .flickity-slider:focus {
-      outline: none;
+    .slider {
+      margin-bottom: 60px;
+
+      .slider-tooltip {
+        color: white;
+        font-size: 21px;
+        font-weight: bold;
+        white-space: nowrap;
+      }
     }
 
-    .page-dots {
+    .home-types {
+      text-align: center;
+    }
+
+    .summary {
+      display: inline-block;
+      border: 2px solid #ea1821;
+      padding: 20px;
+      margin-top: 38px;
+
+      .sum-label {
+        font-size: 21px;
+        color: #999999;
+        text-align: left;
+      }
+
+      .sum-price {
+        text-align: center;
+        font-size: 37px;
+        line-height: 2;
+        font-weight: bold;
+
+        @media (min-width: 767px) {
+          width: 400px;
+        }
+      }
+    }
+
+    .btn-container {
+      margin-top: 40px;
       text-align: center;
 
-      & > * {
-        display: inline-block;
-        width: 12px;
-        height: 12px;
-        border: 2px solid #ea1821;
-        border-radius: 50%;
-        margin: 10px;
-        cursor: pointer;
+      .btn {
+        color: white;
+        background-color: #ea1821;
+        border-radius: 0;
+        font-size: 16px;
+        padding: 13px 30px;
 
-        &.selected  {
-          background-color: #ea1821;
+        &:hover {
+          color: white;
+          background-color: #bb131a;
         }
       }
     }
