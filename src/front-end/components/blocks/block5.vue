@@ -1,32 +1,25 @@
 <template>
   <div class="block">
     <div class="container">
-      <div class="title">Дом вашей мечты уже есть в каталоге:</div>
+      <h2 class="title title-font">Технологии строительства</h2>
       <div class="row">
-        <div class="col-sm-4" v-for="home in homes">
-          <div class="home-item">
-            <img :src="home.img" :alt="home.name">
-            <div class="home-desc">
-              <div class="home-name">{{home.name}}</div>
-              <div class="home-attr">
-                <span>Общая площадь:</span>
-                <span>{{home.square}} м<sup>2</sup></span>
-              </div>
-              <div class="home-attr">
-                <span>Размер:</span>
-                <span>{{home.sizes}} м</span>
-              </div>
-              <div class="home-price">{{ home.price }}</div>
+        <div class="col-sm-4" v-for="plan in plans">
+          <div class="plan-item">
+            <img :src="plan.img" :alt="plan.name">
+            <h3 class="plan-name">{{plan.name}}</h3>
+            <div class="additional">
+              <span v-if="plan.additional" @click="plan.additional = false">Скрыть</span>
+              <span v-else @click="plan.additional = true">Подробнее...</span>
+            </div>
+            <ul class="features" :class="{ 'feature-hide': plan.additional, 'feature-show': !plan.additional }">
+              <li v-for="f in plan.features">{{ f }}</li>
+            </ul>
+            <div class="plan-price">{{ plan.price }} руб/м<sup>2</sup></div>
+            <div class="plan-discount">{{ plan.discountPrice }} руб/м<sup>2</sup></div>
+            <div class="btn-container">
+              <div class="btn">Узнать подробнее</div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="row catalog">
-        <div class="col-sm-7">
-          <div class="title">Посмотрите каталог из 20 лучших наших проектов</div>
-        </div>
-        <div class="col-sm-5">
-          <div class="btn">Получить каталог</div>
         </div>
       </div>
     </div>
@@ -37,46 +30,78 @@
   module.exports = {
     data() {
       return {
-        homes: [{
-          name: 'Каркасный дом',
-          square: 130,
-          sizes: '7x9',
-          price: 'от 1.560.000 рублей',
-          img: '/assets/images/block5/home1.jpg'
+        plans: [{
+          name: 'Дача',
+          features: [
+            'Срок строительства от 45 дней',
+            'Фундамент свайно-винтовой',
+            'Стандартный каркас отработанный антисептиком Neomid',
+            'Базальтовый утеплитель 100мм',
+            'Кровля - металлопрофиль',
+            'Внешняя отделка - OSB',
+            'Окна пластиковые',
+            'Дверь металлическая',
+            'Полы - доска шпунтованная 150x40',
+            'Внутренняя отделка - вагонка'
+          ],
+          price: 'от 15 500',
+          discountPrice: 'от 11 990',
+          img: '/assets/images/block7/item1.jpg',
+          additional: false
         },{
-          name: 'Каркасный дом',
-          square: 64,
-          sizes: '6,4x7,2',
-          price: 'от 990.000 рублей',
-          img: '/assets/images/block5/home2.jpg'
+          name: 'Классика',
+          features: [
+            'Срок строительства от 60 дней',
+            'Фундамент свайно-винтовой',
+            'Стандартный каркас отработанный антисептиком Neomid',
+            'Базальтовый утеплитель 150+50 (200)мм',
+            'Кровля - металлочерепица',
+            'Внешняя отделка - сайдинг или имитация бруса',
+            'Окна пластиковые',
+            'Дверь металлическая',
+            'Полы - доска шпунтованная 150x40',
+            'Внутренняя отделка - ГКЛВ 12,5 мм',
+            'Вентиляция',
+            'Электромонтаж по всему дому, без подключения световых приборов',
+            'Отопление - конвекторы электрические',
+            'Монтаж канализации и водоснабжения в санузлах и кухне'
+          ],
+          price: 'от 18 300',
+          discountPrice: 'от 15 990',
+          img: '/assets/images/block7/item2.jpg',
+          additional: false
         },{
-          name: 'Дом из газобетона',
-          square: 166,
-          sizes: '18,4x14,3',
-          price: 'от 2.350.000 рублей',
-          img: '/assets/images/block5/home3.jpg'
-        },{
-          name: 'Каркасный дом',
-          square: 85,
-          sizes: '8x9',
-          price: 'от 1.020.000 рублей',
-          img: '/assets/images/block5/home4.jpg'
-        },{
-          name: 'Баня из бруса',
-          square: 42,
-          sizes: '5,2x10,7',
-          price: 'от 408.000 рублей',
-          img: '/assets/images/block5/home5.jpg'
-        },{
-          name: 'Газобетонный дом',
-          square: 195,
-          sizes: '14x16,3',
-          price: 'от 5.070.000 рублей',
-          img: '/assets/images/block5/home6.jpg'
+          name: 'Под ключ',
+          features: [
+            'Срок строительства от 75 дней',
+            'Фундамент свайно-винтовой',
+            'Стандартный каркас отработанный антисептиком Neomid',
+            'Базальтовый утеплитель 150+50 (200)мм',
+            'Кровля - металлочерепица',
+            'Внешняя отделка - декоративная штукатурка или имитация бруса',
+            'Окна пластиковые',
+            'Дверь металлическая',
+            'Полы - доска шпунтованная 150x40',
+            'Внутренняя отделка - ГКЛВ 12,5 мм',
+            'Вентиляция',
+            'Электромонтаж по всему дому, с подключением световых приборов',
+            'Отопление - тёплый пол первый этаж , установка котла и радиаторов',
+            'Канализация и водоснабжение в санузлах и кухне',
+            'Чистовая отделка пола - ламинат',
+            'Чистовая отделка санузлов плиткой'
+          ],
+          price: 'от 21 000',
+          discountPrice: 'от 19 900',
+          img: '/assets/images/block7/item3.jpg',
+          additional: false
         }]
       }
     },
-    components: {}
+    methods: {
+      animationend() {
+        console.log('asd');
+      }
+    }
   };
 </script>
 
@@ -84,110 +109,130 @@
   .block {
     position: relative;
     padding: 70px 0;
-    background-color: #1b1d1c;
-    color: white;
+    background-color: #fafafa;
 
     .title {
       font-size: 37px;
+      font-weight: bold;
       margin-bottom: 30px;
-
-      @media (max-width: 767px) {
-        text-align: center;
-      }
+      text-align: center;
     }
 
-    .home-item {
+    .plan-item {
       position: relative;
-      padding-top: 20px;
+      padding: 0 15px 15px 15px;
       margin: 15px 10px;
       z-index: 0;
 
       img {
-        display: block;
-        width: 90%;
+        width: 100%;
       }
 
       &::before {
         content: ' ';
         position: absolute;
-        bottom: 0;
+        top: 80px;
+        bottom: 38px;
+        left: 0;
         right: 0;
-        width: 85%;
-        height: 80%;
         border: 2px #EA1821 solid;
         z-index: -1;
-        transition:all 0.3s ease;
       }
 
-      &:hover::before {
-        @media (min-width: 768px) {
-          height: 100%;
-        }
+      .plan-name {
+        font-size: 21px;
+        font-weight: bold;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        text-align: center;
       }
 
-      .home-desc {
-        margin-left: calc(15% + 4px);
-        padding: 20px;
+      .plan-price {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 16px;
+        color: #999999;
+        text-decoration: line-through;
+      }
 
-        .home-name {
-          font-size: 21px;
-          font-weight: bold;
-          margin-bottom: 10px;
-        }
+      .plan-discount {
+        font-size: 21px;
+        color: #1b1d1c;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
 
-        .home-attr {
-          display: flex;
-          line-height: 2;
-          justify-content: space-between;
-        }
+      .btn-container {
+        text-align: right;
 
-        .home-price {
-          font-size: 21px;
-          font-weight: bold;
-          text-align: right;
-          margin-top: 10px;
+        .btn {
+          color: white;
+          background-color: #ea1821;
+          border-radius: 0;
+          font-size: 16px;
+          padding: 13px 40px;
+
+          @media (max-width: 767px) {
+            width: 100%;
+          }
+
+          @media (min-width: 768px) {
+            display: inline-block;
+          }
+
+          &:hover {
+            color: white;
+            background-color: #bb131a;
+          }
         }
       }
     }
 
-    .catalog {
+    .additional {
+      display: block;
+      text-decoration: underline;
+      color: #ea1821;
+      cursor: pointer;
       text-align: center;
-      margin-top: 40px;
 
-      @media (min-width: 767px) {
-        display: flex;
-        align-items: stretch;
+      &:hover {
+        color: #bb131a;
       }
+    }
 
-      .title {
-        display: inline-block;
-        max-width: 500px;
-        text-align: left;
-        margin: 0;
+    .features {
+      font-size: 16px;
+      color: #0c0d0d;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      transition: max-height 1s ease-in-out;;
 
-        @media (max-width: 767px) {
-          margin-bottom: 20px;
-          text-align: center;
-        }
-      }
+      li {
+        margin: 13px 0;
+        position: relative;
+        padding-left: 30px;
 
-      .btn {
-        @media (min-width: 768px) {
+        &:before {
+          content: ' ';
           position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translateX(-50%) translateY(-50%);
+          top: 3px;
+          left: 7px;
+          height: 14px;
+          width: 14px;
+          border: 2px solid #ea1821;
         }
+      }
 
-        @media (max-width: 767px) {
-          width: 100%;
-        }
+      &.feature-show {
+        max-height: 0;
+      }
 
-        color: white;
-        background-color: #ea1821;
-        border-radius: 0;
-        font-size: 16px;
-        padding: 13px 40px;
+      &.feature-hide {
+        height: auto;
+        max-height: 1000px;
       }
     }
   }
