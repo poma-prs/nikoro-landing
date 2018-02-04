@@ -11,15 +11,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <div class="container partners">
-      <div class="title">Партнеры</div>
-      <div class="row">
-        <div class="col-sm-6" v-for="item in partners">
-          <div class="partner-container"><img :src="item"></div>
-        </div>
-      </div>
-    </div> -->
   </div>
 </template>
 
@@ -43,11 +34,6 @@
     img: '/assets/images/block7/shape6.png',
     text: 'Строим по технологии СНиП СП31-105-2002'
   }];
-
-  /*var partners = [
-    '/assets/images/block7/partner1.png',
-    '/assets/images/block7/partner1.png'
-  ];*/
 
   module.exports = {
     data() {
@@ -85,20 +71,5 @@
         }
       }
     }
-
-    /* .partners {
-      text-align: center;
-
-      .title {
-        font-size: 23px;
-        font-weight: bold;
-        margin-top: 50px;
-        margin-bottom: 30px;
-      }
-
-      .partner-container {
-        margin-bottom: 25px;
-      }
-    } */
   }
 </style>

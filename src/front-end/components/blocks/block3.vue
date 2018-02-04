@@ -75,6 +75,7 @@
         height: 180px;
         max-width: 180px;
         margin: 25px 5px;
+        background-color: rgba(255,255,255,0.5);
 
         &::before {
           content: ' ';

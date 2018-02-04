@@ -12,6 +12,10 @@
     <block7></block7>
     <block8></block8>
     <block9></block9>
+    <block10></block10>
+    <block11></block11>
+    <block12></block12>
+    <block13></block13>
   </div>
 </template>
 
@@ -26,6 +30,10 @@
   var block7 = require('./components/blocks/block7.vue');
   var block8 = require('./components/blocks/block8.vue');
   var block9 = require('./components/blocks/block9.vue');
+  var block10 = require('./components/blocks/block10.vue');
+  var block11 = require('./components/blocks/block11.vue');
+  var block12 = require('./components/blocks/block12.vue');
+  var block13 = require('./components/blocks/block13.vue');
 
   module.exports = {
     mounted() {
@@ -47,7 +55,11 @@
       block6: block6,
       block7: block7,
       block8: block8,
-      block9: block9
+      block9: block9,
+      block10: block10,
+      block11: block11,
+      block12: block12,
+      block13: block13
     }
   };
 </script>

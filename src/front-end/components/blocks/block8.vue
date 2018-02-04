@@ -83,7 +83,7 @@
 
     @media (min-width: 768px) {
       background: url(assets/images/block8/background.jpg) right center no-repeat, #1b1d1c;
-      background-size: contain;
+      background-size: 34%;
     }
 
     .title {

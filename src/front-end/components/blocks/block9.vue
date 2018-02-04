@@ -6,6 +6,7 @@
         <div class="col-sm-3 text-center" v-for="item in items">
           <div class="item">
             <div class="item-value">{{ item.value }}</div>
+            <hr>
             <div class="item-text">{{ item.text }}</div>
           </div>
         </div>
@@ -56,13 +57,21 @@
       .item-value {
         font-size: 37px;
         font-weight: bold;
-        border-bottom: 2px solid #ea1821;
-        padding-bottom: 15px;
-        margin-bottom: 15px;
         margin-top: 20px;
       }
 
-      .item-text {}
+      hr {
+        border: 0;
+        border-bottom: 2px solid #ea1821;
+        width: 80%;
+        transition:all 0.3s ease;
+      }
+
+      &:hover {
+        hr {
+          width: 100%;
+        }
+      }
     }
   }
 </style>
