@@ -6,7 +6,7 @@
         <div class="col-xs-12 col-sm-7 content-part">
           <div class="offer">
             <div class="titles">
-              <h1 class="title title-font">Строительство каркасных домов под ключ в Ижевске от 359 000 рублей</h1>
+              <h1 class="title title-font">Строительство каркасных домов в Ижевске от 359 000 рублей</h1>
               <div class="subtitle">Оставьте заявку на рассчет стоимости дома</div>
             </div>
           </div>
@@ -84,6 +84,10 @@
             line-height: 1.2;
             margin: 0;
             margin-bottom: 20px;
+
+            @media (min-width: 768px) {
+              background-color: #1B1D1C;
+            }
           }
 
           .subtitle {

@@ -23,9 +23,7 @@
     },
     methods: {
       onChange (event) {
-        console.log('checked: ', event.target.checked);
         if (event.target.checked) {
-          console.log(this.options[event.target.value]);
           this.$emit('input', this.options[event.target.value])
         }
       }

@@ -41,8 +41,10 @@
 <style lang="scss" scoped>
   .block {
     position: relative;
-    padding: 0 0 70px;
+    padding: 70px 0;
     background-color: #fafafa;
+    background-image: url(assets/images/block3/background.jpg);
+    background-size: cover;
 
     .title {
       font-size: 37px;

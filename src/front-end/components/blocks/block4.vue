@@ -2,7 +2,9 @@
   <div class="block">
     <div class="container-fluid">
       <div class="text-center">
-        <h2 class="title title-font">Каркасный дом от “Никоро” – идеальное решение, если вы…</h2>
+        <h2 class="title title-font">
+          <span>Каркасный дом от “Никоро” – идеальное решение, если вы…</span>
+        </h2>
       </div>
       <div class="row">
         <div class="col-sm-4 nopadding" v-for="item in features">
@@ -54,6 +56,7 @@
         max-width: 600px;
         margin: 0 auto 70px;
         padding: 20px;
+        line-height: 1.3;
 
         &:before {
           content: ' ';
@@ -64,6 +67,10 @@
           bottom: 0;
           right: 20%;
           border: 2px solid #ea1821;
+        }
+
+        span {
+          background-color: #1b1d1c;
         }
       }
     }

@@ -1,7 +1,7 @@
 <template>
   <div class="block">
     <div class="container">
-      <div class="title title-font">Рассчитайте стоимость своего дома</div>
+      <h2 class="title title-font">Рассчитайте стоимость своего дома</h2>
       <div class="slider">
         <vue-slider v-model="square" v-bind="options">
           <template slot="tooltip" scope="tooltip">
@@ -165,6 +165,7 @@
         border-radius: 0;
         font-size: 16px;
         padding: 13px 30px;
+        max-width: 100%;
 
         &:hover {
           color: white;

@@ -68,6 +68,8 @@
   body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
+    color: #1b1d1c;
+    overflow-x: hidden;
   }
 
   img {

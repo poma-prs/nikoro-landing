@@ -1,7 +1,7 @@
 <template>
   <div class="block">
     <div class="container">
-      <h2 class="title title-font">Технологии строительства</h2>
+      <h2 class="title title-font">Комплектации домов</h2>
       <div class="row">
         <div class="col-sm-4" v-for="plan in plans">
           <div class="plan-item">
@@ -17,7 +17,7 @@
             <div class="plan-price">{{ plan.price }} руб/м<sup>2</sup></div>
             <div class="plan-discount">{{ plan.discountPrice }} руб/м<sup>2</sup></div>
             <div class="btn-container">
-              <div class="btn">Узнать подробнее</div>
+              <div class="btn">Заказать</div>
             </div>
           </div>
         </div>
@@ -96,11 +96,6 @@
           additional: false
         }]
       }
-    },
-    methods: {
-      animationend() {
-        console.log('asd');
-      }
     }
   };
 </script>
@@ -172,6 +167,7 @@
           border-radius: 0;
           font-size: 16px;
           padding: 13px 40px;
+          width: 240px;
 
           @media (max-width: 767px) {
             width: 100%;
