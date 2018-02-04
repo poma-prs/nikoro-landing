@@ -31,7 +31,7 @@
     data() {
       return {
         plans: [{
-          name: 'Дача',
+          name: '“Дача”',
           features: [
             'Срок строительства от 45 дней',
             'Фундамент свайно-винтовой',
@@ -49,7 +49,7 @@
           img: '/assets/images/block7/item1.jpg',
           additional: false
         },{
-          name: 'Классика',
+          name: '“Классика”',
           features: [
             'Срок строительства от 60 дней',
             'Фундамент свайно-винтовой',
@@ -71,7 +71,7 @@
           img: '/assets/images/block7/item2.jpg',
           additional: false
         },{
-          name: 'Под ключ',
+          name: '“Под ключ”',
           features: [
             'Срок строительства от 75 дней',
             'Фундамент свайно-винтовой',

@@ -117,7 +117,9 @@
     }
 
     .slider {
-      margin-bottom: 60px;
+      @media (min-width: 768px) {
+        margin-bottom: 60px;
+      }
 
       .slider-tooltip {
         color: white;
@@ -135,7 +137,10 @@
       display: inline-block;
       border: 2px solid #ea1821;
       padding: 20px;
-      margin-top: 38px;
+
+      @media (min-width: 768px) {
+        margin-top: 38px;
+      }
 
       .sum-label {
         font-size: 21px;
@@ -146,11 +151,12 @@
       .sum-price {
         text-align: center;
         font-size: 37px;
-        line-height: 2;
         font-weight: bold;
 
-        @media (min-width: 767px) {
+        @media (min-width: 768px) {
           width: 400px;
+          line-height: 2;
+          margin-top: 15px;
         }
       }
     }
@@ -166,6 +172,12 @@
         font-size: 16px;
         padding: 13px 30px;
         max-width: 100%;
+
+        @media (max-width: 767px) {
+          width: 100%;
+          padding-left: 0;
+          padding-right: 0;
+        }
 
         &:hover {
           color: white;

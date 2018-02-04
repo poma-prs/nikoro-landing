@@ -1,105 +1,154 @@
 <template>
-  <div class="slider-block">
+  <div class="block">
     <div class="container">
-      <div class="title">Варианты отделки</div>
-    </div>
-    <flickity class="flickity-slider" ref="flickity" :options="flickityOptions">
-      <block-item v-for="page in pages" :name='page.name' :img="page.img" @next="next" @previous="previous">
-      </block-item>
-    </flickity>
-    <div class="page-dots">
-      <div v-for="(i, index) in pages" @click="select(index)" :class="{ selected: selectInd == index }"></div>
+      <div class="row">
+        <div class="col-sm-8">
+          <h2 class="title title-font">Почему у 98,7% людей возникают трудности со строительством дома, а наши клиенты не знают проблем?</h2>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <p>Комплексный подход к строительству от разработки строительного проекта до установки сантехники</p>
+
+              <h3>Акция</h3>
+              <p>Строительный проект в подарок</p>
+            </div>
+            <div class="col-sm-6">
+              <div class="counter">
+                <div>До конца акции:</div>
+                <div class="digits">
+                  <div>{{ days }}<br><span>дней</span></div>
+                  <div>{{ hours | leadZero }}<br><span>часов</span></div>
+                  <div>:</div>
+                  <div>{{ minutes | leadZero }}<br><span>минут</span></div>
+                  <div>:</div>
+                  <div>{{ seconds | leadZero }}<br><span>секунд</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <div class="btn">Заказать строительство дома</div>
+          </div>
+
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-  var Flickity = require('vue-flickity');
-  var blockItem = require('./block8-item.vue');
-
   module.exports = {
     data() {
       return {
-        flickityOptions: {
-          adaptiveHeight: true,
-          prevNextButtons: false,
-          pageDots: false,
-          wrapAround: true
-        },
-        selectInd: 0,
-        pages: [{
-          name: 'Облицовочный кирпич',
-          img: '/assets/images/block8/item1.jpg'
-        },{
-          name: 'Декоративная штукатурка',
-          img: '/assets/images/block8/item2.jpg'
-        },{
-          name: 'Металлосайдинг',
-          img: '/assets/images/block8/item3.jpg'
-        },{
-          name: 'Облицовочный кирпич',
-          img: '/assets/images/block8/item4.jpg'
-        },{
-          name: 'Имитация бруса',
-          img: '/assets/images/block8/item5.jpg'
-        },{
-          name: 'Вагонка',
-          img: '/assets/images/block8/item6.jpg'
-        }]
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0
+      }
+    },
+    methods: {
+      updateCounter() {
+        var dtime = 14 * 24 * 60 * 60 * 1000;
+        var time = dtime - (Date.now() - new Date('02/01/2018').getTime()) % dtime;
+        this.days = Math.floor(time / (24 * 60 * 60 * 1000));
+        time -= this.days * 24 * 60 * 60 * 1000;
+        this.hours = Math.floor(time / (60 * 60 * 1000));
+        time -= this.hours * 60 * 60 * 1000;
+        this.minutes = Math.floor(time / (60 * 1000));
+        time -= this.minutes * 60 * 1000;
+        this.seconds = Math.floor(time / 1000);
       }
     },
     mounted() {
-      var that = this;
-      this.$refs.flickity.on('select', function() {
-        that.selectInd = that.$refs.flickity.selectedIndex();
-      })
+      this.updateCounter();
+      setInterval(this.updateCounter, 1000);
     },
-    methods: {
-      next() {
-        this.$refs.flickity.next();
-      },
-      previous() {
-        this.$refs.flickity.previous();
-      },
-      select(ind) {
-        this.$refs.flickity.select(ind);
+    filters: {
+      leadZero: function (value) {
+        if (value < 0 || value >= 10) return value;
+        return '0' + value;
       }
     },
-    components: { Flickity, blockItem }
+    components: {}
   };
 </script>
 
 <style lang="scss" scoped>
-  .slider-block {
+  .block {
     position: relative;
-    overflow: hidden;
-    padding: 70px 0 40px;
+    padding: 70px 0;
+    color: white;
+    background-color: #1b1d1c;
+
+    @media (min-width: 768px) {
+      background: url(assets/images/block8/background.jpg) right center no-repeat, #1b1d1c;
+      background-size: contain;
+    }
 
     .title {
       font-size: 37px;
-      margin-bottom: 30px;
-      text-align: center;
+      font-weight: bold;
+      margin-bottom: 70px;
     }
 
-    .flickity-slider:focus {
-      outline: none;
-    }
+    .counter {
+      border: 2px solid #ea1821;
+      padding: 25px;
+      margin-bottom: 50px;
 
-    .page-dots {
-      text-align: center;
+      @media (max-width: 767px) {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
 
-      & > * {
-        display: inline-block;
-        width: 12px;
-        height: 12px;
-        border: 2px solid #ea1821;
-        border-radius: 50%;
-        margin: 10px;
-        cursor: pointer;
+      .digits {
+        display: flex;
+        justify-content: space-between;
+        font-size: 37px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 0.6;
+        margin-top: 30px;
 
-        &.selected  {
-          background-color: #ea1821;
+        & > * {
+          margin: 0 5px;
+
+          &:first-child {
+            margin-left: 0;
+            margin-right: 20px;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
         }
+
+        span {
+          font-size: 16px;
+          font-weight: normal;
+          line-height: 1;
+        }
+      }
+    }
+
+    .btn {
+      color: white;
+      background-color: #ea1821;
+      border-radius: 0;
+      font-size: 16px;
+      padding: 13px 30px;
+      max-width: 100%;
+
+      @media (max-width: 767px) {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      &:hover {
+        color: white;
+        background-color: #bb131a;
       }
     }
   }
