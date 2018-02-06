@@ -1,6 +1,8 @@
 <template>
   <div class="radio-container">
-    <label class="radio-box" v-for="(opt, index) in options">{{ opt.text }}
+    <label class="radio-box" v-for="(opt, index) in options">
+      <span class="opt-text">{{ opt.text }}</span>
+      <span class="opt-desc" v-if="opt.desc">{{ opt.desc }}</span>
       <input type="radio" :checked="index == defind ? 'checked': ''" :name="name" :value="index" @change="onChange">
       <span class="checkmark"></span>
     </label>
@@ -52,14 +54,25 @@
         cursor: pointer;
       }
 
+      .opt-text {
+
+      }
+
+      .opt-desc {
+        display: block;
+        color: #999;
+        font-weight: normal;
+      }
+
       .checkmark {
         position: absolute;
-        top: 0;
+        top: 50%;
         left: 0;
         height: 28px;
         width: 28px;
         border: 2px solid #ea1821;
         border-radius: 0;
+        transform: translateY(-50%);
 
         &::after {
           display: none;
@@ -74,7 +87,7 @@
       }
 
       &:hover input ~ .checkmark {
-        top: -1px;
+        top: calc(50% - 1px);
         left: -1px;
         height: 30px;
         width: 30px;

@@ -58,18 +58,18 @@
         },
         selectedType: null,
         types: [{
-          text: "Дача",
+          text: "“Дача”",
           desc: "",
           price: 15500,
           discountPrice: 11990
         },{
-          text: "Классика",
-          desc: "",
+          text: "“Классика”",
+          desc: "Буду жить постоянно",
           price: 18300,
           discountPrice: 15990
         },{
-          text: "Под ключ",
-          desc: "",
+          text: "“Под ключ”",
+          desc: "Буду жить постоянно",
           price: 21000,
           discountPrice: 19900
         }]

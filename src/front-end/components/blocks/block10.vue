@@ -42,19 +42,19 @@
           price: 'от 1.560.000 рублей',
           img: '/assets/images/block10/home1.jpg'
         },{
-          square: 64,
-          sizes: '6,4x7,2',
-          price: 'от 990.000 рублей',
+          square: 115,
+          sizes: '9x11',
+          price: 'от 1.380.000 рублей',
           img: '/assets/images/block10/home2.jpg'
-        },{
-          square: 166,
-          sizes: '18,4x14,3',
-          price: 'от 2.350.000 рублей',
-          img: '/assets/images/block10/home3.jpg'
         },{
           square: 85,
           sizes: '8x9',
           price: 'от 1.020.000 рублей',
+          img: '/assets/images/block10/home3.jpg'
+        },{
+          square: 190,
+          sizes: '9x10,5',
+          price: 'от 2.280.000 рублей',
           img: '/assets/images/block10/home4.jpg'
         },{
           square: 107,
