@@ -4,21 +4,25 @@
       <div class="row">
         <div class="hidden-xs col-sm-4 image-part"></div>
         <div class="col-xs-12 col-sm-7 content-part">
-          <div class="offer">
-            <div class="titles">
-              <h1 class="title title-font">Строительство каркасных домов в Ижевске от 359 000 рублей</h1>
-              <div class="subtitle">Оставьте заявку на рассчет стоимости дома</div>
+
+          <div>
+            <div class="offer">
+              <div class="titles">
+                <h1 class="title title-font">Строительство каркасных домов в Ижевске от 359 000 рублей</h1>
+                <div class="subtitle">Оставьте заявку на рассчет стоимости дома</div>
+              </div>
+            </div>
+            <div class="offer">
+              <div class="buttons">
+                <div class="btn">Остaвить заявку</div>
+                <!-- <div class="bonus">
+                  Оставьте заявку на рассчет стоимости дома
+                  <div class="subbonus">+ бесплатно "Технология умный дом"</div>
+                </div> -->
+              </div>
             </div>
           </div>
-          <div class="offer">
-            <div class="buttons">
-              <div class="btn">Остaвить заявку</div>
-              <!-- <div class="bonus">
-                Оставьте заявку на рассчет стоимости дома
-                <div class="subbonus">+ бесплатно "Технология умный дом"</div>
-              </div> -->
-            </div>
-          </div>
+
         </div>
       </div>
     </div>
@@ -52,6 +56,7 @@
     }
 
     .content-part {
+      position: relative;
       padding-top: 150px;
       padding-bottom: 150px;
       min-height: 90vh;
@@ -59,6 +64,16 @@
 
       @media (max-width: 767px) {
         background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      @media (min-width: 768px) {
+        & > div {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 100%;
+          transform: translateY(-50%) translateX(-50%);
+        }
       }
 
       .offer {

@@ -16,7 +16,8 @@
   "dependencies": {
     "vue": "^2.4.2",
     "vue-flickity": "^1.0.9",
-    "vue-slider-component": "^2.5.1"
+    "vue-slider-component": "^2.5.1",
+    "vue-smooth-scroll": "^1.0.13"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.4",

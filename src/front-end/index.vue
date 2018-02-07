@@ -5,17 +5,17 @@
     </div>
     <block1></block1>
     <block2></block2>
-    <block3></block3>
+    <block3 id="advantages"></block3>
     <block4></block4>
     <block5></block5>
-    <block6></block6>
+    <block6 id="calculator"></block6>
     <block7></block7>
     <block8></block8>
     <block9></block9>
-    <block10></block10>
+    <block10 id="projects"></block10>
     <block11></block11>
     <block12></block12>
-    <block13></block13>
+    <block13 id="contacts"></block13>
   </div>
 </template>
 

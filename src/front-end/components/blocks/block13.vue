@@ -5,15 +5,16 @@
         <div class="col-sm-4">
           г. Ижевск,<br>
           ул. Орджоникидзе, 2б,<br>
-          Офис 66
+          Офис 66<br>
+          <a href="http://go.2gis.com/mddes" target="_blank" title="2GIS, г. Ижевск, ул. Орджоникидзе, 2б, Офис 66">Посмотреть на карте Ижевска</a>
         </div>
         <div class="col-sm-4">
-          <a class="tel" href="tel:+79501738827">+7 (950) 173-88-27</a><br>
-          <a class="email" href="mailto:sk.nikoro@yandex.ru">sk.nikoro@yandex.ru</a>
+          <a class="tel" href="tel:+79501738827" title="Телефон">+7 (950) 173-88-27</a><br>
+          <a class="email" href="mailto:sk.nikoro@yandex.ru" title="Email">sk.nikoro@yandex.ru</a>
         </div>
         <div class="col-sm-4 links">
-          <a href="http://instagram.com/sk_nikoro"><i class="fa fa-instagram"></i></a>
-          <a href="https://vk.com/sk_nikoro"><i class="fa fa-vk"></i></a>
+          <a href="http://instagram.com/sk_nikoro" target="_blank" title="Никоро в Instagram"><i class="fa fa-instagram"></i></a>
+          <a href="https://vk.com/sk_nikoro" target="_blank" title="Никоро в VK"><i class="fa fa-vk"></i></a>
         </div>
       </div>
 

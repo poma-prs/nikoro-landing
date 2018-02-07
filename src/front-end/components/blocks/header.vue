@@ -7,11 +7,11 @@
         </div>
         <div class="col-sm-8">
           <div class="nav">
-            <a class="link" href="#">Преимущества</a>
-            <a class="link" href="#">Проекты</a>
-            <a class="link" href="#">Калькулятор</a>
-            <a class="link" href="#">Контакты</a>
-            <a class="tel" href="tel:+79501738827">+7 (950) 173-88-27</a>
+            <a class="link" href="#advantages" v-smooth-scroll>Преимущества</a>
+            <a class="link" href="#calculator" v-smooth-scroll>Калькулятор</a>
+            <a class="link" href="#projects" v-smooth-scroll>Проекты</a>
+            <a class="link" href="#contacts" v-smooth-scroll>Контакты</a>
+            <a class="tel" href="tel:+79501738827" title="Телефон">+7 (950) 173-88-27</a>
           </div>
         </div>
       </div>
