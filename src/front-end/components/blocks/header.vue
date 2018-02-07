@@ -37,7 +37,7 @@
     padding: 10px 0;
 
     img.logo {
-      height: 40px;
+      height: 30px;
     }
 
     .nav {

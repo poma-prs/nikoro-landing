@@ -1,8 +1,13 @@
 <template>
   <div>
-    <div class="header">
-      <app-header></app-header>
-    </div>
+    <fixed-header :fixed.sync="isFixed">
+      <div class="header" :class="{ 'header-fix': isFixed, 'header-abs': !isFixed }">
+        <app-header></app-header>
+      </div>
+    </fixed-header>
+    <!-- <div class="header">
+
+    </div> -->
     <block1></block1>
     <block2></block2>
     <block3 id="advantages"></block3>
@@ -20,6 +25,7 @@
 </template>
 
 <script>
+  var FixedHeader = require('vue-fixed-header');
   var appHeader = require('./components/blocks/header.vue');
   var block1 = require('./components/blocks/block1.vue');
   var block2 = require('./components/blocks/block2.vue');
@@ -36,6 +42,11 @@
   var block13 = require('./components/blocks/block13.vue');
 
   module.exports = {
+    data() {
+      return {
+        isFixed: false
+      }
+    },
     mounted() {
       /*$(document).on("scroll", function() {
         $('.hidden-animated').each(function() {
@@ -46,6 +57,7 @@
       });*/
     },
     components: {
+      FixedHeader: FixedHeader,
       appHeader: appHeader,
       block1: block1,
       block2: block2,
@@ -67,10 +79,18 @@
 <style lang="scss" scoped>
   .header {
     z-index: 100;
-    position: absolute;
     top: 0;
     left: 0;
     right: 0;
+  }
+
+  .header-fix {
+    position: fixed;
+    background-color: #1B1D1C;
+  }
+
+  .header-abs {
+    position: absolute;
   }
 </style>
 
