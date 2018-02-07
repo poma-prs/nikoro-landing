@@ -28,16 +28,20 @@
           </div>
 
           <div class="text-center">
-            <div class="btn">Заказать строительство дома</div>
+            <div class="btn" data-toggle="modal" data-target="#block8-modal">Заказать строительство дома</div>
           </div>
 
         </div>
       </div>
     </div>
+
+    <app-modal id="block8-modal"></app-modal>
   </div>
 </template>
 
 <script>
+  var appModal = require('../app-modal.vue');
+
   module.exports = {
     data() {
       return {
@@ -70,7 +74,7 @@
         return '0' + value;
       }
     },
-    components: {}
+    components: { appModal: appModal }
   };
 </script>
 

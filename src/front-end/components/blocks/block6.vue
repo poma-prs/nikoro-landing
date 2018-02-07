@@ -23,15 +23,18 @@
         </div>
       </div>
       <div class="btn-container">
-        <div class="btn">Получить подробный расчет стоимости</div>
+        <div class="btn" data-toggle="modal" data-target="#block6-modal">Получить подробный расчет стоимости</div>
       </div>
     </div>
+
+    <app-modal id="block6-modal"></app-modal>
   </div>
 </template>
 
 <script>
   var vueSlider = require('vue-slider-component');
   var radiobox = require('../radiobox.vue');
+  var appModal = require('../app-modal.vue');
 
   module.exports = {
     data() {
@@ -83,7 +86,7 @@
         return price * this.square;
       }
     },
-    components: { vueSlider, radiobox },
+    components: { vueSlider: vueSlider, radiobox: radiobox, appModal: appModal },
     filters: {
       rubles: function (value) {
         if (!value) return '0 рублей';

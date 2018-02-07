@@ -14,7 +14,7 @@
             </div>
             <div class="offer">
               <div class="buttons">
-                <div class="btn">Остaвить заявку</div>
+                <div class="btn" data-toggle="modal" data-target="#block1-modal">Остaвить заявку</div>
                 <!-- <div class="bonus">
                   Оставьте заявку на рассчет стоимости дома
                   <div class="subbonus">+ бесплатно "Технология умный дом"</div>
@@ -26,12 +26,17 @@
         </div>
       </div>
     </div>
+
+    <app-modal id="block1-modal"></app-modal>
+
   </div>
 </template>
 
 <script>
+  var appModal = require('../app-modal.vue');
+
   module.exports = {
-    components: {}
+    components: { appModal: appModal }
   };
 </script>
 

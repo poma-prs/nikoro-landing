@@ -25,14 +25,18 @@
           <h2 class="title title-font">Посмотрите каталог из 20 лучших проектов</h2>
         </div>
         <div class="col-sm-5">
-          <div class="btn">Получить каталог</div>
+          <div class="btn" data-toggle="modal" data-target="#block9-modal">Получить каталог</div>
         </div>
       </div>
     </div>
+
+    <app-modal id="block9-modal"></app-modal>
   </div>
 </template>
 
 <script>
+  var appModal = require('../app-modal.vue');
+
   module.exports = {
     data() {
       return {
@@ -69,7 +73,7 @@
         }]
       }
     },
-    components: {}
+    components: { appModal: appModal }
   };
 </script>
 

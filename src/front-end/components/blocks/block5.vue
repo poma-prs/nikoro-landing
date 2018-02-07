@@ -3,7 +3,7 @@
     <div class="container">
       <h2 class="title title-font">Комплектации домов</h2>
       <div class="row">
-        <div class="col-sm-4" v-for="plan in plans">
+        <div class="col-sm-4" v-for="(plan, ind) in plans">
           <div class="plan-item">
             <img :src="plan.img" :alt="plan.name">
             <h3 class="plan-name">{{plan.name}}</h3>
@@ -17,16 +17,21 @@
             <div class="plan-price">{{ plan.price }} руб/м<sup>2</sup></div>
             <div class="plan-discount">{{ plan.discountPrice }} руб/м<sup>2</sup></div>
             <div class="btn-container">
-              <div class="btn">Заказать</div>
+              <div class="btn" data-toggle="modal" :data-target="'#block5-modal-' + ind">Заказать</div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+
+    <app-modal :id="'block5-modal-' + ind" v-for="(plan, ind) in plans"></app-modal>
   </div>
 </template>
 
 <script>
+  var appModal = require('../app-modal.vue');
+
   module.exports = {
     data() {
       return {
@@ -96,7 +101,8 @@
           additional: false
         }]
       }
-    }
+    },
+    components: { appModal: appModal }
   };
 </script>
 
