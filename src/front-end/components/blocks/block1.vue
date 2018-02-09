@@ -9,14 +9,14 @@
             <div class="offer">
               <div class="titles">
                 <h1 class="title title-font">Строительство каркасных домов в Ижевске от 359 000 рублей</h1>
-                <div class="subtitle">Оставьте заявку на рассчет стоимости дома</div>
+                <div class="subtitle">Оставьте заявку на расчет стоимости дома</div>
               </div>
             </div>
             <div class="offer">
               <div class="buttons">
                 <div class="btn" data-toggle="modal" data-target="#block1-modal">Остaвить заявку</div>
                 <!-- <div class="bonus">
-                  Оставьте заявку на рассчет стоимости дома
+                  Оставьте заявку на расчет стоимости дома
                   <div class="subbonus">+ бесплатно "Технология умный дом"</div>
                 </div> -->
               </div>

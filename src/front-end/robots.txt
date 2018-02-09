@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /assets/images/
+Disallow: /index.vue.js
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Yandex
+Allow: /assets/images/
+Disallow: /index.vue.js
+Host: nikoro-dom.ru

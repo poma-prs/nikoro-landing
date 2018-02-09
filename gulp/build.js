@@ -102,12 +102,21 @@ gulp.task('images', function() {
 })
 
 gulp.task('php', () => {
-  return gulp.src([path.join(conf.paths.src, '*.php'), path.join(conf.paths.src, '.htaccess')])
+  return gulp.src([path.join(conf.paths.src, '*.php')])
     .pipe(plumber())
     .pipe(gulp.dest(conf.paths.dist));
 })
 
-gulp.task('build', ['index', 'images', 'php'], () => {
+gulp.task('other', () => {
+  return gulp.src([path.join(conf.paths.src, 'favicon.ico'),
+      path.join(conf.paths.src, '.htaccess'),
+      path.join(conf.paths.src, 'robots.txt'),
+      path.join(conf.paths.src, '.sitemap.xml')])
+    .pipe(plumber())
+    .pipe(gulp.dest(conf.paths.dist));
+})
+
+gulp.task('build', ['index', 'images', 'php', 'other'], () => {
   process.env.NODE_ENV = "development";
   return build('', 'index.vue.js', false);
 })
