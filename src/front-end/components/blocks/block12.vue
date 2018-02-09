@@ -9,7 +9,7 @@
       <form class="form-horizontal" @submit.prevent="submit" v-if="!done">
         <div class="form-group">
           <div class="col-sm-4">
-            <input type="text" name="name" pattern="[a-zA-Zа-яА-Я]+" placeholder="Введите имя" v-model="name" title="Введите только буквы">
+            <input type="text" name="name" pattern="[a-zA-Zа-яА-Я\s]+" placeholder="Введите имя" v-model="name" title="Введите только буквы">
           </div>
           <div class="col-sm-4">
             <input type="tel" name="phone" pattern="\s*[0-9+][0-9-()\s]*" placeholder="Введите телефон" v-model="phone" title="Пример: +79991112233">
