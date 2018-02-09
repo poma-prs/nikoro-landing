@@ -25,12 +25,14 @@
           <h2 class="title title-font">Посмотрите каталог из 20 лучших проектов</h2>
         </div>
         <div class="col-sm-5">
-          <div class="btn" data-toggle="modal" data-target="#block9-modal">Получить каталог</div>
+          <div class="btn" data-toggle="modal" data-target="#block9-modal" onclick="yaCounter47630926.reachGoal('showmodal5'); return true;">Получить каталог</div>
         </div>
       </div>
     </div>
 
-    <app-modal id="block9-modal" :isemail="true" :isphone="false" message="Заявка оставлена в блоке №10 (Каталог). ВЫСЛАТЬ КАТАЛОГ С ДОМАМИ!"></app-modal>
+    <app-modal id="block9-modal" :isemail="true" :isphone="false"
+      message="Заявка оставлена в блоке №10 (Каталог). ВЫСЛАТЬ КАТАЛОГ С ДОМАМИ!"
+      :success="success"></app-modal>
   </div>
 </template>
 
@@ -73,7 +75,12 @@
         }]
       }
     },
-    components: { appModal: appModal }
+    components: { appModal: appModal },
+    methods: {
+      success() {
+        yaCounter47630926.reachGoal('sendapplication5');
+      }
+    }
   };
 </script>
 

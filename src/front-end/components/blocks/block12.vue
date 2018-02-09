@@ -70,6 +70,7 @@
           },
           success: function() {
             that.done = true;
+            yaCounter47630926.reachGoal('sendapplication6');
           }
         });
       }

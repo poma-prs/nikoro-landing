@@ -17,7 +17,7 @@
             <div class="plan-price">{{ plan.price }} руб/м<sup>2</sup></div>
             <div class="plan-discount">{{ plan.discountPrice }} руб/м<sup>2</sup></div>
             <div class="btn-container">
-              <div class="btn" data-toggle="modal" :data-target="'#block5-modal-' + ind">Заказать</div>
+              <div class="btn" data-toggle="modal" :data-target="'#block5-modal-' + ind" onclick="yaCounter47630926.reachGoal('showmodal2'); return true;">Заказать</div>
             </div>
           </div>
         </div>
@@ -26,7 +26,8 @@
 
 
     <app-modal :id="'block5-modal-' + ind" v-for="(plan, ind) in plans"
-      :message="'Заявка оставлена в блоке №5 (Комплектации домов). Выбран тип: ' + plan.name"></app-modal>
+      :message="'Заявка оставлена в блоке №5 (Комплектации домов). Выбран тип: ' + plan.name"
+      :success="success"></app-modal>
   </div>
 </template>
 
@@ -103,7 +104,12 @@
         }]
       }
     },
-    components: { appModal: appModal }
+    components: { appModal: appModal },
+    methods: {
+      success() {
+        yaCounter47630926.reachGoal('sendapplication2');
+      }
+    }
   };
 </script>
 

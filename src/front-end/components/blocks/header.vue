@@ -11,13 +11,13 @@
             <a class="link" href="#calculator" v-smooth-scroll>Калькулятор</a>
             <a class="link" href="#projects" v-smooth-scroll>Проекты</a>
             <a class="link" href="#contacts" v-smooth-scroll>Контакты</a>
-            <a class="tel" href="tel:+79501738827" title="Телефон">+7 (950) 173-88-27</a>
+            <a class="tel" href="tel:+79501738827" title="Телефон" onclick="yaCounter47630926.reachGoal('phonenumbertop'); return true;">+7 (950) 173-88-27</a>
           </div>
         </div>
       </div>
       <div class="row visible-xs">
         <div class="nav nav-xs">
-          <a class="tel" href="tel:+79501738827">
+          <a class="tel" href="tel:+79501738827" onclick="yaCounter47630926.reachGoal('phonenumbertop'); return true;">
             <i class="fa fa-phone" aria-hidden="true"></i> +7 (950) 173-88-27
           </a>
         </div>

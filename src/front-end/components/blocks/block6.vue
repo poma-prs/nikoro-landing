@@ -23,11 +23,11 @@
         </div>
       </div>
       <div class="btn-container">
-        <div class="btn" data-toggle="modal" data-target="#block6-modal">Получить подробный расчет стоимости</div>
+        <div class="btn" data-toggle="modal" data-target="#block6-modal" onclick="yaCounter47630926.reachGoal('showmodal3'); return true;">Получить подробный расчет стоимости</div>
       </div>
     </div>
 
-    <app-modal id="block6-modal" :message="message"></app-modal>
+    <app-modal id="block6-modal" :message="message" :success="success"></app-modal>
   </div>
 </template>
 
@@ -107,6 +107,11 @@
           result = v + ' ' + result;
         }
         return result + ' рублей';
+      }
+    },
+    methods: {
+      success() {
+        yaCounter47630926.reachGoal('sendapplication3');
       }
     }
   };

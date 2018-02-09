@@ -14,7 +14,7 @@
             </div>
             <div class="offer">
               <div class="buttons">
-                <div class="btn" data-toggle="modal" data-target="#block1-modal">Остaвить заявку</div>
+                <div class="btn" data-toggle="modal" data-target="#block1-modal" onclick="yaCounter47630926.reachGoal('showmodal1'); return true;">Остaвить заявку</div>
                 <!-- <div class="bonus">
                   Оставьте заявку на расчет стоимости дома
                   <div class="subbonus">+ бесплатно "Технология умный дом"</div>
@@ -27,7 +27,8 @@
       </div>
     </div>
 
-    <app-modal id="block1-modal" message="Заявка оставлена в блоке №1 (Оффер)"></app-modal>
+    <app-modal id="block1-modal" message="Заявка оставлена в блоке №1 (Оффер)"
+      :success="success"></app-modal>
 
   </div>
 </template>
@@ -36,7 +37,12 @@
   var appModal = require('../app-modal.vue');
 
   module.exports = {
-    components: { appModal: appModal }
+    components: { appModal: appModal },
+    methods: {
+      success() {
+        yaCounter47630926.reachGoal('sendapplication1');
+      }
+    }
   };
 </script>
 

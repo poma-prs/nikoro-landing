@@ -28,14 +28,14 @@
           </div>
 
           <div class="text-center">
-            <div class="btn" data-toggle="modal" data-target="#block8-modal">Заказать строительство дома</div>
+            <div class="btn" data-toggle="modal" data-target="#block8-modal" onclick="yaCounter47630926.reachGoal('showmodal4'); return true;">Заказать строительство дома</div>
           </div>
 
         </div>
       </div>
     </div>
 
-    <app-modal id="block8-modal" message="Заявка оставлена в блоке №8 (Акция)"></app-modal>
+    <app-modal id="block8-modal" message="Заявка оставлена в блоке №8 (Акция)" :success="success"></app-modal>
   </div>
 </template>
 
@@ -62,6 +62,9 @@
         this.minutes = Math.floor(time / (60 * 1000));
         time -= this.minutes * 60 * 1000;
         this.seconds = Math.floor(time / 1000);
+      },
+      success() {
+        yaCounter47630926.reachGoal('sendapplication4');
       }
     },
     mounted() {

@@ -63,7 +63,8 @@
     props: {
       message: { type: String },
       isphone: { type: Boolean, default: true },
-      isemail: { type: Boolean, default: false }
+      isemail: { type: Boolean, default: false },
+      success: { type: Function }
     },
     methods: {
       submit() {
@@ -83,6 +84,9 @@
           },
           success: function() {
             that.done = true;
+            if (that.success && typeof that.success === "function") {
+              that.success();
+            }
           }
         });
       }
