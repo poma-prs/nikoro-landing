@@ -25,7 +25,8 @@
     </div>
 
 
-    <app-modal :id="'block5-modal-' + ind" v-for="(plan, ind) in plans"></app-modal>
+    <app-modal :id="'block5-modal-' + ind" v-for="(plan, ind) in plans"
+      :message="'Заявка оставлена в блоке №5 (Комплектации домов). Выбран тип: ' + plan.name"></app-modal>
   </div>
 </template>
 

@@ -35,7 +35,7 @@
       </div>
     </div>
 
-    <app-modal id="block8-modal"></app-modal>
+    <app-modal id="block8-modal" message="Заявка оставлена в блоке №8 (Акция)"></app-modal>
   </div>
 </template>
 

@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <app-modal id="block6-modal"></app-modal>
+    <app-modal id="block6-modal" :message="message"></app-modal>
   </div>
 </template>
 
@@ -84,6 +84,13 @@
           ? this.selectedType.discountPrice
           : this.types[0].discountPrice;
         return price * this.square;
+      },
+      message() {
+        return 'Заявка оставлена в блоке №6 (Калькулятор). ' +
+          (this.selectedType
+            ? 'Выбраны параметры: ' + this.selectedType.text + ', ' + this.square + 'м2, Итого: ' + this.summary + ' рублей'
+            : 'Параметры не выбраны');
+
       }
     },
     components: { vueSlider: vueSlider, radiobox: radiobox, appModal: appModal },

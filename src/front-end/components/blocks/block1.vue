@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <app-modal id="block1-modal"></app-modal>
+    <app-modal id="block1-modal" message="Заявка оставлена в блоке №1 (Оффер)"></app-modal>
 
   </div>
 </template>

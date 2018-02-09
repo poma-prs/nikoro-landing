@@ -64,7 +64,7 @@
           type: "POST",
           url: 'email.php',
           data: {
-            desc: 'Пользователь оставил заявку в блоке "Как мы работаем"',
+            desc: 'Заявка оставлена в блоке №12 (Как мы работаем)',
             name: this.name,
             phone: this.phone
           },

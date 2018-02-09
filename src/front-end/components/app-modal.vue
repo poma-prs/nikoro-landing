@@ -8,7 +8,7 @@
         <div class="modal-body">
 
           <form @submit.prevent="submit" v-if="!done">
-            <input type="hidden" name="message" v-model="message">
+            <input type="hidden" name="desc" v-model="message">
             <div class="form-group">
               <input type="text" name="name" pattern="[a-zA-Zа-яА-Я\s]+" placeholder="Введите имя" v-model="name" title="Введите только буквы">
             </div>
@@ -82,9 +82,7 @@
             email: this.email
           },
           success: function() {
-            console.log(that.done);
             that.done = true;
-            console.log(that.done);
           }
         });
       }

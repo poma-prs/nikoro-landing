@@ -30,7 +30,7 @@
       </div>
     </div>
 
-    <app-modal id="block9-modal" :isemail="true" :isphone="false"></app-modal>
+    <app-modal id="block9-modal" :isemail="true" :isphone="false" message="Заявка оставлена в блоке №10 (Каталог). ВЫСЛАТЬ КАТАЛОГ С ДОМАМИ!"></app-modal>
   </div>
 </template>
 
