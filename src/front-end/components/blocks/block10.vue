@@ -30,7 +30,7 @@
       </div>
     </div>
 
-    <app-modal id="block9-modal"></app-modal>
+    <app-modal id="block9-modal" :isemail="true" :isphone="false"></app-modal>
   </div>
 </template>
 
@@ -44,32 +44,32 @@
           square: 130,
           sizes: '7x9',
           price: 'от 1.560.000 рублей',
-          img: '/assets/images/block10/home1.jpg'
+          img: 'assets/images/block10/home1.jpg'
         },{
           square: 115,
           sizes: '9x11',
           price: 'от 1.380.000 рублей',
-          img: '/assets/images/block10/home2.jpg'
+          img: 'assets/images/block10/home2.jpg'
         },{
           square: 85,
           sizes: '8x9',
           price: 'от 1.020.000 рублей',
-          img: '/assets/images/block10/home3.jpg'
+          img: 'assets/images/block10/home3.jpg'
         },{
           square: 190,
           sizes: '9x10,5',
           price: 'от 2.280.000 рублей',
-          img: '/assets/images/block10/home4.jpg'
+          img: 'assets/images/block10/home4.jpg'
         },{
           square: 107,
           sizes: '13x10',
           price: 'от 1.123.000 рублей',
-          img: '/assets/images/block10/home5.jpg'
+          img: 'assets/images/block10/home5.jpg'
         },{
           square: 48,
           sizes: '6x8',
           price: 'от 504.000 рублей',
-          img: '/assets/images/block10/home6.jpg'
+          img: 'assets/images/block10/home6.jpg'
         }]
       }
     },

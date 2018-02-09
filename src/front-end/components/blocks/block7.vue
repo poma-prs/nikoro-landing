@@ -16,22 +16,22 @@
 
 <script>
   var benefits = [{
-    img: '/assets/images/block7/shape1.png',
+    img: 'assets/images/block7/shape1.png',
     text: 'Входим в ГК "Дом", основанную в 1997г.'
   },{
-    img: '/assets/images/block7/shape2.png',
+    img: 'assets/images/block7/shape2.png',
     text: 'Гарантия 10 лет'
   },{
-    img: '/assets/images/block7/shape3.png',
+    img: 'assets/images/block7/shape3.png',
     text: 'Материалы высокого качества'
   },{
-    img: '/assets/images/block7/shape4.png',
+    img: 'assets/images/block7/shape4.png',
     text: 'Бесплатный проект'
   },{
-    img: '/assets/images/block7/shape5.png',
+    img: 'assets/images/block7/shape5.png',
     text: 'Опыт бригад более 5 лет'
   },{
-    img: '/assets/images/block7/shape6.png',
+    img: 'assets/images/block7/shape6.png',
     text: 'Строим по технологии СНиП СП31-105-2002'
   }];
 

@@ -1,0 +1,27 @@
+<filesMatch ".(css|jpg|jpeg|png|gif|js|ico)$">
+  Header set Cache-Control "max-age=2628000, public"
+</filesMatch>
+
+RewriteEngine On
+
+# Handle _escaped_fragment_
+RewriteCond %{HTTP_USER_AGENT} baiduspider|facebookexternalhit|twitterbot|rogerbot|linkedinbot|embedly|quora\ link\ preview|showyoubot|outbrain|pinterest [NC,OR]
+RewriteCond %{QUERY_STRING} _escaped_fragment_
+RewriteRule ^ index-robots.html [L]
+
+# If requested resource exists as a file or directory
+# (REQUEST_FILENAME is only relative in virtualhost context, so not usable)
+RewriteCond %{DOCUMENT_ROOT}/%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/%{REQUEST_URI} -d
+# Go to it as is
+RewriteRule (.*) $1 [L]
+
+# If non existent
+# If path ends with / and is not just a single /, redirect to without the trailing /
+RewriteCond %{REQUEST_URI} ^.*/$
+RewriteCond %{REQUEST_URI} !^/$
+RewriteRule ^(.*)/$ $1 [R,QSA,L]
+
+# If non existent
+# Accept everything on index.html
+RewriteRule ^ index.html

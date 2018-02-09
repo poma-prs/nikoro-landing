@@ -29,22 +29,22 @@
         selectInd: 0,
         pages: [{
           name: 'Декоративная штукатурка',
-          img: '/assets/images/block11/item2.jpg'
+          img: 'assets/images/block11/item2.jpg'
         },{
           name: 'Имитация бруса',
-          img: '/assets/images/block11/item7.jpg'
+          img: 'assets/images/block11/item7.jpg'
         },{
           name: 'Имитация бревна',
-          img: '/assets/images/block11/item5.jpg'
+          img: 'assets/images/block11/item5.jpg'
         },{
           name: 'Металлосайдинг',
-          img: '/assets/images/block11/item3.jpg'
+          img: 'assets/images/block11/item3.jpg'
         },{
           name: 'Облицовочный кирпич',
-          img: '/assets/images/block11/item4.jpg'
+          img: 'assets/images/block11/item4.jpg'
         },{
           name: 'Облицовочный кирпич',
-          img: '/assets/images/block11/item1.jpg'
+          img: 'assets/images/block11/item1.jpg'
         }]
       }
     },

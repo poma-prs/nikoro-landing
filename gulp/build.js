@@ -64,7 +64,6 @@ function getBrowserify(path, watch) {
 }
 
 function build(folder, filename, watch) {
-  process.env.NODE_ENV = argv.prod ? "production" : "development";
   return getBrowserify(path.join(conf.paths.src, folder, filename), watch)
     .bundle()
     .on('error', (err) => {
@@ -78,6 +77,13 @@ function build(folder, filename, watch) {
     //.pipe(babel({presets: ['es2015'], ignore: ['**/node_modules/**']}))
     .pipe(gulp.dest(path.join(conf.paths.dist, folder)));
 }
+
+gulp.task('minify', function() {
+  return gulp.src(path.join(conf.paths.dist, '**/*.js'))
+    .pipe(plumber())
+    .pipe(uglify())
+    .pipe(gulp.dest(conf.paths.publish));
+})
 
 gulp.task('clean', function() {
   return del.sync([conf.paths.dist, conf.paths.publish]);
@@ -95,8 +101,24 @@ gulp.task('images', function() {
     .pipe(gulp.dest(conf.paths.dist));
 })
 
-gulp.task('build', ['index', 'images'], () => {
+gulp.task('php', () => {
+  return gulp.src([path.join(conf.paths.src, '*.php'), path.join(conf.paths.src, '.htaccess')])
+    .pipe(plumber())
+    .pipe(gulp.dest(conf.paths.dist));
+})
+
+gulp.task('build', ['index', 'images', 'php'], () => {
+  process.env.NODE_ENV = "development";
   return build('', 'index.vue.js', false);
+})
+
+gulp.task('build-prod', ['build', 'minify'], () => {
+  process.env.NODE_ENV = "production";
+  return gulp.src([
+      path.join(conf.paths.dist, '**/*'),
+      '!' + path.join(conf.paths.dist, '**/*.js'),
+      path.join(conf.paths.dist, '.htaccess')])
+    .pipe(gulp.dest(conf.paths.publish));
 })
 
 gulp.task('build-watchify', ['index', 'images'], () => {

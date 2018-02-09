@@ -9,12 +9,12 @@
       </div>
       <div class="row">
         <div class="col-sm-4 col-sm-offset-1 hidden-xs img-container">
-          <img src="/assets/images/block2/home.png">
+          <img src="assets/images/block2/home.png">
         </div>
         <div class="col-sm-7">
           <div class="desc">
             <div class="item-img">
-              <img src="/assets/images/block2/item1.jpg" alt="Сваи">
+              <img src="assets/images/block2/item1.jpg" alt="Сваи">
             </div>
             <h3>Сваи</h3>
             <p>Наиболее подходящий вид фундамента при строительстве каркасного дома — фундамент на винтовых сваях. Он подходит для любого рельефа местности и для любых «проблемных» грунтов.<br>
@@ -22,14 +22,14 @@
           </div>
           <div class="desc">
             <div class="item-img">
-              <img src="/assets/images/block2/item2.jpg" alt="Сваи">
+              <img src="assets/images/block2/item2.jpg" alt="Сваи">
             </div>
             <h3>Силовой каркас</h3>
             <p>Строим каркасные дома строго по технологии СНиП СП 31-105-2002. Для строительства силового каркаса используем доску хвойной породы камерной сушки 1; 2-го сорта сечением 150x50, обработанную огнебиозащитным составом.</p>
           </div>
           <div class="desc">
             <div class="item-img">
-              <img src="/assets/images/block2/item3.jpg" alt="Сваи">
+              <img src="assets/images/block2/item3.jpg" alt="Сваи">
             </div>
             <h3>Утепление</h3>
             <p>Стена каркасного дома состоит из : силового каркаса, гидро-ветрозащитной плёнки , базальтового утеплителя 150мм по несущим стойкам и 50мм перекрёстного утепления , пароизоляционной плёнки.</p>

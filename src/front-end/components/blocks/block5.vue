@@ -51,7 +51,7 @@
           ],
           price: 'от 15 500',
           discountPrice: 'от 11 990',
-          img: '/assets/images/block7/item1.jpg',
+          img: 'assets/images/block5/item1.jpg',
           additional: false
         },{
           name: '“Классика”',
@@ -73,7 +73,7 @@
           ],
           price: 'от 18 300',
           discountPrice: 'от 15 990',
-          img: '/assets/images/block7/item2.jpg',
+          img: 'assets/images/block5/item2.jpg',
           additional: false
         },{
           name: '“Под ключ”',
@@ -97,7 +97,7 @@
           ],
           price: 'от 21 000',
           discountPrice: 'от 19 900',
-          img: '/assets/images/block7/item3.jpg',
+          img: 'assets/images/block5/item3.jpg',
           additional: false
         }]
       }

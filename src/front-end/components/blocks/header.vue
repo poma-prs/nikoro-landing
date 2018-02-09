@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row hidden-xs">
         <div class="col-xs-4">
-          <img class="logo" alt="Nikoro logo Строительство каркасных домов" src="/assets/images/logo-white.png">
+          <img class="logo" alt="Nikoro logo Строительство каркасных домов" src="assets/images/logo-white.png">
         </div>
         <div class="col-sm-8">
           <div class="nav">

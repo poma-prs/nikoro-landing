@@ -19,9 +19,9 @@
       </div>
 
       <div class="partners">
-        <div><img src="/assets/images/block13/partner1.png" alt="Группа Компаний Дом"></div>
-        <div><img src="/assets/images/block13/partner2.png" alt="ПК Строй-Элемент"></div>
-        <div><img src="/assets/images/block13/partner3.png" alt="Завьяловские сады"></div>
+        <div><img src="assets/images/block13/partner1.png" alt="Группа Компаний Дом"></div>
+        <div><img src="assets/images/block13/partner2.png" alt="ПК Строй-Элемент"></div>
+        <div><img src="assets/images/block13/partner3.png" alt="Завьяловские сады"></div>
       </div>
     </div>
   </div>

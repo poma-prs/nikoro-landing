@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Каркасные умные дома - NIKORO</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<style type="text/css">.header[data-v-82f0f610] {
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0; }
+
+.header-fix[data-v-82f0f610] {
+  position: fixed;
+  background-color: #1B1D1C; }
+
+.header-abs[data-v-82f0f610] {
+  position: absolute; }
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display");
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #1b1d1c;
+  overflow-x: hidden; }
+
+img {
+  max-height: 100%;
+  max-width: 100%; }
+
+.hidden-animated {
+  opacity: 0; }
+
+.title-font {
+  font-family: 'Playfair Display', serif; }</style><style type="text/css">.header-root[data-v-334e1a27] {
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px 0; }
+  .header-root img.logo[data-v-334e1a27] {
+    height: 30px; }
+  .header-root .nav[data-v-334e1a27] {
+    font-size: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 40px; }
+    .header-root .nav a[data-v-334e1a27] {
+      color: #999999;
+      position: relative; }
+      .header-root .nav a[data-v-334e1a27]:hover, .header-root .nav a[data-v-334e1a27]:focus {
+        color: white;
+        text-decoration: none; }
+        .header-root .nav a[data-v-334e1a27]:hover::before, .header-root .nav a[data-v-334e1a27]:focus::before {
+          content: ' ';
+          position: absolute;
+          width: 90%;
+          height: 2px;
+          background-color: #ea1821;
+          left: 5%;
+          bottom: -3px; }
+    @media (min-width: 768px) {
+      .header-root .nav.nav-xs[data-v-334e1a27] {
+        display: none; } }
+    .header-root .nav.nav-xs a.tel[data-v-334e1a27] {
+      color: white; }
+      .header-root .nav.nav-xs a.tel[data-v-334e1a27]:hover, .header-root .nav.nav-xs a.tel[data-v-334e1a27]:focus {
+        color: white; }
+        .header-root .nav.nav-xs a.tel[data-v-334e1a27]:hover::before, .header-root .nav.nav-xs a.tel[data-v-334e1a27]:focus::before {
+          display: none; }
+    @media (max-width: 767px) {
+      .header-root .nav.nav-sm[data-v-334e1a27] {
+        display: none; } }</style><style type="text/css">.block[data-v-0787d15e] {
+  position: relative;
+  background-color: #1B1D1C; }
+  @media (max-width: 767px) {
+    .block[data-v-0787d15e] {
+      background-image: url(assets/images/block1/home.jpg);
+      background-size: cover; } }
+  .block > .container-fluid > .row[data-v-0787d15e] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch; }
+  .block .image-part[data-v-0787d15e] {
+    background-image: url(assets/images/block1/home.jpg);
+    background-size: cover; }
+  .block .content-part[data-v-0787d15e] {
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    min-height: 90vh;
+    color: white; }
+    @media (max-width: 767px) {
+      .block .content-part[data-v-0787d15e] {
+        background-color: rgba(0, 0, 0, 0.4); } }
+    @media (min-width: 768px) {
+      .block .content-part > div[data-v-0787d15e] {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        -webkit-transform: translateY(-50%) translateX(-50%);
+                transform: translateY(-50%) translateX(-50%); } }
+    @media (min-width: 768px) {
+      .block .content-part .offer[data-v-0787d15e] {
+        text-align: right; } }
+    .block .content-part .offer .titles[data-v-0787d15e] {
+      position: relative;
+      display: inline-block;
+      text-align: left;
+      z-index: 0;
+      padding-left: 10px; }
+      @media (min-width: 768px) {
+        .block .content-part .offer .titles[data-v-0787d15e] {
+          width: 80%;
+          padding: 10px 30px; } }
+      .block .content-part .offer .titles .title[data-v-0787d15e] {
+        font-size: 37px;
+        font-weight: bold;
+        line-height: 1.2;
+        margin: 0;
+        margin-bottom: 20px; }
+        @media (min-width: 768px) {
+          .block .content-part .offer .titles .title[data-v-0787d15e] {
+            background-color: #1B1D1C; } }
+      .block .content-part .offer .titles .subtitle[data-v-0787d15e] {
+        font-size: 16px;
+        margin-bottom: 10px; }
+        @media (min-width: 768px) {
+          .block .content-part .offer .titles .subtitle[data-v-0787d15e] {
+            max-width: 50%; } }
+      .block .content-part .offer .titles[data-v-0787d15e]::before {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        border: 2px #EA1821 solid;
+        z-index: -1; }
+        @media (min-width: 768px) {
+          .block .content-part .offer .titles[data-v-0787d15e]::before {
+            width: 66%; } }
+    .block .content-part .offer .buttons[data-v-0787d15e] {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      text-align: left;
+      margin-top: 30px; }
+      @media (min-width: 768px) {
+        .block .content-part .offer .buttons[data-v-0787d15e] {
+          padding-left: 20%; } }
+      @media (max-width: 767px) {
+        .block .content-part .offer .buttons[data-v-0787d15e] {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: reverse;
+              -ms-flex-direction: column-reverse;
+                  flex-direction: column-reverse; } }
+      .block .content-part .offer .buttons .btn[data-v-0787d15e] {
+        border-radius: 0;
+        background-color: #EA1821;
+        font-size: 16px;
+        padding: 12px 15px;
+        min-width: 230px;
+        max-width: 100%;
+        display: inline-block; }
+        @media (max-width: 767px) {
+          .block .content-part .offer .buttons .btn[data-v-0787d15e] {
+            width: 100%; } }
+        .block .content-part .offer .buttons .btn[data-v-0787d15e]:hover {
+          color: white;
+          background-color: #bb131a; }
+      .block .content-part .offer .buttons .bonus[data-v-0787d15e] {
+        display: inline-block;
+        margin-left: 10px; }
+        @media (max-width: 767px) {
+          .block .content-part .offer .buttons .bonus[data-v-0787d15e] {
+            margin-bottom: 15px;
+            margin-left: 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px; } }
+        .block .content-part .offer .buttons .bonus .subbonus[data-v-0787d15e] {
+          font-size: 20px;
+          margin-top: 7px; }
+          @media (min-width: 768px) {
+            .block .content-part .offer .buttons .bonus .subbonus[data-v-0787d15e] {
+              display: none; } }</style><style type="text/css">.modal-header[data-v-048c80f6] {
+  border: 0; }
+  .modal-header .close[data-v-048c80f6] {
+    position: relative;
+    color: white;
+    font-size: 25px;
+    width: 30px;
+    height: 30px; }
+    .modal-header .close[data-v-048c80f6]::before {
+      content: ' ';
+      position: absolute;
+      height: 30px;
+      top: 0;
+      left: 14px;
+      border-left: 2px solid white;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    .modal-header .close[data-v-048c80f6]::after {
+      content: ' ';
+      position: absolute;
+      width: 30px;
+      top: 14px;
+      left: 0;
+      border-top: 2px solid white;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+
+.modal-content[data-v-048c80f6] {
+  border: 0;
+  border-radius: 0;
+  background-color: #1b1b1c;
+  color: white;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .modal-content form[data-v-048c80f6] {
+      display: inline-block;
+      margin: 0 auto;
+      max-width: 300px; } }
+  .modal-content input[data-v-048c80f6] {
+    border: 2px solid #ea1821;
+    padding: 12px 15px;
+    width: 100%;
+    background-color: #1b1b1c;
+    margin-bottom: 15px; }
+  .modal-content .btn[data-v-048c80f6] {
+    border-radius: 0;
+    background-color: #EA1821;
+    padding: 14px 15px;
+    width: 100%; }
+    .modal-content .btn[data-v-048c80f6]:hover {
+      color: white;
+      background-color: #bb131a; }
+  .modal-content .personal-data[data-v-048c80f6] {
+    text-align: center;
+    font-size: 12px;
+    padding: 15px 30px 0; }</style><style type="text/css">.block[data-v-0795e8df] {
+  position: relative;
+  padding: 70px 0;
+  background-color: #fafafa;
+  z-index: 0; }
+  .block .title[data-v-0795e8df] {
+    font-size: 37px;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 70px; }
+    @media (max-width: 767px) {
+      .block .title[data-v-0795e8df] {
+        margin-bottom: 30px;
+        text-align: center; } }
+  .block .row[data-v-0795e8df] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch; }
+  .block .img-container[data-v-0795e8df] {
+    position: relative;
+    min-height: 500px; }
+    .block .img-container[data-v-0795e8df]::before {
+      content: ' ';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 2px #ea1821 solid; }
+    .block .img-container img[data-v-0795e8df] {
+      max-width: none;
+      max-height: none;
+      position: absolute;
+      bottom: 5%;
+      right: 30px;
+      height: 75%; }
+  .block .desc[data-v-0795e8df] {
+    position: relative;
+    padding: 0 10px 10px 0;
+    z-index: 0; }
+    @media (max-width: 767px) {
+      .block .desc[data-v-0795e8df] {
+        text-align: center;
+        padding-left: 10px; } }
+    .block .desc[data-v-0795e8df]:not(:last-child) {
+      margin-bottom: 15px; }
+    .block .desc[data-v-0795e8df]:before {
+      content: ' ';
+      position: absolute;
+      top: 50px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 2px solid #ea1821;
+      z-index: -1; }
+      @media (min-width: 768px) {
+        .block .desc[data-v-0795e8df]:before {
+          left: 50px; } }
+    .block .desc h3[data-v-0795e8df] {
+      text-align: center; }
+      @media (min-width: 768px) {
+        .block .desc h3[data-v-0795e8df] {
+          width: calc(100% - 300px);
+          display: inline-block;
+          position: relative;
+          top: 30px;
+          left: 0; } }
+    .block .desc .item-img[data-v-0795e8df] {
+      position: relative;
+      display: inline-block;
+      padding: 0 10px 10px 0;
+      background-color: #fafafa; }
+      @media (max-width: 767px) {
+        .block .desc .item-img[data-v-0795e8df] {
+          padding-left: 10px; } }
+      .block .desc .item-img[data-v-0795e8df]:before {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 10px;
+        bottom: 10px;
+        border: 2px solid #ea1821; }
+        @media (max-width: 767px) {
+          .block .desc .item-img[data-v-0795e8df]:before {
+            left: 10px; } }
+      .block .desc .item-img img[data-v-0795e8df] {
+        max-width: 200px; }
+    .block .desc p[data-v-0795e8df] {
+      text-align: left;
+      /* @media (max-width: 767px) {
+        padding: 10px;
+        position: relative;
+
+        &:before {
+          content: ' ';
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          border-left: 2px solid #ea1821;
+        }
+      } */ }
+      @media (min-width: 768px) {
+        .block .desc p[data-v-0795e8df] {
+          padding-left: 65px; } }</style><style type="text/css">.block[data-v-07a40060] {
+  position: relative;
+  padding: 70px 0;
+  background-color: #fafafa;
+  background-image: url(assets/images/block3/background.jpg);
+  background-size: cover; }
+  .block .title[data-v-07a40060] {
+    font-size: 37px;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 45px; }
+    @media (max-width: 767px) {
+      .block .title[data-v-07a40060] {
+        text-align: center; } }
+  .block .benefits[data-v-07a40060] {
+    list-style-type: none;
+    padding: 0; }
+  @media (min-width: 768px) {
+    .block .benefits[data-v-07a40060] {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+    .block .benefit[data-v-07a40060] {
+      position: relative;
+      border: 2px solid #ea1821;
+      padding: 15px;
+      height: 180px;
+      max-width: 180px;
+      margin: 25px 5px;
+      background-color: rgba(255, 255, 255, 0.5); }
+      .block .benefit[data-v-07a40060]::before {
+        content: ' ';
+        position: absolute;
+        height: 30px;
+        bottom: 10px;
+        right: 24px;
+        border-left: 2px solid #ea1821;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
+      .block .benefit[data-v-07a40060]::after {
+        content: ' ';
+        position: absolute;
+        width: 30px;
+        bottom: 24px;
+        right: 10px;
+        border-top: 2px solid #ea1821;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
+      .block .benefit[data-v-07a40060]:hover::before {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg); }
+      .block .benefit[data-v-07a40060]:hover::after {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg); } }
+  @media (max-width: 767px) {
+    .block .benefit[data-v-07a40060] {
+      position: relative;
+      padding: 10px 0 10px 50px; }
+      .block .benefit[data-v-07a40060]::before {
+        content: ' ';
+        position: absolute;
+        width: 35px;
+        left: 0;
+        top: 50%;
+        border-top: 2px solid #ea1821;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%); } }</style><style type="text/css">.block[data-v-07b217e1] {
+  position: relative;
+  padding: 70px 0;
+  background-color: #1b1d1c;
+  color: white; }
+  .block .title[data-v-07b217e1] {
+    position: relative;
+    font-size: 37px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    z-index: 0; }
+    @media (min-width: 768px) {
+      .block .title[data-v-07b217e1] {
+        display: inline-block;
+        max-width: 600px;
+        margin: 0 auto 70px;
+        padding: 20px;
+        line-height: 1.3; }
+        .block .title[data-v-07b217e1]:before {
+          content: ' ';
+          position: absolute;
+          z-index: -1;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          right: 20%;
+          border: 2px solid #ea1821; }
+        .block .title span[data-v-07b217e1] {
+          background-color: #1b1d1c; } }
+  .block .nopadding[data-v-07b217e1] {
+    padding: 0 !important; }
+  .block .feature[data-v-07b217e1] {
+    position: relative;
+    background-size: cover;
+    text-align: center;
+    font-size: 21px;
+    font-weight: bold;
+    height: 33vw;
+    min-height: 300px;
+    z-index: 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    .block .feature > span[data-v-07b217e1] {
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 15%;
+      right: 15%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); }
+    .block .feature[data-v-07b217e1]:before {
+      content: ' ';
+      position: absolute;
+      z-index: -1;
+      left: 20px;
+      top: 20px;
+      bottom: 20px;
+      right: 20px;
+      border: 2px solid #ea1821;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+    .block .feature[data-v-07b217e1]:hover {
+      font-size: 22px; }
+      .block .feature[data-v-07b217e1]:hover:before {
+        left: 17px;
+        right: 17px;
+        top: 17px;
+        bottom: 17px; }</style><style type="text/css">.block[data-v-07c02f62] {
+  position: relative;
+  padding: 70px 0;
+  background-color: #fafafa; }
+  .block .title[data-v-07c02f62] {
+    font-size: 37px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center; }
+  .block .plan-item[data-v-07c02f62] {
+    position: relative;
+    padding: 0 15px 15px 15px;
+    margin: 15px 10px;
+    z-index: 0; }
+    .block .plan-item img[data-v-07c02f62] {
+      width: 100%; }
+    .block .plan-item[data-v-07c02f62]::before {
+      content: ' ';
+      position: absolute;
+      top: 80px;
+      bottom: 38px;
+      left: 0;
+      right: 0;
+      border: 2px #EA1821 solid;
+      z-index: -1; }
+    .block .plan-item .plan-name[data-v-07c02f62] {
+      font-size: 21px;
+      font-weight: bold;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      text-align: center; }
+    .block .plan-item .plan-price[data-v-07c02f62] {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 16px;
+      color: #999999;
+      text-decoration: line-through; }
+    .block .plan-item .plan-discount[data-v-07c02f62] {
+      font-size: 21px;
+      color: #1b1d1c;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 30px; }
+    .block .plan-item .btn-container[data-v-07c02f62] {
+      text-align: right; }
+      .block .plan-item .btn-container .btn[data-v-07c02f62] {
+        color: white;
+        background-color: #ea1821;
+        border-radius: 0;
+        font-size: 16px;
+        padding: 13px 40px;
+        width: 240px; }
+        @media (max-width: 767px) {
+          .block .plan-item .btn-container .btn[data-v-07c02f62] {
+            width: 100%; } }
+        @media (min-width: 768px) {
+          .block .plan-item .btn-container .btn[data-v-07c02f62] {
+            display: inline-block; } }
+        .block .plan-item .btn-container .btn[data-v-07c02f62]:hover {
+          color: white;
+          background-color: #bb131a; }
+  .block .additional[data-v-07c02f62] {
+    display: block;
+    text-decoration: underline;
+    color: #ea1821;
+    cursor: pointer;
+    text-align: center; }
+    .block .additional[data-v-07c02f62]:hover {
+      color: #bb131a; }
+  .block .features[data-v-07c02f62] {
+    font-size: 16px;
+    color: #0c0d0d;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    -webkit-transition: max-height 1s ease-in-out;
+    transition: max-height 1s ease-in-out; }
+    .block .features li[data-v-07c02f62] {
+      margin: 13px 0;
+      position: relative;
+      padding-left: 30px; }
+      .block .features li[data-v-07c02f62]:before {
+        content: ' ';
+        position: absolute;
+        top: 3px;
+        left: 7px;
+        height: 14px;
+        width: 14px;
+        border: 2px solid #ea1821; }
+    .block .features.feature-show[data-v-07c02f62] {
+      max-height: 0; }
+    .block .features.feature-hide[data-v-07c02f62] {
+      height: auto;
+      max-height: 1000px; }</style><style type="text/css">.block[data-v-07ce46e3] {
+  position: relative;
+  padding: 70px 0;
+  background-color: #1b1d1c;
+  color: white; }
+  .block .title[data-v-07ce46e3] {
+    font-size: 37px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 70px; }
+  @media (min-width: 768px) {
+    .block .slider[data-v-07ce46e3] {
+      margin-bottom: 60px; } }
+  .block .slider .slider-tooltip[data-v-07ce46e3] {
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+    white-space: nowrap; }
+  .block .home-types[data-v-07ce46e3] {
+    text-align: center; }
+  .block .summary[data-v-07ce46e3] {
+    display: inline-block;
+    border: 2px solid #ea1821;
+    padding: 20px; }
+    @media (min-width: 768px) {
+      .block .summary[data-v-07ce46e3] {
+        margin-top: 38px; } }
+    .block .summary .sum-label[data-v-07ce46e3] {
+      font-size: 21px;
+      color: #999999;
+      text-align: left; }
+    .block .summary .sum-price[data-v-07ce46e3] {
+      text-align: center;
+      font-size: 37px;
+      font-weight: bold; }
+      @media (min-width: 768px) {
+        .block .summary .sum-price[data-v-07ce46e3] {
+          width: 400px;
+          line-height: 2;
+          margin-top: 15px; } }
+  .block .btn-container[data-v-07ce46e3] {
+    margin-top: 40px;
+    text-align: center; }
+    .block .btn-container .btn[data-v-07ce46e3] {
+      color: white;
+      background-color: #ea1821;
+      border-radius: 0;
+      font-size: 16px;
+      padding: 13px 30px;
+      max-width: 100%; }
+      @media (max-width: 767px) {
+        .block .btn-container .btn[data-v-07ce46e3] {
+          width: 100%;
+          padding-left: 0;
+          padding-right: 0; } }
+      .block .btn-container .btn[data-v-07ce46e3]:hover {
+        color: white;
+        background-color: #bb131a; }</style><style type="text/css">.vue-slider-component{position:relative;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.vue-slider-component.vue-slider-disabled{opacity:.5;cursor:not-allowed}.vue-slider-component.vue-slider-has-label{margin-bottom:15px}.vue-slider-component.vue-slider-disabled .vue-slider-dot{cursor:not-allowed}.vue-slider-component .vue-slider{position:relative;display:block;border-radius:15px;background-color:#ccc}.vue-slider-component .vue-slider:after{content:"";position:absolute;left:0;top:0;width:100%;height:100%;z-index:2}.vue-slider-component .vue-slider-process{position:absolute;border-radius:15px;background-color:#3498db;transition:all 0s;z-index:1}.vue-slider-component.vue-slider-horizontal .vue-slider-process{width:0;height:100%;top:0;left:0;will-change:width}.vue-slider-component.vue-slider-vertical .vue-slider-process{width:100%;height:0;bottom:0;left:0;will-change:height}.vue-slider-component.vue-slider-horizontal-reverse .vue-slider-process{width:0;height:100%;top:0;right:0}.vue-slider-component.vue-slider-vertical-reverse .vue-slider-process{width:100%;height:0;top:0;left:0}.vue-slider-component .vue-slider-dot{position:absolute;border-radius:50%;background-color:#fff;box-shadow:.5px .5px 2px 1px rgba(0,0,0,.32);transition:all 0s;will-change:transform;cursor:pointer;z-index:3}.vue-slider-component.vue-slider-horizontal .vue-slider-dot{left:0}.vue-slider-component.vue-slider-vertical .vue-slider-dot{bottom:0}.vue-slider-component.vue-slider-horizontal-reverse .vue-slider-dot{right:0}.vue-slider-component.vue-slider-vertical-reverse .vue-slider-dot{top:0}.vue-slider-component .vue-slider-tooltip-wrap{display:none;position:absolute;z-index:9}.vue-slider-component .vue-slider-tooltip{display:block;font-size:14px;white-space:nowrap;padding:2px 5px;min-width:20px;text-align:center;color:#fff;border-radius:5px;border:1px solid #3498db;background-color:#3498db}.vue-slider-component .vue-slider-tooltip-wrap.vue-slider-tooltip-top{top:-9px;left:50%;-webkit-transform:translate(-50%,-100%);transform:translate(-50%,-100%)}.vue-slider-component .vue-slider-tooltip-wrap.vue-slider-tooltip-bottom{bottom:-9px;left:50%;-webkit-transform:translate(-50%,100%);transform:translate(-50%,100%)}.vue-slider-component .vue-slider-tooltip-wrap.vue-slider-tooltip-left{top:50%;left:-9px;-webkit-transform:translate(-100%,-50%);transform:translate(-100%,-50%)}.vue-slider-component .vue-slider-tooltip-wrap.vue-slider-tooltip-right{top:50%;right:-9px;-webkit-transform:translate(100%,-50%);transform:translate(100%,-50%)}.vue-slider-component .vue-slider-tooltip-wrap.vue-slider-tooltip-top .vue-slider-tooltip:before{content:"";position:absolute;bottom:-10px;left:50%;width:0;height:0;border:5px solid transparent;border:6px solid transparent\0;border-top-color:inherit;-webkit-transform:translate(-50%);transform:translate(-50%)}.vue-slider-component .vue-slider-tooltip-wrap.vue-slider-tooltip-bottom .vue-slider-tooltip:before{content:"";position:absolute;top:-10px;left:50%;width:0;height:0;border:5px solid transparent;border:6px solid transparent\0;border-bottom-color:inherit;-webkit-transform:translate(-50%);transform:translate(-50%)}.vue-slider-component .vue-slider-tooltip-wrap.vue-slider-tooltip-left .vue-slider-tooltip:before{content:"";position:absolute;top:50%;right:-10px;width:0;height:0;border:5px solid transparent;border:6px solid transparent\0;border-left-color:inherit;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.vue-slider-component .vue-slider-tooltip-wrap.vue-slider-tooltip-right .vue-slider-tooltip:before{content:"";position:absolute;top:50%;left:-10px;width:0;height:0;border:5px solid transparent;border:6px solid transparent\0;border-right-color:inherit;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.vue-slider-component .vue-slider-dot.vue-slider-hover:hover .vue-slider-tooltip-wrap{display:block}.vue-slider-component .vue-slider-dot.vue-slider-always .vue-slider-tooltip-wrap{display:block!important}.vue-slider-component .vue-slider-piecewise{position:absolute;width:100%;padding:0;margin:0;left:0;top:0;height:100%;list-style:none}.vue-slider-component .vue-slider-piecewise-item{position:absolute;width:8px;height:8px}.vue-slider-component .vue-slider-piecewise-dot{position:absolute;left:50%;top:50%;width:100%;height:100%;display:inline-block;background-color:rgba(0,0,0,.16);border-radius:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);z-index:2;transition:all .3s}.vue-slider-component .vue-slider-piecewise-item:first-child .vue-slider-piecewise-dot,.vue-slider-component .vue-slider-piecewise-item:last-child .vue-slider-piecewise-dot{visibility:hidden}.vue-slider-component.vue-slider-horizontal-reverse .vue-slider-piecewise-label,.vue-slider-component.vue-slider-horizontal .vue-slider-piecewise-label{position:absolute;display:inline-block;top:100%;left:50%;white-space:nowrap;font-size:12px;color:#333;-webkit-transform:translate(-50%,8px);transform:translate(-50%,8px);visibility:visible}.vue-slider-component.vue-slider-vertical-reverse .vue-slider-piecewise-label,.vue-slider-component.vue-slider-vertical .vue-slider-piecewise-label{position:absolute;display:inline-block;top:50%;left:100%;white-space:nowrap;font-size:12px;color:#333;-webkit-transform:translate(8px,-50%);transform:translate(8px,-50%);visibility:visible}.vue-slider-component .vue-slider-sr-only{clip:rect(1px,1px,1px,1px);height:1px;width:1px;overflow:hidden;position:absolute!important}</style><style type="text/css">.radio-container[data-v-c70090c8] {
+  display: inline-block; }
+  .radio-container .radio-box[data-v-c70090c8] {
+    display: block;
+    position: relative;
+    padding-left: 50px;
+    margin: 35px 0;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 28px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    text-align: left; }
+    .radio-container .radio-box input[data-v-c70090c8] {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer; }
+    .radio-container .radio-box .opt-desc[data-v-c70090c8] {
+      display: block;
+      color: #999;
+      font-weight: normal; }
+    .radio-container .radio-box .checkmark[data-v-c70090c8] {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      height: 28px;
+      width: 28px;
+      border: 2px solid #ea1821;
+      border-radius: 0;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); }
+      .radio-container .radio-box .checkmark[data-v-c70090c8]::after {
+        display: none;
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: 16px;
+        height: 16px;
+        background-color: #ea1821; }
+    .radio-container .radio-box:hover input ~ .checkmark[data-v-c70090c8] {
+      top: calc(50% - 1px);
+      left: -1px;
+      height: 30px;
+      width: 30px; }
+    .radio-container .radio-box:hover input ~ .checkmark[data-v-c70090c8]::after {
+      width: 18px;
+      height: 18px; }
+
+@-webkit-keyframes tick {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  90% {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes tick {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  90% {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+    .radio-container .radio-box input:checked ~ .checkmark[data-v-c70090c8]::after {
+      display: block;
+      -webkit-animation: tick .2s ease-in-out;
+              animation: tick .2s ease-in-out; }</style><style type="text/css">.block[data-v-07dc5e64] {
+  padding: 70px 0;
+  background-color: #fafafa; }
+  .block .title[data-v-07dc5e64] {
+    font-size: 37px;
+    font-weight: bold;
+    text-align: center; }
+  .block .benefit[data-v-07dc5e64] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 130px;
+    margin-top: 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 16px;
+    line-height: 2; }
+    .block .benefit .shape-container[data-v-07dc5e64] {
+      min-width: 150px;
+      text-align: center; }
+      .block .benefit .shape-container img[data-v-07dc5e64] {
+        margin-right: 20px; }</style><style type="text/css">.block[data-v-07ea75e5] {
+  position: relative;
+  padding: 70px 0;
+  color: white;
+  background-color: #1b1d1c; }
+  @media (min-width: 768px) {
+    .block[data-v-07ea75e5] {
+      background: url(assets/images/block8/background.jpg) right center no-repeat, #1b1d1c;
+      background-size: 34%; } }
+  .block .title[data-v-07ea75e5] {
+    font-size: 37px;
+    font-weight: bold;
+    margin-bottom: 70px; }
+  .block .counter[data-v-07ea75e5] {
+    border: 2px solid #ea1821;
+    padding: 25px;
+    margin-bottom: 50px; }
+    @media (max-width: 767px) {
+      .block .counter[data-v-07ea75e5] {
+        margin-top: 30px;
+        margin-bottom: 30px; } }
+    .block .counter .digits[data-v-07ea75e5] {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      font-size: 37px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 0.6;
+      margin-top: 30px; }
+      .block .counter .digits > *[data-v-07ea75e5] {
+        margin: 0 5px; }
+        .block .counter .digits > *[data-v-07ea75e5]:first-child {
+          margin-left: 0;
+          margin-right: 20px; }
+        .block .counter .digits > *[data-v-07ea75e5]:last-child {
+          margin-right: 0; }
+      .block .counter .digits span[data-v-07ea75e5] {
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 1; }
+  .block .btn[data-v-07ea75e5] {
+    color: white;
+    background-color: #ea1821;
+    border-radius: 0;
+    font-size: 16px;
+    padding: 13px 30px;
+    max-width: 100%; }
+    @media (max-width: 767px) {
+      .block .btn[data-v-07ea75e5] {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0; } }
+    .block .btn[data-v-07ea75e5]:hover {
+      color: white;
+      background-color: #bb131a; }</style><style type="text/css">.block[data-v-07f88d66] {
+  padding: 50px 0;
+  background-color: #fafafa; }
+  .block .title[data-v-07f88d66] {
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px; }
+  .block .item[data-v-07f88d66] {
+    display: inline-block;
+    max-width: 170px; }
+    .block .item .item-value[data-v-07f88d66] {
+      font-size: 37px;
+      font-weight: bold;
+      margin-top: 20px; }
+    .block .item hr[data-v-07f88d66] {
+      border: 0;
+      border-bottom: 2px solid #ea1821;
+      width: 80%;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+    .block .item:hover hr[data-v-07f88d66] {
+      width: 100%; }</style><style type="text/css">.block[data-v-2d24567c] {
+  position: relative;
+  padding: 70px 0;
+  background-color: #1b1d1c;
+  color: white; }
+  .block .title[data-v-2d24567c] {
+    font-size: 37px;
+    font-weight: bold;
+    margin-bottom: 30px; }
+    @media (max-width: 767px) {
+      .block .title[data-v-2d24567c] {
+        text-align: center; } }
+  .block .home-item[data-v-2d24567c] {
+    position: relative;
+    padding-top: 20px;
+    margin: 15px 10px;
+    z-index: 0; }
+    .block .home-item img[data-v-2d24567c] {
+      display: block;
+      width: 90%; }
+    .block .home-item[data-v-2d24567c]::before {
+      content: ' ';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 85%;
+      height: 80%;
+      border: 2px #EA1821 solid;
+      z-index: -1;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+    @media (min-width: 768px) {
+      .block .home-item[data-v-2d24567c]:hover::before {
+        height: 100%; } }
+    .block .home-item .home-desc[data-v-2d24567c] {
+      margin-left: calc(15% + 4px);
+      padding: 20px; }
+      .block .home-item .home-desc .home-attr[data-v-2d24567c] {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        line-height: 2;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+      .block .home-item .home-desc .home-price[data-v-2d24567c] {
+        font-size: 21px;
+        font-weight: bold;
+        text-align: right;
+        margin-top: 10px; }
+  .block .catalog[data-v-2d24567c] {
+    text-align: center;
+    margin-top: 40px; }
+    @media (min-width: 767px) {
+      .block .catalog[data-v-2d24567c] {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
+                align-items: stretch; } }
+    .block .catalog .title[data-v-2d24567c] {
+      display: inline-block;
+      max-width: 500px;
+      text-align: left;
+      margin: 0; }
+      @media (max-width: 767px) {
+        .block .catalog .title[data-v-2d24567c] {
+          margin-bottom: 20px;
+          text-align: center; } }
+    .block .catalog .btn[data-v-2d24567c] {
+      color: white;
+      background-color: #ea1821;
+      border-radius: 0;
+      font-size: 16px;
+      padding: 13px 40px; }
+      @media (min-width: 768px) {
+        .block .catalog .btn[data-v-2d24567c] {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translateX(-50%) translateY(-50%);
+                  transform: translateX(-50%) translateY(-50%); } }
+      @media (max-width: 767px) {
+        .block .catalog .btn[data-v-2d24567c] {
+          width: 100%; } }
+      .block .catalog .btn[data-v-2d24567c]:hover {
+        color: white;
+        background-color: #bb131a; }</style><style type="text/css">.slider-block[data-v-2d08277a] {
+  position: relative;
+  overflow: hidden;
+  padding: 70px 0 40px; }
+  .slider-block .title[data-v-2d08277a] {
+    font-size: 37px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center; }
+  .slider-block .flickity-slider[data-v-2d08277a]:focus {
+    outline: none; }
+  .slider-block .page-dots[data-v-2d08277a] {
+    text-align: center; }
+    .slider-block .page-dots > *[data-v-2d08277a] {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border: 2px solid #ea1821;
+      border-radius: 50%;
+      margin: 10px;
+      cursor: pointer; }
+      .slider-block .page-dots > *.selected[data-v-2d08277a] {
+        background-color: #ea1821; }</style><style type="text/css">.block[data-v-282deee6] {
+  position: relative;
+  margin-bottom: 25px;
+  width: 100%;
+  background-size: cover; }
+  .block .title[data-v-282deee6] {
+    font-size: 37px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-align: center; }
+  .block .container[data-v-282deee6] {
+    height: 550px; }
+    @media (max-width: 767px) {
+      .block .container[data-v-282deee6] {
+        height: 400px; } }
+  @media (min-width: 767px) {
+    .block .row[data-v-282deee6] {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: stretch;
+          -ms-flex-align: stretch;
+              align-items: stretch;
+      height: 100%; } }
+  .block .arrow[data-v-282deee6] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+    width: 56px;
+    height: 56px;
+    background-color: #fafafa;
+    cursor: pointer;
+    opacity: 0.5; }
+    .block .arrow[data-v-282deee6]:before {
+      content: ' ';
+      display: block;
+      position: relative;
+      width: 28px;
+      height: 28px;
+      top: 14px;
+      border: 0 solid #ea1821;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    .block .arrow.left-arrow[data-v-282deee6]:before {
+      left: 20px;
+      border-width: 0 0 2px 2px; }
+    .block .arrow.right-arrow[data-v-282deee6]:before {
+      left: 8px;
+      border-width: 2px 2px 0 0; }
+  .block .info[data-v-282deee6] {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    bottom: 30px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    z-index: 0; }
+    .block .info[data-v-282deee6]:before {
+      content: ' ';
+      display: inline-block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 10px;
+      left: 10px;
+      border: 2px solid #ea1821;
+      z-index: -1; }
+    .block .info .name[data-v-282deee6] {
+      background-color: #fafafa;
+      padding: 15px 20px;
+      color: #2a2a2a;
+      font-size: 16px; }</style><style type="text/css">.block[data-v-2cebf878] {
+  padding: 50px 0;
+  background-color: #1b1d1c;
+  color: white; }
+  .block .title[data-v-2cebf878] {
+    font-size: 37px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px; }
+  .block .work-scheme[data-v-2cebf878] {
+    margin-bottom: 70px; }
+  .block input[data-v-2cebf878] {
+    border: 2px solid #ea1821;
+    padding: 12px 15px;
+    width: 100%;
+    background-color: #1b1b1c; }
+    @media (max-width: 767px) {
+      .block input[data-v-2cebf878] {
+        margin-bottom: 15px; } }
+  .block .btn[data-v-2cebf878] {
+    border-radius: 0;
+    background-color: #EA1821;
+    padding: 14px 15px;
+    width: 100%; }
+    .block .btn[data-v-2cebf878]:hover {
+      color: white;
+      background-color: #bb131a; }
+  .block .personal-data[data-v-2cebf878] {
+    text-align: center;
+    font-size: 12px;
+    padding: 15px 30px 0; }</style><style type="text/css">.block[data-v-2ccfc976] {
+  padding: 70px 0;
+  background-color: #fafafa;
+  line-height: 2; }
+  @media (max-width: 767px) {
+    .block[data-v-2ccfc976] {
+      text-align: center; } }
+  .block a[data-v-2ccfc976] {
+    color: #ea1821; }
+    .block a[data-v-2ccfc976]:hover, .block a[data-v-2ccfc976]:visited, .block a[data-v-2ccfc976]:focus, .block a[data-v-2ccfc976]:active {
+      color: #bb131a; }
+  .block .links[data-v-2ccfc976] {
+    font-size: 37px;
+    text-align: center; }
+    .block .links a[data-v-2ccfc976] {
+      display: inline-block;
+      color: #1b1b1c;
+      margin: 0 10px;
+      border: 2px solid #1b1b1c;
+      border-radius: 50%;
+      height: 56px;
+      width: 56px;
+      line-height: 50px; }
+      .block .links a[data-v-2ccfc976]:visited {
+        color: #1b1b1c; }
+      .block .links a[data-v-2ccfc976]:hover, .block .links a[data-v-2ccfc976]:focus, .block .links a[data-v-2ccfc976]:active {
+        color: #ea1821;
+        border-color: #ea1821; }
+  .block .partners[data-v-2ccfc976] {
+    margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .block .partners > *[data-v-2ccfc976] {
+      height: 60px;
+      max-width: 25%;
+      margin: 0 10px; }
+    .block .partners > *[data-v-2ccfc976]:last-child {
+      height: 100px; }</style></head>
+<body cz-shortcut-listen="true">
+  <div data-v-82f0f610=""><div data-v-82f0f610="" class="header header-abs"><div data-v-334e1a27="" data-v-82f0f610="" class="header-root"><div data-v-334e1a27="" class="container"><div data-v-334e1a27="" class="row hidden-xs"><div data-v-334e1a27="" class="col-xs-4"><img data-v-334e1a27="" alt="Nikoro logo Строительство каркасных домов" src="assets/images/logo-white.png" class="logo"></div> <div data-v-334e1a27="" class="col-sm-8"><div data-v-334e1a27="" class="nav"><a data-v-334e1a27="" href="#advantages" class="link">Преимущества</a> <a data-v-334e1a27="" href="#calculator" class="link">Калькулятор</a> <a data-v-334e1a27="" href="#projects" class="link">Проекты</a> <a data-v-334e1a27="" href="#contacts" class="link">Контакты</a> <a data-v-334e1a27="" href="tel:+79501738827" title="Телефон" class="tel">+7 (950) 173-88-27</a></div></div></div> <div data-v-334e1a27="" class="row visible-xs"><div data-v-334e1a27="" class="nav nav-xs"><a data-v-334e1a27="" href="tel:+79501738827" class="tel"><i data-v-334e1a27="" aria-hidden="true" class="fa fa-phone"></i> +7 (950) 173-88-27
+        </a></div></div></div></div></div> <div data-v-0787d15e="" data-v-82f0f610="" class="block"><div data-v-0787d15e="" class="container-fluid"><div data-v-0787d15e="" class="row"><div data-v-0787d15e="" class="hidden-xs col-sm-4 image-part"></div> <div data-v-0787d15e="" class="col-xs-12 col-sm-7 content-part"><div data-v-0787d15e=""><div data-v-0787d15e="" class="offer"><div data-v-0787d15e="" class="titles"><h1 data-v-0787d15e="" class="title title-font">Строительство каркасных домов в Ижевске от 359 000 рублей</h1> <div data-v-0787d15e="" class="subtitle">Оставьте заявку на рассчет стоимости дома</div></div></div> <div data-v-0787d15e="" class="offer"><div data-v-0787d15e="" class="buttons"><div data-v-0787d15e="" data-toggle="modal" data-target="#block1-modal" class="btn">Остaвить заявку</div></div></div></div></div></div></div> <div data-v-048c80f6="" data-v-0787d15e="" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade" id="block1-modal"><div data-v-048c80f6="" role="document" class="modal-dialog"><div data-v-048c80f6="" class="modal-content"><div data-v-048c80f6="" class="modal-header"><button data-v-048c80f6="" type="button" data-dismiss="modal" aria-label="Close" class="close"></button></div> <div data-v-048c80f6="" class="modal-body"><form data-v-048c80f6=""><div data-v-048c80f6="" class="form-group"><input data-v-048c80f6="" type="text" name="name" placeholder="Введите имя"></div> <div data-v-048c80f6="" class="form-group"><input data-v-048c80f6="" type="tel" name="tel" pattern="[0-9-+()\s]+" placeholder="Введите телефон"></div> <div data-v-048c80f6="" class="form-group"><button data-v-048c80f6="" type="submit" class="btn">Отправить заявку</button> <div data-v-048c80f6="" class="personal-data">
+              Отправляя персональные данные, вы соглашаетесь на их обработку
+            </div></div></form></div></div></div></div></div> <div data-v-0795e8df="" data-v-82f0f610="" class="block"><div data-v-0795e8df="" class="container"><div data-v-0795e8df="" class="row"><div data-v-0795e8df="" class="col-sm-offset-1 col-sm-11"><h2 data-v-0795e8df="" class="title title-font">Технология строительства каркасных домов</h2></div></div> <div data-v-0795e8df="" class="row"><div data-v-0795e8df="" class="col-sm-4 col-sm-offset-1 hidden-xs img-container"><img data-v-0795e8df="" src="assets/images/block2/home.png"></div> <div data-v-0795e8df="" class="col-sm-7"><div data-v-0795e8df="" class="desc"><div data-v-0795e8df="" class="item-img"><img data-v-0795e8df="" src="assets/images/block2/item1.jpg" alt="Сваи"></div> <h3 data-v-0795e8df="">Сваи</h3> <p data-v-0795e8df="">Наиболее подходящий вид фундамента при строительстве каркасного дома — фундамент на винтовых сваях. Он подходит для любого рельефа местности и для любых «проблемных» грунтов.<br data-v-0795e8df="">
+          Утепление фундамента на винтовых сваях не требуется, поскольку этот тип фундамента относится к проветриваемым. Перед установкой фундамента проводим геологическое исследование грунта.</p></div> <div data-v-0795e8df="" class="desc"><div data-v-0795e8df="" class="item-img"><img data-v-0795e8df="" src="assets/images/block2/item2.jpg" alt="Сваи"></div> <h3 data-v-0795e8df="">Силовой каркас</h3> <p data-v-0795e8df="">Строим каркасные дома строго по технологии СНиП СП 31-105-2002. Для строительства силового каркаса используем доску хвойной породы камерной сушки 1; 2-го сорта сечением 150x50, обработанную огнебиозащитным составом.</p></div> <div data-v-0795e8df="" class="desc"><div data-v-0795e8df="" class="item-img"><img data-v-0795e8df="" src="assets/images/block2/item3.jpg" alt="Сваи"></div> <h3 data-v-0795e8df="">Утепление</h3> <p data-v-0795e8df="">Стена каркасного дома состоит из : силового каркаса, гидро-ветрозащитной плёнки , базальтового утеплителя 150мм по несущим стойкам и 50мм перекрёстного утепления , пароизоляционной плёнки.</p></div></div></div></div></div> <div data-v-07a40060="" data-v-82f0f610="" class="block" id="advantages"><div data-v-07a40060="" class="container"><div data-v-07a40060="" class="row"><div data-v-07a40060="" class="col-sm-offset-1 col-sm-11"><h2 data-v-07a40060="" class="title title-font">Преимущества каркасных домов</h2> <ul data-v-07a40060="" class="benefits"><li data-v-07a40060="" class="benefit">На 50% дешевле кирпичного дома</li><li data-v-07a40060="" class="benefit">Возможность круглогодичного строительства</li><li data-v-07a40060="" class="benefit">Любая архитектурная форма и отделка</li><li data-v-07a40060="" class="benefit">Прогрев дома от 5 до 20°C за 1 час</li><!----><!----><!----><!----></ul> <ul data-v-07a40060="" class="benefits"><!----><!----><!----><!----><li data-v-07a40060="" class="benefit">Сроки возведения 30-120 дней</li><li data-v-07a40060="" class="benefit">50 лет - срок службы до первого серьезного ремонта</li><li data-v-07a40060="" class="benefit">Затраты на отопление на 58% меньше</li><li data-v-07a40060="" class="benefit">Можно строить и отделывать поэтапно</li></ul></div></div></div></div> <div data-v-07b217e1="" data-v-82f0f610="" class="block"><div data-v-07b217e1="" class="container-fluid"><div data-v-07b217e1="" class="text-center"><h2 data-v-07b217e1="" class="title title-font"><span data-v-07b217e1="">Каркасный дом от “Никоро” – идеальное решение, если вы…</span></h2></div> <div data-v-07b217e1="" class="row"><div data-v-07b217e1="" class="col-sm-4 nopadding"><div data-v-07b217e1="" class="feature" style="background-image: url(&quot;assets/images/block4/home1.jpg&quot;);"><span data-v-07b217e1="">Хотите жить в уютном, тихом и надежном доме</span></div></div><div data-v-07b217e1="" class="col-sm-4 nopadding"><div data-v-07b217e1="" class="feature" style="background-image: url(&quot;assets/images/block4/home2.jpg&quot;);"><span data-v-07b217e1="">Устали переплачивать за квартиру</span></div></div><div data-v-07b217e1="" class="col-sm-4 nopadding"><div data-v-07b217e1="" class="feature" style="background-image: url(&quot;assets/images/block4/home3.jpg&quot;);"><span data-v-07b217e1="">Мечтаете жить с детьми в просторном доме</span></div></div></div></div></div> <div data-v-07c02f62="" data-v-82f0f610="" class="block"><div data-v-07c02f62="" class="container"><h2 data-v-07c02f62="" class="title title-font">Комплектации домов</h2> <div data-v-07c02f62="" class="row"><div data-v-07c02f62="" class="col-sm-4"><div data-v-07c02f62="" class="plan-item"><img data-v-07c02f62="" src="assets/images/block5/item1.jpg" alt="“Дача”"> <h3 data-v-07c02f62="" class="plan-name">“Дача”</h3> <div data-v-07c02f62="" class="additional"><span data-v-07c02f62="">Подробнее...</span></div> <ul data-v-07c02f62="" class="features feature-show"><li data-v-07c02f62="">Срок строительства от 45 дней</li><li data-v-07c02f62="">Фундамент свайно-винтовой</li><li data-v-07c02f62="">Стандартный каркас отработанный антисептиком Neomid</li><li data-v-07c02f62="">Базальтовый утеплитель 100мм</li><li data-v-07c02f62="">Кровля - металлопрофиль</li><li data-v-07c02f62="">Внешняя отделка - OSB</li><li data-v-07c02f62="">Окна пластиковые</li><li data-v-07c02f62="">Дверь металлическая</li><li data-v-07c02f62="">Полы - доска шпунтованная 150x40</li><li data-v-07c02f62="">Внутренняя отделка - вагонка</li></ul> <div data-v-07c02f62="" class="plan-price">от 15 500 руб/м<sup data-v-07c02f62="">2</sup></div> <div data-v-07c02f62="" class="plan-discount">от 11 990 руб/м<sup data-v-07c02f62="">2</sup></div> <div data-v-07c02f62="" class="btn-container"><div data-v-07c02f62="" data-toggle="modal" data-target="#block5-modal-0" class="btn">Заказать</div></div></div></div><div data-v-07c02f62="" class="col-sm-4"><div data-v-07c02f62="" class="plan-item"><img data-v-07c02f62="" src="assets/images/block5/item2.jpg" alt="“Классика”"> <h3 data-v-07c02f62="" class="plan-name">“Классика”</h3> <div data-v-07c02f62="" class="additional"><span data-v-07c02f62="">Подробнее...</span></div> <ul data-v-07c02f62="" class="features feature-show"><li data-v-07c02f62="">Срок строительства от 60 дней</li><li data-v-07c02f62="">Фундамент свайно-винтовой</li><li data-v-07c02f62="">Стандартный каркас отработанный антисептиком Neomid</li><li data-v-07c02f62="">Базальтовый утеплитель 150+50 (200)мм</li><li data-v-07c02f62="">Кровля - металлочерепица</li><li data-v-07c02f62="">Внешняя отделка - сайдинг или имитация бруса</li><li data-v-07c02f62="">Окна пластиковые</li><li data-v-07c02f62="">Дверь металлическая</li><li data-v-07c02f62="">Полы - доска шпунтованная 150x40</li><li data-v-07c02f62="">Внутренняя отделка - ГКЛВ 12,5 мм</li><li data-v-07c02f62="">Вентиляция</li><li data-v-07c02f62="">Электромонтаж по всему дому, без подключения световых приборов</li><li data-v-07c02f62="">Отопление - конвекторы электрические</li><li data-v-07c02f62="">Монтаж канализации и водоснабжения в санузлах и кухне</li></ul> <div data-v-07c02f62="" class="plan-price">от 18 300 руб/м<sup data-v-07c02f62="">2</sup></div> <div data-v-07c02f62="" class="plan-discount">от 15 990 руб/м<sup data-v-07c02f62="">2</sup></div> <div data-v-07c02f62="" class="btn-container"><div data-v-07c02f62="" data-toggle="modal" data-target="#block5-modal-1" class="btn">Заказать</div></div></div></div><div data-v-07c02f62="" class="col-sm-4"><div data-v-07c02f62="" class="plan-item"><img data-v-07c02f62="" src="assets/images/block5/item3.jpg" alt="“Под ключ”"> <h3 data-v-07c02f62="" class="plan-name">“Под ключ”</h3> <div data-v-07c02f62="" class="additional"><span data-v-07c02f62="">Подробнее...</span></div> <ul data-v-07c02f62="" class="features feature-show"><li data-v-07c02f62="">Срок строительства от 75 дней</li><li data-v-07c02f62="">Фундамент свайно-винтовой</li><li data-v-07c02f62="">Стандартный каркас отработанный антисептиком Neomid</li><li data-v-07c02f62="">Базальтовый утеплитель 150+50 (200)мм</li><li data-v-07c02f62="">Кровля - металлочерепица</li><li data-v-07c02f62="">Внешняя отделка - декоративная штукатурка или имитация бруса</li><li data-v-07c02f62="">Окна пластиковые</li><li data-v-07c02f62="">Дверь металлическая</li><li data-v-07c02f62="">Полы - доска шпунтованная 150x40</li><li data-v-07c02f62="">Внутренняя отделка - ГКЛВ 12,5 мм</li><li data-v-07c02f62="">Вентиляция</li><li data-v-07c02f62="">Электромонтаж по всему дому, с подключением световых приборов</li><li data-v-07c02f62="">Отопление - тёплый пол первый этаж , установка котла и радиаторов</li><li data-v-07c02f62="">Канализация и водоснабжение в санузлах и кухне</li><li data-v-07c02f62="">Чистовая отделка пола - ламинат</li><li data-v-07c02f62="">Чистовая отделка санузлов плиткой</li></ul> <div data-v-07c02f62="" class="plan-price">от 21 000 руб/м<sup data-v-07c02f62="">2</sup></div> <div data-v-07c02f62="" class="plan-discount">от 19 900 руб/м<sup data-v-07c02f62="">2</sup></div> <div data-v-07c02f62="" class="btn-container"><div data-v-07c02f62="" data-toggle="modal" data-target="#block5-modal-2" class="btn">Заказать</div></div></div></div></div></div> <div data-v-048c80f6="" data-v-07c02f62="" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade" id="block5-modal-0"><div data-v-048c80f6="" role="document" class="modal-dialog"><div data-v-048c80f6="" class="modal-content"><div data-v-048c80f6="" class="modal-header"><button data-v-048c80f6="" type="button" data-dismiss="modal" aria-label="Close" class="close"></button></div> <div data-v-048c80f6="" class="modal-body"><form data-v-048c80f6=""><div data-v-048c80f6="" class="form-group"><input data-v-048c80f6="" type="text" name="name" placeholder="Введите имя"></div> <div data-v-048c80f6="" class="form-group"><input data-v-048c80f6="" type="tel" name="tel" pattern="[0-9-+()\s]+" placeholder="Введите телефон"></div> <div data-v-048c80f6="" class="form-group"><button data-v-048c80f6="" type="submit" class="btn">Отправить заявку</button> <div data-v-048c80f6="" class="personal-data">
+              Отправляя персональные данные, вы соглашаетесь на их обработку
+            </div></div></form></div></div></div></div><div data-v-048c80f6="" data-v-07c02f62="" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade" id="block5-modal-1"><div data-v-048c80f6="" role="document" class="modal-dialog"><div data-v-048c80f6="" class="modal-content"><div data-v-048c80f6="" class="modal-header"><button data-v-048c80f6="" type="button" data-dismiss="modal" aria-label="Close" class="close"></button></div> <div data-v-048c80f6="" class="modal-body"><form data-v-048c80f6=""><div data-v-048c80f6="" class="form-group"><input data-v-048c80f6="" type="text" name="name" placeholder="Введите имя"></div> <div data-v-048c80f6="" class="form-group"><input data-v-048c80f6="" type="tel" name="tel" pattern="[0-9-+()\s]+" placeholder="Введите телефон"></div> <div data-v-048c80f6="" class="form-group"><button data-v-048c80f6="" type="submit" class="btn">Отправить заявку</button> <div data-v-048c80f6="" class="personal-data">
+              Отправляя персональные данные, вы соглашаетесь на их обработку
+            </div></div></form></div></div></div></div><div data-v-048c80f6="" data-v-07c02f62="" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade" id="block5-modal-2"><div data-v-048c80f6="" role="document" class="modal-dialog"><div data-v-048c80f6="" class="modal-content"><div data-v-048c80f6="" class="modal-header"><button data-v-048c80f6="" type="button" data-dismiss="modal" aria-label="Close" class="close"></button></div> <div data-v-048c80f6="" class="modal-body"><form data-v-048c80f6=""><div data-v-048c80f6="" class="form-group"><input data-v-048c80f6="" type="text" name="name" placeholder="Введите имя"></div> <div data-v-048c80f6="" class="form-group"><input data-v-048c80f6="" type="tel" name="tel" pattern="[0-9-+()\s]+" placeholder="Введите телефон"></div> <div data-v-048c80f6="" class="form-group"><button data-v-048c80f6="" type="submit" class="btn">Отправить заявку</button> <div data-v-048c80f6="" class="personal-data">
+              Отправляя персональные данные, вы соглашаетесь на их обработку
+            </div></div></form></div></div></div></div></div> <div data-v-07ce46e3="" data-v-82f0f610="" class="block" id="calculator"><div data-v-07ce46e3="" class="container"><h2 data-v-07ce46e3="" class="title title-font">Рассчитайте стоимость своего дома</h2> <div data-v-07ce46e3="" class="slider"><div data-v-07ce46e3="" class="vue-slider-component vue-slider-horizontal" style="width: auto; padding: 8px;"><div aria-hidden="true" class="vue-slider" style="height: 3px; background-color: rgb(234, 24, 33);"><div class="vue-slider-always vue-slider-dot" style="width: 28px; height: 28px; top: -12px; border: 2px solid rgb(234, 24, 33); background-color: rgb(27, 29, 28); box-shadow: none; transition-duration: 0s; transform: translateX(329.2px);"><span class="vue-slider-tooltip-top vue-slider-tooltip-wrap"><div data-v-07ce46e3="" class="slider-tooltip">150 м<sup data-v-07ce46e3="">2</sup></div></span></div> <ul class="vue-slider-piecewise"></ul> <div class="vue-slider-process" style="background-color: rgb(234, 24, 33); transition-duration: 0s; width: 337.2px; left: 0px;"></div></div> <input type="range" min="0" max="500" class="vue-slider-sr-only"></div></div> <div data-v-07ce46e3="" class="row"><div data-v-07ce46e3="" class="col-sm-6"><div data-v-07ce46e3="" class="home-types"><div data-v-c70090c8="" data-v-07ce46e3="" class="radio-container"><label data-v-c70090c8="" class="radio-box"><span data-v-c70090c8="" class="opt-text">“Дача”</span> <!----> <input data-v-c70090c8="" type="radio" name="hometype" value="0"> <span data-v-c70090c8="" class="checkmark"></span></label><label data-v-c70090c8="" class="radio-box"><span data-v-c70090c8="" class="opt-text">“Классика”</span> <span data-v-c70090c8="" class="opt-desc">Буду жить постоянно</span> <input data-v-c70090c8="" type="radio" name="hometype" value="1"> <span data-v-c70090c8="" class="checkmark"></span></label><label data-v-c70090c8="" class="radio-box"><span data-v-c70090c8="" class="opt-text">“Под ключ”</span> <span data-v-c70090c8="" class="opt-desc">Буду жить постоянно</span> <input data-v-c70090c8="" type="radio" name="hometype" value="2"> <span data-v-c70090c8="" class="checkmark"></span></label></div></div></div> <div data-v-07ce46e3="" class="col-sm-6 text-center"><div data-v-07ce46e3="" class="summary"><div data-v-07ce46e3="" class="sum-label">СТОИМОСТЬ ДОМА:</div> <div data-v-07ce46e3="" class="sum-price">2 398 500  рублей</div></div></div></div> <div data-v-07ce46e3="" class="btn-container"><div data-v-07ce46e3="" data-toggle="modal" data-target="#block6-modal" class="btn">Получить подробный расчет стоимости</div></div></div> <div data-v-048c80f6="" data-v-07ce46e3="" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade" id="block6-modal"><div data-v-048c80f6="" role="document" class="modal-dialog"><div data-v-048c80f6="" class="modal-content"><div data-v-048c80f6="" class="modal-header"><button data-v-048c80f6="" type="button" data-dismiss="modal" aria-label="Close" class="close"></button></div> <div data-v-048c80f6="" class="modal-body"><form data-v-048c80f6=""><div data-v-048c80f6="" class="form-group"><input data-v-048c80f6="" type="text" name="name" placeholder="Введите имя"></div> <div data-v-048c80f6="" class="form-group"><input data-v-048c80f6="" type="tel" name="tel" pattern="[0-9-+()\s]+" placeholder="Введите телефон"></div> <div data-v-048c80f6="" class="form-group"><button data-v-048c80f6="" type="submit" class="btn">Отправить заявку</button> <div data-v-048c80f6="" class="personal-data">
+              Отправляя персональные данные, вы соглашаетесь на их обработку
+            </div></div></form></div></div></div></div></div> <div data-v-07dc5e64="" data-v-82f0f610="" class="block"><div data-v-07dc5e64="" class="container"><h2 data-v-07dc5e64="" class="title title-font">Наши преимущества</h2> <div data-v-07dc5e64="" class="row"><div data-v-07dc5e64="" class="col-sm-4"><div data-v-07dc5e64="" class="benefit"><div data-v-07dc5e64="" class="shape-container"><img data-v-07dc5e64="" src="assets/images/block7/shape1.png"></div> <div data-v-07dc5e64="">Входим в ГК "Дом", основанную в 1997г.</div></div></div><div data-v-07dc5e64="" class="col-sm-4"><div data-v-07dc5e64="" class="benefit"><div data-v-07dc5e64="" class="shape-container"><img data-v-07dc5e64="" src="assets/images/block7/shape2.png"></div> <div data-v-07dc5e64="">Гарантия 10 лет</div></div></div><div data-v-07dc5e64="" class="col-sm-4"><div data-v-07dc5e64="" class="benefit"><div data-v-07dc5e64="" class="shape-container"><img data-v-07dc5e64="" src="assets/images/block7/shape3.png"></div> <div data-v-07dc5e64="">Материалы высокого качества</div></div></div><div data-v-07dc5e64="" class="col-sm-4"><div data-v-07dc5e64="" class="benefit"><div data-v-07dc5e64="" class="shape-container"><img data-v-07dc5e64="" src="assets/images/block7/shape4.png"></div> <div data-v-07dc5e64="">Бесплатный проект</div></div></div><div data-v-07dc5e64="" class="col-sm-4"><div data-v-07dc5e64="" class="benefit"><div data-v-07dc5e64="" class="shape-container"><img data-v-07dc5e64="" src="assets/images/block7/shape5.png"></div> <div data-v-07dc5e64="">Опыт бригад более 5 лет</div></div></div><div data-v-07dc5e64="" class="col-sm-4"><div data-v-07dc5e64="" class="benefit"><div data-v-07dc5e64="" class="shape-container"><img data-v-07dc5e64="" src="assets/images/block7/shape6.png"></div> <div data-v-07dc5e64="">Строим по технологии СНиП СП31-105-2002</div></div></div></div></div></div> <div data-v-07ea75e5="" data-v-82f0f610="" class="block"><div data-v-07ea75e5="" class="container"><div data-v-07ea75e5="" class="row"><div data-v-07ea75e5="" class="col-sm-8"><h2 data-v-07ea75e5="" class="title title-font">Почему у 98,7% людей возникают трудности со строительством дома, а наши клиенты не знают проблем?</h2> <div data-v-07ea75e5="" class="row"><div data-v-07ea75e5="" class="col-sm-6"><p data-v-07ea75e5="">Комплексный подход к строительству от разработки строительного проекта до установки сантехники</p> <h3 data-v-07ea75e5="">Акция</h3> <p data-v-07ea75e5="">Строительный проект в подарок</p></div> <div data-v-07ea75e5="" class="col-sm-6"><div data-v-07ea75e5="" class="counter"><div data-v-07ea75e5="">До конца акции:</div> <div data-v-07ea75e5="" class="digits"><div data-v-07ea75e5="">5<br data-v-07ea75e5=""><span data-v-07ea75e5="">дней</span></div> <div data-v-07ea75e5="">13<br data-v-07ea75e5=""><span data-v-07ea75e5="">часов</span></div> <div data-v-07ea75e5="">:</div> <div data-v-07ea75e5="">04<br data-v-07ea75e5=""><span data-v-07ea75e5="">минут</span></div> <div data-v-07ea75e5="">:</div> <div data-v-07ea75e5="">13<br data-v-07ea75e5=""><span data-v-07ea75e5="">секунд</span></div></div></div></div></div> <div data-v-07ea75e5="" class="text-center"><div data-v-07ea75e5="" data-toggle="modal" data-target="#block8-modal" class="btn">Заказать строительство дома</div></div></div></div></div> <div data-v-048c80f6="" data-v-07ea75e5="" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade" id="block8-modal"><div data-v-048c80f6="" role="document" class="modal-dialog"><div data-v-048c80f6="" class="modal-content"><div data-v-048c80f6="" class="modal-header"><button data-v-048c80f6="" type="button" data-dismiss="modal" aria-label="Close" class="close"></button></div> <div data-v-048c80f6="" class="modal-body"><form data-v-048c80f6=""><div data-v-048c80f6="" class="form-group"><input data-v-048c80f6="" type="text" name="name" placeholder="Введите имя"></div> <div data-v-048c80f6="" class="form-group"><input data-v-048c80f6="" type="tel" name="tel" pattern="[0-9-+()\s]+" placeholder="Введите телефон"></div> <div data-v-048c80f6="" class="form-group"><button data-v-048c80f6="" type="submit" class="btn">Отправить заявку</button> <div data-v-048c80f6="" class="personal-data">
+              Отправляя персональные данные, вы соглашаетесь на их обработку
+            </div></div></form></div></div></div></div></div> <div data-v-07f88d66="" data-v-82f0f610="" class="block"><div data-v-07f88d66="" class="container"><div data-v-07f88d66="" class="title">Группа Компаний “Дом” в цифрах</div> <div data-v-07f88d66="" class="row"><div data-v-07f88d66="" class="col-sm-3 text-center"><div data-v-07f88d66="" class="item"><div data-v-07f88d66="" class="item-value">&gt;300</div> <hr data-v-07f88d66=""> <div data-v-07f88d66="" class="item-text">сотрудников работает ежедневно</div></div></div><div data-v-07f88d66="" class="col-sm-3 text-center"><div data-v-07f88d66="" class="item"><div data-v-07f88d66="" class="item-value">21</div> <hr data-v-07f88d66=""> <div data-v-07f88d66="" class="item-text">год опыта в строительстве</div></div></div><div data-v-07f88d66="" class="col-sm-3 text-center"><div data-v-07f88d66="" class="item"><div data-v-07f88d66="" class="item-value">137</div> <hr data-v-07f88d66=""> <div data-v-07f88d66="" class="item-text">объектов сдали за последние 5 лет</div></div></div><div data-v-07f88d66="" class="col-sm-3 text-center"><div data-v-07f88d66="" class="item"><div data-v-07f88d66="" class="item-value">10</div> <hr data-v-07f88d66=""> <div data-v-07f88d66="" class="item-text">лет гарантии на работы</div></div></div></div></div></div> <div data-v-2d24567c="" data-v-82f0f610="" class="block" id="projects"><div data-v-2d24567c="" class="container"><h2 data-v-2d24567c="" class="title title-font">Каркасный дом вашей мечты уже есть в каталоге:</h2> <div data-v-2d24567c="" class="row"><div data-v-2d24567c="" class="col-sm-4"><div data-v-2d24567c="" class="home-item"><img data-v-2d24567c="" src="assets/images/block10/home1.jpg"> <div data-v-2d24567c="" class="home-desc"><div data-v-2d24567c="" class="home-attr"><span data-v-2d24567c="">Общая площадь:</span> <span data-v-2d24567c="">130 м<sup data-v-2d24567c="">2</sup></span></div> <div data-v-2d24567c="" class="home-attr"><span data-v-2d24567c="">Размер:</span> <span data-v-2d24567c="">7x9 м</span></div> <div data-v-2d24567c="" class="home-price">от 1.560.000 рублей</div></div></div></div><div data-v-2d24567c="" class="col-sm-4"><div data-v-2d24567c="" class="home-item"><img data-v-2d24567c="" src="assets/images/block10/home2.jpg"> <div data-v-2d24567c="" class="home-desc"><div data-v-2d24567c="" class="home-attr"><span data-v-2d24567c="">Общая площадь:</span> <span data-v-2d24567c="">115 м<sup data-v-2d24567c="">2</sup></span></div> <div data-v-2d24567c="" class="home-attr"><span data-v-2d24567c="">Размер:</span> <span data-v-2d24567c="">9x11 м</span></div> <div data-v-2d24567c="" class="home-price">от 1.380.000 рублей</div></div></div></div><div data-v-2d24567c="" class="col-sm-4"><div data-v-2d24567c="" class="home-item"><img data-v-2d24567c="" src="assets/images/block10/home3.jpg"> <div data-v-2d24567c="" class="home-desc"><div data-v-2d24567c="" class="home-attr"><span data-v-2d24567c="">Общая площадь:</span> <span data-v-2d24567c="">85 м<sup data-v-2d24567c="">2</sup></span></div> <div data-v-2d24567c="" class="home-attr"><span data-v-2d24567c="">Размер:</span> <span data-v-2d24567c="">8x9 м</span></div> <div data-v-2d24567c="" class="home-price">от 1.020.000 рублей</div></div></div></div><div data-v-2d24567c="" class="col-sm-4"><div data-v-2d24567c="" class="home-item"><img data-v-2d24567c="" src="assets/images/block10/home4.jpg"> <div data-v-2d24567c="" class="home-desc"><div data-v-2d24567c="" class="home-attr"><span data-v-2d24567c="">Общая площадь:</span> <span data-v-2d24567c="">190 м<sup data-v-2d24567c="">2</sup></span></div> <div data-v-2d24567c="" class="home-attr"><span data-v-2d24567c="">Размер:</span> <span data-v-2d24567c="">9x10,5 м</span></div> <div data-v-2d24567c="" class="home-price">от 2.280.000 рублей</div></div></div></div><div data-v-2d24567c="" class="col-sm-4"><div data-v-2d24567c="" class="home-item"><img data-v-2d24567c="" src="assets/images/block10/home5.jpg"> <div data-v-2d24567c="" class="home-desc"><div data-v-2d24567c="" class="home-attr"><span data-v-2d24567c="">Общая площадь:</span> <span data-v-2d24567c="">107 м<sup data-v-2d24567c="">2</sup></span></div> <div data-v-2d24567c="" class="home-attr"><span data-v-2d24567c="">Размер:</span> <span data-v-2d24567c="">13x10 м</span></div> <div data-v-2d24567c="" class="home-price">от 1.123.000 рублей</div></div></div></div><div data-v-2d24567c="" class="col-sm-4"><div data-v-2d24567c="" class="home-item"><img data-v-2d24567c="" src="assets/images/block10/home6.jpg"> <div data-v-2d24567c="" class="home-desc"><div data-v-2d24567c="" class="home-attr"><span data-v-2d24567c="">Общая площадь:</span> <span data-v-2d24567c="">48 м<sup data-v-2d24567c="">2</sup></span></div> <div data-v-2d24567c="" class="home-attr"><span data-v-2d24567c="">Размер:</span> <span data-v-2d24567c="">6x8 м</span></div> <div data-v-2d24567c="" class="home-price">от 504.000 рублей</div></div></div></div></div> <div data-v-2d24567c="" class="row catalog"><div data-v-2d24567c="" class="col-sm-7"><h2 data-v-2d24567c="" class="title title-font">Посмотрите каталог из 20 лучших проектов</h2></div> <div data-v-2d24567c="" class="col-sm-5"><div data-v-2d24567c="" data-toggle="modal" data-target="#block9-modal" class="btn">Получить каталог</div></div></div></div> <div data-v-048c80f6="" data-v-2d24567c="" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade" id="block9-modal"><div data-v-048c80f6="" role="document" class="modal-dialog"><div data-v-048c80f6="" class="modal-content"><div data-v-048c80f6="" class="modal-header"><button data-v-048c80f6="" type="button" data-dismiss="modal" aria-label="Close" class="close"></button></div> <div data-v-048c80f6="" class="modal-body"><form data-v-048c80f6=""><div data-v-048c80f6="" class="form-group"><input data-v-048c80f6="" type="text" name="name" placeholder="Введите имя"></div> <div data-v-048c80f6="" class="form-group"><input data-v-048c80f6="" type="tel" name="tel" pattern="[0-9-+()\s]+" placeholder="Введите телефон"></div> <div data-v-048c80f6="" class="form-group"><button data-v-048c80f6="" type="submit" class="btn">Отправить заявку</button> <div data-v-048c80f6="" class="personal-data">
+              Отправляя персональные данные, вы соглашаетесь на их обработку
+            </div></div></form></div></div></div></div></div> <div data-v-2d08277a="" data-v-82f0f610="" class="slider-block"><div data-v-2d08277a="" class="container"><h2 data-v-2d08277a="" class="title title-font">Варианты внешней отделки</h2></div> <div data-v-2d08277a="" class="flickity-slider flickity-enabled is-draggable" tabindex="0"><div class="flickity-viewport" style="height: 627px; touch-action: pan-y;"><div class="flickity-slider" style="left: 0px; transform: translateX(-100%);"><div data-v-282deee6="" data-v-2d08277a="" class="block" style="background-image: url(&quot;assets/images/block11/item2.jpg&quot;); position: absolute; left: 0%;"><div data-v-282deee6="" class="container"><div data-v-282deee6="" class="row hidden-xs"><div data-v-282deee6="" class="col-sm-1"><div data-v-282deee6="" class="arrow left-arrow"></div></div> <div data-v-282deee6="" class="col-sm-1 col-sm-offset-10"><div data-v-282deee6="" class="arrow right-arrow"></div></div></div></div> <div data-v-282deee6="" class="info"><div data-v-282deee6="" class="name">Декоративная штукатурка</div></div></div><div data-v-282deee6="" data-v-2d08277a="" class="block is-selected" style="background-image: url(&quot;assets/images/block11/item7.jpg&quot;); position: absolute; left: 100%;"><div data-v-282deee6="" class="container"><div data-v-282deee6="" class="row hidden-xs"><div data-v-282deee6="" class="col-sm-1"><div data-v-282deee6="" class="arrow left-arrow"></div></div> <div data-v-282deee6="" class="col-sm-1 col-sm-offset-10"><div data-v-282deee6="" class="arrow right-arrow"></div></div></div></div> <div data-v-282deee6="" class="info"><div data-v-282deee6="" class="name">Имитация бруса</div></div></div><div data-v-282deee6="" data-v-2d08277a="" class="block" style="background-image: url(&quot;assets/images/block11/item5.jpg&quot;); position: absolute; left: 200%;"><div data-v-282deee6="" class="container"><div data-v-282deee6="" class="row hidden-xs"><div data-v-282deee6="" class="col-sm-1"><div data-v-282deee6="" class="arrow left-arrow"></div></div> <div data-v-282deee6="" class="col-sm-1 col-sm-offset-10"><div data-v-282deee6="" class="arrow right-arrow"></div></div></div></div> <div data-v-282deee6="" class="info"><div data-v-282deee6="" class="name">Имитация бревна</div></div></div><div data-v-282deee6="" data-v-2d08277a="" class="block" style="background-image: url(&quot;assets/images/block11/item3.jpg&quot;); position: absolute; left: 300%;"><div data-v-282deee6="" class="container"><div data-v-282deee6="" class="row hidden-xs"><div data-v-282deee6="" class="col-sm-1"><div data-v-282deee6="" class="arrow left-arrow"></div></div> <div data-v-282deee6="" class="col-sm-1 col-sm-offset-10"><div data-v-282deee6="" class="arrow right-arrow"></div></div></div></div> <div data-v-282deee6="" class="info"><div data-v-282deee6="" class="name">Металлосайдинг</div></div></div><div data-v-282deee6="" data-v-2d08277a="" class="block" style="background-image: url(&quot;assets/images/block11/item4.jpg&quot;); position: absolute; left: 400%;"><div data-v-282deee6="" class="container"><div data-v-282deee6="" class="row hidden-xs"><div data-v-282deee6="" class="col-sm-1"><div data-v-282deee6="" class="arrow left-arrow"></div></div> <div data-v-282deee6="" class="col-sm-1 col-sm-offset-10"><div data-v-282deee6="" class="arrow right-arrow"></div></div></div></div> <div data-v-282deee6="" class="info"><div data-v-282deee6="" class="name">Облицовочный кирпич</div></div></div><div data-v-282deee6="" data-v-2d08277a="" class="block" style="background-image: url(&quot;assets/images/block11/item1.jpg&quot;); position: absolute; left: 500%;"><div data-v-282deee6="" class="container"><div data-v-282deee6="" class="row hidden-xs"><div data-v-282deee6="" class="col-sm-1"><div data-v-282deee6="" class="arrow left-arrow"></div></div> <div data-v-282deee6="" class="col-sm-1 col-sm-offset-10"><div data-v-282deee6="" class="arrow right-arrow"></div></div></div></div> <div data-v-282deee6="" class="info"><div data-v-282deee6="" class="name">Облицовочный кирпич</div></div></div></div></div></div> <div data-v-2d08277a="" class="page-dots"><div data-v-2d08277a="" class=""></div><div data-v-2d08277a="" class="selected"></div><div data-v-2d08277a="" class=""></div><div data-v-2d08277a="" class=""></div><div data-v-2d08277a="" class=""></div><div data-v-2d08277a="" class=""></div></div></div> <div data-v-2cebf878="" data-v-82f0f610="" class="block"><div data-v-2cebf878="" class="container"><h2 data-v-2cebf878="" class="title title-font">Как мы работаем</h2> <div data-v-2cebf878=""><img data-v-2cebf878="" src="assets/images/block12/work.png" alt="Схема работы строительной компании каркасных домов Никоро" class="work-scheme"></div> <form data-v-2cebf878="" class="form-horizontal"><div data-v-2cebf878="" class="form-group"><div data-v-2cebf878="" class="col-sm-4"><input data-v-2cebf878="" type="text" name="name" placeholder="Введите имя"></div> <div data-v-2cebf878="" class="col-sm-4"><input data-v-2cebf878="" type="tel" name="tel" pattern="[0-9-+()\s]+" placeholder="Введите телефон"></div> <div data-v-2cebf878="" class="col-sm-4"><button data-v-2cebf878="" type="submit" class="btn">Отправить заявку</button> <div data-v-2cebf878="" class="personal-data">
+            Отправляя персональные данные, вы соглашаетесь на их обработку
+          </div></div></div></form></div></div> <div data-v-2ccfc976="" data-v-82f0f610="" class="block" id="contacts"><div data-v-2ccfc976="" class="container"><div data-v-2ccfc976="" class="row"><div data-v-2ccfc976="" class="col-sm-4">
+        г. Ижевск,<br data-v-2ccfc976="">
+        ул. Орджоникидзе, 2б,<br data-v-2ccfc976="">
+        Офис 66<br data-v-2ccfc976=""> <a data-v-2ccfc976="" href="http://go.2gis.com/mddes" target="_blank" title="2GIS, г. Ижевск, ул. Орджоникидзе, 2б, Офис 66">Посмотреть на карте Ижевска</a></div> <div data-v-2ccfc976="" class="col-sm-4"><a data-v-2ccfc976="" href="tel:+79501738827" title="Телефон" class="tel">+7 (950) 173-88-27</a><br data-v-2ccfc976=""> <a data-v-2ccfc976="" href="mailto:sk.nikoro@yandex.ru" title="Email" class="email">sk.nikoro@yandex.ru</a></div> <div data-v-2ccfc976="" class="col-sm-4 links"><a data-v-2ccfc976="" href="http://instagram.com/sk_nikoro" target="_blank" title="Никоро в Instagram"><i data-v-2ccfc976="" class="fa fa-instagram"></i></a> <a data-v-2ccfc976="" href="https://vk.com/sk_nikoro" target="_blank" title="Никоро в VK"><i data-v-2ccfc976="" class="fa fa-vk"></i></a></div></div> <div data-v-2ccfc976="" class="partners"><div data-v-2ccfc976=""><img data-v-2ccfc976="" src="assets/images/block13/partner1.png" alt="Группа Компаний Дом"></div> <div data-v-2ccfc976=""><img data-v-2ccfc976="" src="assets/images/block13/partner2.png" alt="ПК Строй-Элемент"></div> <div data-v-2ccfc976=""><img data-v-2ccfc976="" src="assets/images/block13/partner3.png" alt="Завьяловские сады"></div></div></div></div></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="index.vue.js"></script>
+
+
+<div></div></body></html>
