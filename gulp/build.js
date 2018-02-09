@@ -111,7 +111,7 @@ gulp.task('other', () => {
   return gulp.src([path.join(conf.paths.src, 'favicon.ico'),
       path.join(conf.paths.src, '.htaccess'),
       path.join(conf.paths.src, 'robots.txt'),
-      path.join(conf.paths.src, '.sitemap.xml')])
+      path.join(conf.paths.src, 'sitemap.xml')])
     .pipe(plumber())
     .pipe(gulp.dest(conf.paths.dist));
 })
