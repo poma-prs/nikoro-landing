@@ -22,7 +22,7 @@
 
   include('smtp-func.php');
 
-  if (smtpmail('larec9876@gmail.com', 'Новая заявка', $message))
+  if (smtpmail('sk.nikoro@yandex.ru', 'Новая заявка', $message))
       echo 'ok';
   else
       echo 'fail';
