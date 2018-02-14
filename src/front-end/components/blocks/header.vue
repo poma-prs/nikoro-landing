@@ -3,7 +3,9 @@
     <div class="container">
       <div class="row hidden-xs">
         <div class="col-xs-4">
-          <img class="logo" alt="Nikoro logo Строительство каркасных домов" src="assets/images/logo-white.png">
+          <a class="link" href="#offer" v-smooth-scroll>
+            <img class="logo" alt="Nikoro logo Строительство каркасных домов" src="assets/images/logo-white.png">
+          </a>
         </div>
         <div class="col-sm-8">
           <div class="nav">

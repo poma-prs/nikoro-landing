@@ -39,7 +39,7 @@
   module.exports = {
     data() {
       return {
-        square: 150,
+        square: 109,
         options: {
           max: 500,
           height: 3,

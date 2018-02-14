@@ -53,10 +53,11 @@
     },
     methods: {
       updateCounter() {
-        var dtime = 14 * 24 * 60 * 60 * 1000;
+        var dtime = 12 * 24 * 60 * 60 * 1000;
         var time = dtime - (Date.now() - new Date('02/01/2018').getTime()) % dtime;
         this.days = Math.floor(time / (24 * 60 * 60 * 1000));
         time -= this.days * 24 * 60 * 60 * 1000;
+        this.days += 2;
         this.hours = Math.floor(time / (60 * 60 * 1000));
         time -= this.hours * 60 * 60 * 1000;
         this.minutes = Math.floor(time / (60 * 1000));

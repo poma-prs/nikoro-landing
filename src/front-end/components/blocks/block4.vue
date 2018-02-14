@@ -3,7 +3,9 @@
     <div class="container-fluid">
       <div class="text-center">
         <h2 class="title title-font">
-          <span>Каркасный дом от “Никоро” – идеальное решение, если вы…</span>
+          <div class="back-container">
+            <span>Каркасный дом от “Никоро” – идеальное решение, если вы…</span>
+          </div>
         </h2>
       </div>
       <div class="row">
@@ -69,7 +71,7 @@
           border: 2px solid #ea1821;
         }
 
-        span {
+        .back-container {
           background-color: #1b1d1c;
         }
       }

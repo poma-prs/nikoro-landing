@@ -3,10 +3,11 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-4">
-          г. Ижевск,<br>
-          ул. Орджоникидзе, 2б,<br>
-          Офис 66<br>
-          <a href="http://go.2gis.com/mddes" target="_blank" title="2GIS, г. Ижевск, ул. Орджоникидзе, 2б, Офис 66" onclick="yaCounter47630926.reachGoal('seemap'); return true;">Посмотреть на карте Ижевска</a>
+          <a href="http://go.2gis.com/mddes" target="_blank" title="2GIS, г. Ижевск, ул. Орджоникидзе, 2, Офис 66" onclick="yaCounter47630926.reachGoal('seemap'); return true;">
+            г. Ижевск,<br>
+            ул. Орджоникидзе, 2,<br>
+            Офис 66<br>
+          </a>
         </div>
         <div class="col-sm-4">
           <a class="tel" href="tel:+79501738827" title="Телефон" onclick="yaCounter47630926.reachGoal('phonenumberbottom'); return true;">+7 (950) 173-88-27</a><br>

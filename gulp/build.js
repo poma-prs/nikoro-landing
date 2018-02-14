@@ -117,7 +117,6 @@ gulp.task('other', () => {
 })
 
 gulp.task('build', ['index', 'images', 'php', 'other'], () => {
-  process.env.NODE_ENV = "development";
   return build('', 'index.vue.js', false);
 })
 
