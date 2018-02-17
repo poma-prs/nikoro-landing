@@ -52,7 +52,7 @@
             'Внутренняя отделка - вагонка'
           ],
           price: 'от 15 500',
-          discountPrice: 'от 11 990',
+          discountPrice: 'от 10 990',
           img: 'assets/images/block5/item1.jpg',
           additional: false
         },{
@@ -74,7 +74,7 @@
             'Монтаж канализации и водоснабжения в санузлах и кухне'
           ],
           price: 'от 18 300',
-          discountPrice: 'от 15 990',
+          discountPrice: 'от 14 990',
           img: 'assets/images/block5/item2.jpg',
           additional: false
         },{
@@ -98,7 +98,7 @@
             'Чистовая отделка санузлов плиткой'
           ],
           price: 'от 21 000',
-          discountPrice: 'от 19 900',
+          discountPrice: 'от 17 900',
           img: 'assets/images/block5/item3.jpg',
           additional: false
         }]

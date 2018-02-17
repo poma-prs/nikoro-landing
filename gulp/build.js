@@ -12,6 +12,7 @@ var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var gutil = require('gulp-util');
 var gulpif = require('gulp-if');
+var inject = require('gulp-inject');
 var del = require('del');
 var runseq = require('run-sequence');
 var assign = require('lodash.assign');
@@ -64,7 +65,7 @@ function getBrowserify(path, watch) {
 }
 
 function build(folder, filename, watch) {
-  return getBrowserify(path.join(conf.paths.src, folder, filename), watch)
+  return getBrowserify(path.join(conf.paths.src, folder, filename + '.js'), watch)
     .bundle()
     .on('error', (err) => {
       console.log(err.message);
@@ -72,42 +73,50 @@ function build(folder, filename, watch) {
       //this.emit('end');
     })
     .pipe(plumber())
-    .pipe(source(filename))
+    .pipe(source(filename + '-' + Math.floor(Math.random() * 100000) + '.js'))
     .pipe(buffer())
     //.pipe(babel({presets: ['es2015'], ignore: ['**/node_modules/**']}))
     .pipe(gulp.dest(path.join(conf.paths.dist, folder)));
 }
 
-gulp.task('minify', function() {
-  return gulp.src(path.join(conf.paths.dist, '**/*.js'))
-    .pipe(plumber())
-    .pipe(uglify())
-    .pipe(gulp.dest(conf.paths.publish));
-})
-
 gulp.task('clean', function() {
   return del.sync([conf.paths.dist, conf.paths.publish]);
 })
 
+gulp.task('browserify', () => {
+  return build('', 'index.vue', false);
+});
+
+gulp.task('watchify', () => {
+  return build('', 'index.vue', true);
+});
+
 gulp.task('index', () => {
   return gulp.src(path.join(conf.paths.src, '*.html'))
     .pipe(plumber())
+    .pipe(inject(gulp.src(path.join(conf.paths.dist, '**/*.js')), {
+      transform: function(filepath, file, i, length, targetFile) {
+        filepath = filepath.slice(
+          filepath.indexOf(conf.paths.dist) + conf.paths.dist.length);
+        return inject.transform.apply(inject.transform, [filepath, file, i, length, targetFile]);
+      }
+    }))
     .pipe(gulp.dest(conf.paths.dist));
 })
 
-gulp.task('images', function() {
+gulp.task('images', ['clean'], function() {
   return gulp.src(path.join(conf.paths.src, '/assets/images/**/*'), { base: conf.paths.src })
     .pipe(plumber())
     .pipe(gulp.dest(conf.paths.dist));
 })
 
-gulp.task('php', () => {
+gulp.task('php', ['clean'], () => {
   return gulp.src([path.join(conf.paths.src, '*.php')])
     .pipe(plumber())
     .pipe(gulp.dest(conf.paths.dist));
 })
 
-gulp.task('other', () => {
+gulp.task('other', ['clean'], () => {
   return gulp.src([path.join(conf.paths.src, 'favicon.ico'),
       path.join(conf.paths.src, '.htaccess'),
       path.join(conf.paths.src, 'robots.txt'),
@@ -116,11 +125,18 @@ gulp.task('other', () => {
     .pipe(gulp.dest(conf.paths.dist));
 })
 
-gulp.task('build', ['index', 'images', 'php', 'other'], () => {
-  return build('', 'index.vue.js', false);
+gulp.task('build', ['images', 'php', 'other'], (cb) => {
+  runseq('browserify', 'index', cb);
 })
 
-gulp.task('build-prod', ['build', 'minify'], () => {
+gulp.task('minify', ['build'], function() {
+  return gulp.src(path.join(conf.paths.dist, '**/*.js'))
+    .pipe(plumber())
+    .pipe(uglify())
+    .pipe(gulp.dest(conf.paths.publish));
+})
+
+gulp.task('build-prod', ['minify'], () => {
   process.env.NODE_ENV = "production";
   return gulp.src([
       path.join(conf.paths.dist, '**/*'),
@@ -129,8 +145,8 @@ gulp.task('build-prod', ['build', 'minify'], () => {
     .pipe(gulp.dest(conf.paths.publish));
 })
 
-gulp.task('build-watchify', ['index', 'images'], () => {
-  return build('', 'index.vue.js', true);
+gulp.task('build-watchify', ['images', 'php', 'other'], (cb) => {
+  runseq('watchify', 'index', cb);
 })
 
 gulp.task('rebuild', (cb) => { runseq('clean', 'build', cb); })

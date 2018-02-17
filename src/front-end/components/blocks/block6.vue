@@ -64,17 +64,17 @@
           text: "“Дача”",
           desc: "",
           price: 15500,
-          discountPrice: 11990
+          discountPrice: 10990
         },{
           text: "“Классика”",
           desc: "Буду жить постоянно",
           price: 18300,
-          discountPrice: 15990
+          discountPrice: 14990
         },{
           text: "“Под ключ”",
           desc: "Буду жить постоянно",
           price: 21000,
-          discountPrice: 19900
+          discountPrice: 17900
         }]
       }
     },
