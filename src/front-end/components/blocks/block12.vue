@@ -6,22 +6,24 @@
         <img class="work-scheme" src="assets/images/block12/work.png" alt="Схема работы строительной компании каркасных домов Никоро">
       </div>
 
-      <form class="form-horizontal" @submit.prevent="submit" v-if="!done">
-        <div class="form-group">
-          <div class="col-sm-4">
+      <div v-if="!done">
+        <h2 class="title title-font">Остались вопросы?<br>Оставьте заявку, и мы перезвоним вам в течение дня.</h2>
+
+        <form @submit.prevent="submit">
+          <div class="form-group">
             <input type="text" name="name" pattern="[a-zA-Zа-яА-Я\s]+" placeholder="Введите имя" v-model="name" title="Введите только буквы">
           </div>
-          <div class="col-sm-4">
+          <div class="form-group">
             <input type="tel" name="phone" pattern="\s*[0-9+][0-9-()\s]*" placeholder="Введите телефон" v-model="phone" title="Пример: +79991112233">
           </div>
-          <div class="col-sm-4">
+          <div class="form-group">
             <button type="submit" class="btn">Отправить заявку</button>
             <div class="personal-data">
               Отправляя персональные данные, вы соглашаетесь на их обработку
             </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
 
       <div class="thanks" v-else>
         <svg xmlns:x="http://ns.adobe.com/Extensibility/1.0/" xmlns:i="http://ns.adobe.com/AdobeIllustrator/10.0/" xmlns:graph="http://ns.adobe.com/Graphs/1.0/" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="230 230 52 52" enable-background="new 230 230 52 52" xml:space="preserve" width="100px" height="100px">
@@ -95,15 +97,19 @@
       margin-bottom: 70px;
     }
 
+    form {
+      @media (min-width: 768px) {
+        margin: 0 auto;
+        max-width: 500px;
+      }
+    }
+
     input {
       border: 2px solid #ea1821;
       padding: 12px 15px;
       width: 100%;
       background-color: #1b1b1c;
-
-      @media (max-width: 767px) {
-        margin-bottom: 15px;
-      }
+      margin-bottom: 15px;
     }
 
     .btn {
