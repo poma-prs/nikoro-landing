@@ -63,18 +63,18 @@
         types: [{
           text: "“Дача”",
           desc: "",
-          price: 15500,
-          discountPrice: 10990
+          price: 14500,
+          discountPrice: 11000
         },{
           text: "“Классика”",
           desc: "Буду жить постоянно",
-          price: 18300,
-          discountPrice: 14990
+          price: 17300,
+          discountPrice: 12500
         },{
           text: "“Под ключ”",
           desc: "Буду жить постоянно",
-          price: 21000,
-          discountPrice: 17900
+          price: 19500,
+          discountPrice: 14000
         }]
       }
     },
