@@ -3,14 +3,11 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-8">
-          <h2 class="title title-font">Почему у 98,7% людей возникают трудности со строительством дома, а наши клиенты не знают проблем?</h2>
+          <h2 class="title title-font">Получите скидку 50 000 рублей и деревянную лестницу в подарок, при заказе дома под ключь!</h2>
 
           <div class="row">
             <div class="col-sm-6">
-              <p>Комплексный подход к строительству от разработки строительного проекта до установки сантехники</p>
-
-              <h3>Акция</h3>
-              <p>Строительный проект в подарок</p>
+              <p>Узнайте подробности у менеджера</p>
             </div>
             <div class="col-sm-6">
               <div class="counter">
@@ -28,7 +25,7 @@
           </div>
 
           <div class="text-center">
-            <div class="btn" data-toggle="modal" data-target="#block8-modal" onclick="yaCounter47630926.reachGoal('showmodal4'); return true;">Заказать строительство дома</div>
+            <div class="btn" data-toggle="modal" data-target="#block8-modal" onclick="yaCounter47630926.reachGoal('showmodal4'); return true;">Получить скидку</div>
           </div>
 
         </div>
@@ -90,7 +87,7 @@
     background-color: #1b1d1c;
 
     @media (min-width: 768px) {
-      background: url(assets/images/block8/background.jpg) right center no-repeat, #1b1d1c;
+      background: url(assets/images/block8/block8_bg.jpg) right center no-repeat, #1b1d1c;
       background-size: 34%;
     }
 

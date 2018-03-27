@@ -4,7 +4,7 @@
       <div class="row hidden-xs">
         <div class="col-xs-4">
           <a class="link" href="#offer" v-smooth-scroll>
-            <img class="logo" alt="Nikoro logo Строительство каркасных домов" src="assets/images/logo-white.png">
+            <img class="logo" alt="Nikoro logo Строительство каркасных домов" src="assets/images/Logo_NIKORO_1.png">
           </a>
         </div>
         <div class="col-sm-8">
@@ -14,6 +14,15 @@
             <a class="link" href="#projects" v-smooth-scroll>Проекты</a>
             <a class="link" href="#contacts" v-smooth-scroll>Контакты</a>
             <a class="tel" href="tel:+79501738827" title="Телефон" onclick="yaCounter47630926.reachGoal('phonenumbertop'); return true;">+7 (950) 173-88-27</a>
+            <div class="link-social">
+              <a  href="https://vk.com/sk_nikoro" target="_blank" title="Никоро в VK"><i class="fa fa-vk"></i></a>
+            </div>
+            <div class="link-social">
+              <a   href="http://instagram.com/sk_nikoro" target="_blank" title="Никоро в Instagram"><i class="fa fa-instagram"></i></a>
+            </div>
+
+
+
           </div>
         </div>
       </div>
@@ -38,8 +47,33 @@
     background-color: rgba(0,0,0,0.1);
     padding: 10px 0;
 
+    .link-social{
+      font-size: 26px;
+      background: #ccc;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      transition: all .3s ease 0s;
+      &:hover{
+        background: #a3a3a3;
+        a{
+          color: #fff;
+        }
+      }
+
+      a{
+        color: #0c0d0d;
+      }
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+
     img.logo {
-      height: 30px;
+      height: 35px;
     }
 
     .nav {
@@ -49,7 +83,7 @@
       justify-content: space-between;
       height: 40px;
 
-      a {
+      &>a {
         color: #999999;
         position: relative;
 

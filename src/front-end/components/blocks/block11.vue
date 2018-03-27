@@ -1,21 +1,24 @@
 <template>
   <div class="slider-block">
     <div class="container">
-      <h2 class="title title-font">Варианты внешней отделки</h2>
+      <h2 class="title title-font">Наши работы</h2>
     </div>
     <flickity class="flickity-slider" ref="flickity" :options="flickityOptions">
-      <block-item v-for="page in pages" :name='page.name' :img="page.img" @next="next" @previous="previous">
+      <block-item v-for="page in pages" :img="page.img" @next="next" @previous="previous">
       </block-item>
     </flickity>
+
     <div class="page-dots">
       <div v-for="(i, index) in pages" @click="select(index)" :class="{ selected: selectInd == index }"></div>
     </div>
+    <app-modal id="block11-modal" message="Заявка оставлена в блоке №11 (Наши работы)" :success="success"></app-modal>
   </div>
 </template>
 
 <script>
   var Flickity = require('vue-flickity');
   var blockItem = require('./block11-item.vue');
+  var appModal = require('../app-modal.vue');
 
   module.exports = {
     data() {
@@ -28,24 +31,70 @@
         },
         selectInd: 0,
         pages: [{
-          name: 'Декоративная штукатурка',
-          img: 'assets/images/block11/item2.jpg'
+          img: 'assets/images/block11/item_1.jpg'
         },{
-          name: 'Имитация бруса',
-          img: 'assets/images/block11/item7.jpg'
+          img: 'assets/images/block11/item_2.jpg'
         },{
-          name: 'Имитация бревна',
-          img: 'assets/images/block11/item5.jpg'
+          img: 'assets/images/block11/item_3.jpg'
         },{
-          name: 'Металлосайдинг',
-          img: 'assets/images/block11/item3.jpg'
+          img: 'assets/images/block11/item_4.jpg'
         },{
-          name: 'Облицовочный кирпич',
-          img: 'assets/images/block11/item4.jpg'
+          img: 'assets/images/block11/item_5.jpg'
         },{
-          name: 'Облицовочный кирпич',
-          img: 'assets/images/block11/item1.jpg'
-        }]
+          img: 'assets/images/block11/item_6.jpg'
+        },{
+          img: 'assets/images/block11/item_7.jpg'
+        },{
+          img: 'assets/images/block11/item_8.jpg'
+        },{
+          img: 'assets/images/block11/item_9.jpg'
+        },{
+          img: 'assets/images/block11/item_10.jpg'
+        },{
+          img: 'assets/images/block11/item_11.jpg'
+        }, {
+          img: 'assets/images/block11/item_12.jpg'
+        },{
+          img: 'assets/images/block11/item_13.jpg'
+        },{
+          img: 'assets/images/block11/item_14.jpg'
+        },{
+          img: 'assets/images/block11/item_15.jpg'
+        },{
+          img: 'assets/images/block11/item_16.jpg'
+        },{
+          img: 'assets/images/block11/item_17.jpg'
+        },{
+          img: 'assets/images/block11/item_18.jpg'
+        },{
+          img: 'assets/images/block11/item_19.jpg'
+        },{
+          img: 'assets/images/block11/item_20.jpg'
+        },{
+          img: 'assets/images/block11/item_21.jpg'
+        }
+        ,{
+          img: 'assets/images/block11/item_22.jpg'
+        }
+        ,{
+          img: 'assets/images/block11/item_23.jpg'
+        }
+        ,{
+          img: 'assets/images/block11/item_24.jpg'
+        }
+        ,{
+          img: 'assets/images/block11/item_25.jpg'
+        }
+        ,{
+          img: 'assets/images/block11/item_26.jpg'
+        }
+        ,{
+          img: 'assets/images/block11/item_27.jpg'
+        }
+        ,{
+          img: 'assets/images/block11/item_28.jpg'
+        }
+        ]
       }
     },
     mounted() {
@@ -65,7 +114,7 @@
         this.$refs.flickity.select(ind);
       }
     },
-    components: { Flickity, blockItem }
+    components: { Flickity, blockItem, appModal }
   };
 </script>
 

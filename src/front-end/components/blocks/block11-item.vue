@@ -13,7 +13,8 @@
     </div>
 
     <div class="info">
-      <div class="name">{{ name }}</div>
+      <!--<div class="name">{{ name }}</div>-->
+      <div class="btn name call-to-action" data-toggle="modal" data-target="#block11-modal" onclick="yaCounter47630926.reachGoal('showmodal1'); return true;"></div>
     </div>
   </div>
 </template>
@@ -107,23 +108,29 @@
       transform: translateX(-50%);
       z-index: 0;
 
-      &:before {
-        content: ' ';
-        display: inline-block;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 10px;
-        left: 10px;
-        border: 2px solid #ea1821;
-        z-index: -1;
-      }
+
 
       .name {
         background-color: #fafafa;
         padding: 15px 20px;
         color: #2a2a2a;
         font-size: 16px;
+      }
+      .name.call-to-action {
+        background-color: #ff822e;
+        color: #fff;
+        font-weight: 600;
+
+        &:hover{
+          background-color: #e57529;
+        }
+      }
+
+      .name.call-to-action:after{
+        @media (max-width: 767px) {
+          content: 'Записаться на экскурсию';
+        }
+        content: 'Записаться на экскурсию по готовым объектам';
       }
     }
   }

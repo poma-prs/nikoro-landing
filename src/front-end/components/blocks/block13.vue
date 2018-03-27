@@ -18,6 +18,10 @@
           <a href="https://vk.com/sk_nikoro" target="_blank" title="Никоро в VK"><i class="fa fa-vk"></i></a>
         </div>
       </div>
+      <div class="row yandex-map" >
+        <iframe src="https://yandex.ru/map-widget/v1/-/CBeta0HKoB" width="100%" height="400" frameborder="0"></iframe>
+      </div>
+
 
       <div class="partners">
         <div><img src="assets/images/block13/partner1.png" alt="Группа Компаний Дом"></div>
@@ -39,6 +43,11 @@
     padding: 70px 0;
     background-color: #fafafa;
     line-height: 2;
+
+    .yandex-map{
+      margin-top: 70px;
+    }
+
 
     @media (max-width: 767px) {
       text-align: center;

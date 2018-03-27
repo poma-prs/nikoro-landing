@@ -91,6 +91,7 @@
 
   .header-abs {
     position: absolute;
+    background-color: #1B1D1C;
   }
 </style>
 

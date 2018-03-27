@@ -1,32 +1,32 @@
 <template>
   <div class="block">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="hidden-xs col-sm-4 image-part"></div>
-        <div class="col-xs-12 col-sm-7 content-part">
-
-          <div>
-            <div class="offer">
-              <div class="titles">
-                <div class="title-container">
-                  <h1 class="title title-font">Строительство каркасных домов в Ижевске от 359 000 рублей</h1>
-                </div>
-                <div class="subtitle">Оставьте заявку на расчет стоимости дома</div>
-              </div>
+    <div class="content container-fluid">
+      <div class="row flex-centered">
+        <div class="main-info flex-centered ">
+            <div class="text-wrap flex-centered">
+              <div class="title">СТРОИТЕЛЬСТВО</div>
+              <div class="subtitle">энергоэффективных домов</div>
+              <div class="subtitle">по каркасной технологии</div>
             </div>
-            <div class="offer">
-              <div class="buttons">
-                <div class="btn" data-toggle="modal" data-target="#block1-modal" onclick="yaCounter47630926.reachGoal('showmodal1'); return true;">Остaвить заявку</div>
-                <!-- <div class="bonus">
-                  Оставьте заявку на расчет стоимости дома
-                  <div class="subbonus">+ бесплатно "Технология умный дом"</div>
-                </div> -->
-              </div>
-            </div>
-          </div>
+            <div class="price-wrap">от <span class="price">10 900</span> руб/м<sup>2</sup>
 
+            </div>
+            <div class="red-outline"></div>
         </div>
+        <div class="extra-info col-xs-12 col-sm-11 col-md-10 col-lg-6">
+          Все услуги строительства от фундамента до внутренней отделки в Ижевске и по Удмуртской Республике
+        </div>
+        <div class="call call-to-apply-wrap ">
+          <div class="call-to-apply flex-centered ">
+            <div class="call-title">ЗАПИШИСЬ БЕСПЛАТНО</div>
+            <div class="call-subtitle">на экскурсию по готовым объектам</div>
+            <div class="btn" data-toggle="modal" data-target="#block1-modal" onclick="yaCounter47630926.reachGoal('showmodal1'); return true;">Остaвить заявку</div>
+
+          </div>
+        </div>
+
       </div>
+
     </div>
 
     <app-modal id="block1-modal" message="Заявка оставлена в блоке №1 (Оффер)"
@@ -51,155 +51,182 @@
 <style lang="scss" scoped>
   .block {
     position: relative;
-    background-color: #1B1D1C;
 
-    @media (max-width: 767px) {
-      background-image: url(assets/images/block1/home.jpg);
-      background-size: cover;
-    }
+    background-image: url(assets/images/block1/bg-min.jpg);
+    background-size: cover;
+    background-position: center;
 
-    & > .container-fluid > .row {
-      display: flex;
-      align-items: stretch;
-    }
-
-    .image-part {
-      background-image: url(assets/images/block1/home.jpg);
-      background-size: cover;
-    }
-
-    .content-part {
-      position: relative;
-      padding-top: 150px;
-      padding-bottom: 150px;
-      min-height: 90vh;
-      color: white;
+    .btn {
+      border-radius: 0;
+      background-color: #EA1821;
+      font-size: 16px;
+      padding: 12px 15px;
+      min-width: 230px;
+      max-width: 100%;
+      display: inline-block;
 
       @media (max-width: 767px) {
-        background-color: rgba(0, 0, 0, 0.4);
+        width: 100%;
       }
+
+      &:hover {
+        color: white;
+        background-color: #bb131a;
+      }
+    }
+
+    .flex-centered{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .content{
+      padding-top: 100px;
+      padding-bottom: 20px;
+      min-height: 95vh;
+      color: white;
+      font-family: "Times New Roman";
+      transition: all .3s ease 0s;
 
       @media (min-width: 768px) {
-        & > div {
+        padding-top: 200px;
+      }
+
+      .main-info{
+        position: relative;
+        .text-wrap{
+          background: rgba(27, 29, 28, 0.71);
+          padding:20px;
+          z-index: 0;
+          .title{
+            font-size:54px;
+            font-weight: 600;
+            line-height: 1;
+            @media (max-width: 767px) {
+              font-size:34px;
+            }
+          }
+          .subtitle{
+            font-size:40px;
+            text-align: center;
+            font-weight: 500;
+            line-height: 1.1;
+            @media (max-width: 767px) {
+              font-size:24px;
+            }
+          }
+        }
+
+        .price-wrap{
+          z-index: 2;
+          position: relative;
+          font-size:38px;
+          background: #EA1821;
+          padding:5px 15px;
+          margin-top: 10px;
+          .price{
+            font-size:64px;
+            line-height: 1.1;
+            font-weight: 600;
+            @media (max-width: 767px) {
+              font-size:44px;
+            }
+          }
+          @media (max-width: 767px) {
+            font-size:22px;
+          }
+        }
+
+        .red-outline{
           position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 100%;
-          transform: translateY(-50%) translateX(-50%);
+          bottom: 40px;
+          left:-20px;
+          right:-20px;
+          height: 50%;
+          border-bottom: 3px #EA1821 solid;
+          z-index: 1;
+
+          &:before {
+            content: ' ';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 40px;
+            border-top: 3px #ea1821 solid;
+            border-left: 3px #ea1821 solid;
+          }
+
+          &:after {
+            content: ' ';
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 40px;
+            border-top: 3px #ea1821 solid;
+            border-right: 3px #ea1821 solid;
+          }
+        }
+
+
+      }
+
+      .extra-info{
+        text-align: center;
+        font-family: Arial;
+        font-size: 25px;
+        margin-top: 10px;
+        @media (max-width: 767px) {
+          font-size:16px;
         }
       }
 
-      .offer {
-        @media (min-width: 768px) {
-          text-align: right;
+      .call{
+        margin-top: 80px;
+        width:60%;
+        @media (max-width: 767px) {
+          width:100%;
+        }
+      }
+
+      .call-to-apply-wrap{
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+
+        @media (max-width: 767px) {
+          flex-direction: column;
         }
 
-        .titles {
+
+        .call-to-apply{
+          text-align: center;
+          font-family: Arial;
+          font-size: 16px;
+          background: #1b1d1c;
+          padding: 5px 10px;
+          padding-bottom: 20px;
           position: relative;
-          display: inline-block;
-          text-align: left;
-          z-index: 0;
-          padding-left: 10px;
-
-          @media (min-width: 768px) {
-            width: 80%;
-            padding: 10px 30px;
+          .call-title{
+            font-size: 22px;
+            color: #EA1821;
           }
+          .call-subtitle{
 
-          .title-container {
-            @media (min-width: 768px) {
-              background-color: #1B1D1C;
-            }
           }
-
-          .title {
-            font-size: 37px;
-            font-weight: bold;
-            line-height: 1.2;
-            margin: 0;
-            margin-bottom: 20px;
-          }
-
-          .subtitle {
-            font-size: 16px;
-            margin-bottom: 10px;
-
-            @media (min-width: 768px) {
-              max-width: 50%;
-            }
-          }
-
-          &::before {
-            content: ' ';
+          .btn{
+            font-size:18px;
             position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            border: 2px #EA1821 solid;
-            z-index: -1;
-
-            @media (min-width: 768px) {
-              width: 66%;
-            }
-          }
-        }
-
-        .buttons {
-          display: flex;
-          align-items: center;
-          text-align: left;
-          margin-top: 30px;
-
-          @media (min-width: 768px) {
-            padding-left: 20%;
-          }
-
-          @media (max-width: 767px) {
-            flex-direction: column-reverse;
-          }
-
-          .btn {
-            border-radius: 0;
-            background-color: #EA1821;
-            font-size: 16px;
-            padding: 12px 15px;
-            min-width: 230px;
-            max-width: 100%;
-            display: inline-block;
-
-            @media (max-width: 767px) {
-              width: 100%;
-            }
-
-            &:hover {
-              color: white;
-              background-color: #bb131a;
-            }
-          }
-
-          .bonus {
-            display: inline-block;
-            margin-left: 10px;
-
-            @media (max-width: 767px) {
-              margin-bottom: 15px;
-              margin-left: 0;
-              text-align: center;
-              font-weight: bold;
-              font-size: 16px;
-            }
-
-            .subbonus {
-              font-size: 20px;
-              margin-top: 7px;
-
-              @media (min-width: 768px) {
-                display: none;
-              }
-            }
+            /*left: 50%;*/
+            bottom: -50%;
           }
         }
       }
     }
+
+
   }
 </style>
