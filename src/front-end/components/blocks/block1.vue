@@ -91,7 +91,7 @@
       transition: all .3s ease 0s;
 
       @media (min-width: 768px) {
-        padding-top: 200px;
+        padding-top: 130px;
       }
 
       .main-info{
@@ -185,7 +185,7 @@
       }
 
       .call{
-        margin-top: 80px;
+        margin-top: 40px;
         width:60%;
         @media (max-width: 767px) {
           width:100%;

@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-8">
-          <h2 class="title title-font">Получите скидку 50 000 рублей и деревянную лестницу в подарок, при заказе дома под ключь!</h2>
+          <h2 class="title title-font">Получите скидку 50 000 рублей и деревянную лестницу в подарок, при заказе дома под ключ!</h2>
 
           <div class="row flex-centered">
             <div class="col-sm-6">
@@ -88,6 +88,7 @@
 
     .flex-centered{
       display: flex;
+      flex-direction: column;
       align-items: center;
       margin-bottom: 50px;
     }
@@ -100,12 +101,13 @@
     .title {
       font-size: 37px;
       font-weight: bold;
-      margin-bottom: 70px;
+      margin-bottom: 40px;
     }
 
     .counter {
       border: 2px solid #ea1821;
       padding: 25px;
+      margin-top: 30px;
 
 
       @media (max-width: 767px) {
