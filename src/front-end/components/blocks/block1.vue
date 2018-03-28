@@ -210,6 +210,7 @@
           padding: 5px 10px;
           padding-bottom: 20px;
           position: relative;
+          margin-bottom: 80px;
           .call-title{
             font-size: 22px;
             color: #EA1821;
@@ -220,7 +221,6 @@
           .btn{
             font-size:18px;
             position: absolute;
-            /*left: 50%;*/
             bottom: -50%;
           }
         }

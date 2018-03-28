@@ -2,6 +2,7 @@ node_modules/
 dist/
 awsaccess.json
 publish/
+.idea
 
 awsaccess-prod.json
 awsaccess-stage.json

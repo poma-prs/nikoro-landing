@@ -5,7 +5,7 @@
         <div class="col-sm-8">
           <h2 class="title title-font">Получите скидку 50 000 рублей и деревянную лестницу в подарок, при заказе дома под ключь!</h2>
 
-          <div class="row">
+          <div class="row flex-centered">
             <div class="col-sm-6">
               <p>Узнайте подробности у менеджера</p>
             </div>
@@ -86,6 +86,12 @@
     color: white;
     background-color: #1b1d1c;
 
+    .flex-centered{
+      display: flex;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+
     @media (min-width: 768px) {
       background: url(assets/images/block8/block8_bg.jpg) right center no-repeat, #1b1d1c;
       background-size: 34%;
@@ -100,7 +106,7 @@
     .counter {
       border: 2px solid #ea1821;
       padding: 25px;
-      margin-bottom: 50px;
+
 
       @media (max-width: 767px) {
         margin-top: 30px;
