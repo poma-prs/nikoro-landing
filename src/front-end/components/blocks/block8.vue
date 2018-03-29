@@ -88,9 +88,11 @@
 
     .flex-centered{
       display: flex;
-      flex-direction: column;
       align-items: center;
       margin-bottom: 50px;
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
     }
 
     @media (min-width: 768px) {
