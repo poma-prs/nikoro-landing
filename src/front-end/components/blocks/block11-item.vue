@@ -1,6 +1,7 @@
 <template>
   <div class="block"
       :style="{ backgroundImage: img ? 'url(' + img + ')' : 'none' }">
+    <!--<img class="slide-img" :src="img">-->
     <div class="container">
       <div class="row hidden-xs">
         <div class="col-sm-1">
@@ -42,7 +43,20 @@
     position: relative;
     margin-bottom: 25px;
     width: 100%;
-    background-size: cover;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /*.slide-img{*/
+      /*height: 100%;*/
+
+      /*!* width: fit-content; *!*/
+      /*position: absolute;*/
+      /*margin-left: auto;*/
+      /*margin-right: auto;*/
+      /*left: 0;*/
+      /*right: 0;*/
+    /*}*/
 
     .title {
       font-size: 37px;

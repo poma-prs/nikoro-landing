@@ -85,7 +85,7 @@
     .content{
       padding-top: 100px;
       padding-bottom: 20px;
-      min-height: 95vh;
+      min-height: 90vh;
       color: white;
       font-family: "Times New Roman";
       transition: all .3s ease 0s;
@@ -101,7 +101,7 @@
           padding:20px;
           z-index: 0;
           .title{
-            font-size:54px;
+            font-size:52px;
             font-weight: 600;
             line-height: 1;
             @media (max-width: 767px) {
@@ -109,7 +109,7 @@
             }
           }
           .subtitle{
-            font-size:40px;
+            font-size:38px;
             text-align: center;
             font-weight: 500;
             line-height: 1.1;
@@ -122,12 +122,12 @@
         .price-wrap{
           z-index: 2;
           position: relative;
-          font-size:38px;
+          font-size:36px;
           background: #EA1821;
           padding:5px 15px;
           margin-top: 10px;
           .price{
-            font-size:64px;
+            font-size:62px;
             line-height: 1.1;
             font-weight: 600;
             @media (max-width: 767px) {
@@ -177,7 +177,7 @@
       .extra-info{
         text-align: center;
         font-family: Arial;
-        font-size: 25px;
+        font-size: 22px;
         margin-top: 10px;
         @media (max-width: 767px) {
           font-size:16px;
