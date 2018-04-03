@@ -1,30 +1,26 @@
 <template>
   <div class="header-root">
     <div class="container">
-      <div class="row hidden-xs">
-        <div class="col-xs-4">
-          <a class="link" href="#offer" v-smooth-scroll>
-            <img class="logo" alt="Nikoro logo Строительство каркасных домов" src="assets/images/Logo_NIKORO_1.png">
-          </a>
+      <div class="header-content hidden-xs">
+        <a class="link" href="#offer" v-smooth-scroll>
+          <img class="logo" alt="Nikoro logo Строительство каркасных домов" src="assets/images/Logo_NIKORO_1.png">
+        </a>
+
+        <div class="nav">
+          <a class="link" href="#advantages" v-smooth-scroll>Преимущества</a>
+          <a class="link" href="#calculator" v-smooth-scroll>Калькулятор</a>
+          <a class="link" href="#projects" v-smooth-scroll>Проекты</a>
+          <a class="link" href="#contacts" v-smooth-scroll>Контакты</a>
+          <a class="tel" href="tel:+79501738827" title="Телефон" onclick="yaCounter47630926.reachGoal('phonenumbertop'); return true;">+7 (950) 173-88-27</a>
         </div>
-        <div class="col-sm-8">
-          <div class="nav">
-            <a class="link" href="#advantages" v-smooth-scroll>Преимущества</a>
-            <a class="link" href="#calculator" v-smooth-scroll>Калькулятор</a>
-            <a class="link" href="#projects" v-smooth-scroll>Проекты</a>
-            <a class="link" href="#contacts" v-smooth-scroll>Контакты</a>
-            <a class="tel" href="tel:+79501738827" title="Телефон" onclick="yaCounter47630926.reachGoal('phonenumbertop'); return true;">+7 (950) 173-88-27</a>
-            <div class="link-social">
-              <a  href="https://vk.com/sk_nikoro" target="_blank" title="Никоро в VK"><i class="fa fa-vk"></i></a>
-            </div>
-            <div class="link-social">
-              <a   href="http://instagram.com/sk_nikoro" target="_blank" title="Никоро в Instagram"><i class="fa fa-instagram"></i></a>
-            </div>
 
-
-
-          </div>
+        <div class="link-social">
+          <a  href="https://vk.com/sk_nikoro" target="_blank" title="Никоро в VK"><i class="fa fa-vk"></i></a>
         </div>
+        <div class="link-social">
+          <a   href="http://instagram.com/sk_nikoro" target="_blank" title="Никоро в Instagram"><i class="fa fa-instagram"></i></a>
+        </div>
+
       </div>
       <div class="row visible-xs">
         <div class="nav nav-xs">
@@ -47,6 +43,14 @@
     background-color: rgba(0,0,0,0.1);
     padding: 10px 0;
 
+    .header-content {
+      display: flex;
+
+      .nav {
+        flex: 1;
+      }
+    }
+
     .link-social{
       font-size: 26px;
       background: #ccc;
@@ -56,6 +60,8 @@
       line-height: 35px;
       text-align: center;
       transition: all .3s ease 0s;
+      margin: 0 5px;
+
       &:hover{
         background: #a3a3a3;
         a{
@@ -80,12 +86,13 @@
       font-size: 18px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       height: 40px;
 
-      &>a {
+      & > a {
         color: #999999;
         position: relative;
+        padding: 7px;
 
         &:hover, &:focus {
           color: white;
