@@ -92,7 +92,7 @@
       & > a {
         color: #999999;
         position: relative;
-        padding: 7px;
+        padding: 0 10px;
 
         &:hover, &:focus {
           color: white;
