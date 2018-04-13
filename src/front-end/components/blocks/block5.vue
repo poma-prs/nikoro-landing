@@ -54,7 +54,7 @@
             'Дверь входная утепленная'
           ],
           price: 'от 14 500',
-          discountPrice: 'от 11 000',
+          discountPrice: 'от 8 000',
           img: 'assets/images/block5/item1.jpg',
           additional: false
         },{
@@ -75,7 +75,7 @@
             'Дверь входная утепленная'
           ],
           price: 'от 17 300',
-          discountPrice: 'от 12 500',
+          discountPrice: 'от 9 000',
           img: 'assets/images/block5/item2.jpg',
           additional: false
         },{
@@ -97,7 +97,7 @@
             'Дверь входная утепленная'
           ],
           price: 'от 19 500',
-          discountPrice: 'от 14 000',
+          discountPrice: 'от 12 000',
           img: 'assets/images/block5/item3.jpg',
           additional: false
         }]
